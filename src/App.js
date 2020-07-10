@@ -1,24 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CustomizedInputs from  "./Components/Pages/Personal"
+import Header from "./Components/Fragments/Header"
+import Footer from './Components/Fragments/Footer';
+import Templates from './Components/Pages/Templates';
+import Home from "./Components/Pages/Home";
+import {Route , Switch } from "react-router-dom"
+import Personal from "./Components/Pages/Personal"
+import Multiline from "./Components/Pages/Multiline"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+          
+        
+        <Route component={Home} path="/home" />
+
+        
+        <Route component={Templates} path="/templates"/>
+        <Route component={Personal} path="/personal_information"/>
+          <Route component={Multiline} path="/cvmaker"/>
+
     </div>
   );
 }

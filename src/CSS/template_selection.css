@@ -1,0 +1,263 @@
+/*
+
+ART FACTORY
+
+https://templatemo.com/tm-537-art-factory
+
+*/
+
+/* 
+---------------------------------------------
+Table of contents
+---------------------------------------------
+01. font & reset css
+02. reset
+03. global styles
+04. header
+05. welcome
+06. features
+07. team
+08. pricing
+09. blog
+10. contact
+11. footer
+12. preloader
+
+--------------------------------------------- 
+*/
+
+/* 
+---------------------------------------------
+font & reset css
+--------------------------------------------- 
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+/* 
+---------------------------------------------
+reset
+--------------------------------------------- 
+*/
+
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+
+div pre
+ {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* 
+---------------------------------------------
+Templates
+--------------------------------------------- 
+*/
+
+ul{
+
+    list-style: none;
+  }
+
+  ul li::before{
+    content: "\2022";
+    color:rgba(0,0,0,0.0);
+    font-weight: bold;
+    display:inline-block;
+    margin-left: -1em;
+  }
+
+  .radio-toolbar input[type="radio"]{
+
+    opacity: 0;
+    width:0
+      }
+
+  .radio-toolbar label{
+
+    padding-bottom: 10px;
+    padding:10px 20px;
+    font-size: 16px;
+    
+    border-radius: 4px;
+
+    
+
+    background-color: #fff;
+     border: 2px solid #f55858;
+    border-color: #f55858;
+    color: #555;
+
+
+  }
+
+  .radio-toolbar label:hover{
+    color:#fff;
+    background-color: #f55858;
+
+  }
+
+  
+
+  .radio-toolbar input[type="radio"]:checked + label{
+
+    border: 2px solid #f55858;
+       color:#fff;
+    background-color: #f55858;
+  
+
+  }
+
+  img {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+img:hover {opacity: 0.7; 
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 450px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.radio-toolbar{
+
+  display: inline-flex;
+}
+
+@media screen and (max-width: 800px) {
+    .radio-toolbar{
+
+  display: inline-block;
+}
+
+  }
+
+.pad20 {
+  padding:20px;
+}
+.pad10{
+  padding:10px;
+}
+#myImg {
+    width:100%;
+     max-width:200px; 
+     border:2px solid #555
+
+}
+
+
+
