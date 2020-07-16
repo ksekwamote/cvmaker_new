@@ -14,6 +14,9 @@ import {
     makeStyles,
     createMuiTheme,
   } from '@material-ui/core/styles';
+import {useSelector , useDispatch} from "react-redux"
+import {changeDateOfBirth} from "../action/index"
+
 
 
 const useStyles2 = makeStyles((theme) => ({
@@ -38,6 +41,7 @@ export default function MaterialUIPickers() {
   };
 
   const classes = useStyles2();
+  const dispatch = useDispatch();
 
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -50,7 +54,7 @@ export default function MaterialUIPickers() {
           className={classes.margin}
           format="MM/dd/yyyy"
           value={selectedDate}
-          onChange={handleDateChange}
+          onChange={e => dispatch(changeDateOfBirth(e))}
           KeyboardButtonProps={{
             'aria-label': 'change date',
           }}

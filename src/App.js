@@ -16,11 +16,9 @@ function App() {
           
         
         <Route component={Home} path="/home" />
-
-        
         <Route component={Templates} path="/templates"/>
         <Route component={Personal} path="/personal_information"/>
-          <Route component={Multiline} path="/cvmaker"/>
+        <Route component={Multiline} path="/cvmaker"/>
 
     </div>
   );

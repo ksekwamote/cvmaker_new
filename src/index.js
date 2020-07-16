@@ -5,12 +5,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import {createStore } from 'redux'
-import firstnameReducer from "./Components/reducer/personal"
+import store from "./store"
 import {Provider} from "react-redux"
 
-
-const store  = createStore(firstnameReducer ,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 
 

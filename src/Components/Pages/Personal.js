@@ -19,20 +19,15 @@ import Header from "../Fragments/Header"
 import Footer from "../Fragments/Footer"
 import {Textfield, Textfield2} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
-import {firstname} from "../action/index"
+import {changeFirstname, changeSurname , changeAddress , changeEmail ,changePhoneNumber} from "../action/index"
 
-export default class Personal extends Component {
+export default function() {
 
-      constructor(props){
-        super(props)
-        
-      }
 
-  render() { 
+
   
 
-    const{value , handleChange , onSubmit} = this.props;
-    const firstnameReducer = useSelector(state => firstnameReducer)
+    //const{value , handleChange , onSubmit} = this.props;
     const dispatch = useDispatch();
 
 
@@ -46,7 +41,7 @@ export default class Personal extends Component {
       <Header/>
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h1>COMPLETE THE FOLLOWING PERSONAL</h1>
+        <h1>PERSONAL INFORMATION</h1>
         </div>
         
     <Grid container justify="space-around">
@@ -58,7 +53,7 @@ export default class Personal extends Component {
         name="firstname"
         type="text"
         variant="filled"
-        onChange ={() => dispatch(firstname("kutlo"))}
+        onChange = {e => dispatch(changeFirstname(e.target.value))}
         id="firstname"
         
 
@@ -71,7 +66,7 @@ export default class Personal extends Component {
         type="text"
         defaultValue=""
         variant="filled"
-        onChange={handleChange('surname')}
+        onChange={e => dispatch(changeSurname(e.target.value))}
         id="reddit-input"
       />
     <br></br>
@@ -82,7 +77,7 @@ export default class Personal extends Component {
         defaultValue=""
         type="text"
         variant="filled"
-       onChange={handleChange('address')}
+       onChange={e => dispatch(changeAddress(e.target.value))}
         id="reddit-input"
       />
       <br></br>
@@ -93,7 +88,7 @@ export default class Personal extends Component {
         defaultValue=""
         type="email"
         variant="filled"
-        onChange={handleChange('email')}
+        onChange={e => dispatch(changeEmail(e.target.value))}
         id="reddit-input"
       />
         <Textfield
@@ -102,7 +97,7 @@ export default class Personal extends Component {
         defaultValue="+267 77105790"
         variant="filled"
         type="text"
-      onChange={handleChange('phoneNumber')}
+      onChange={e => dispatch(changePhoneNumber(e.target.value))}
         id="reddit-input"
       />
       <br></br>
@@ -137,5 +132,5 @@ export default class Personal extends Component {
       </React.Fragment>
     )
   }
-}
+
 
