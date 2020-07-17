@@ -7,6 +7,8 @@ import Education from './Education';
 import Reference from './Reference';
 import Interests from './Interests';
 import Profile from './Profile'
+import Header from "../Fragments/Header"
+import Footer from "../Fragments/Footer"
 //import "./css/multistep.css";
 
 
@@ -220,31 +222,7 @@ export class Multistep extends Component {
 
      }
 
-     
-
-     /** 
-     onSubmit(){
-
-        //e.preventDefault();
-
-        const personal = {
-        firstname:this.state.firstname,
-        surname: this.state.surname,
-        email: this.state.email,      
-        phoneNumber: this.state.phoneNumber,
-        dob: this.state.dob,
-        address: this.state.address
-        }
-
-        axios.post('http://localhost:5000/personal/add' , personal)
-            .then(res => console.log(res.data))
-        
-        window.Location = '/';
-
-    }
-
-    */
-
+    
 
    
 
@@ -255,6 +233,7 @@ export class Multistep extends Component {
         const values = {button,ebutton,rbutton,firstname, surname,email,phoneNumber,dob,address,objective,experience ,employer,jobObjective,jobTitle,jstartDate,jendDate,qualities, interests, fieldOfStudy,startDate,gradDate, schoolName,education,rname,roccupation,remployer,remail,rphone,reference,temp};
      
       console.log(values)
+
         switch(step){
 
                case 1:

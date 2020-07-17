@@ -5,6 +5,8 @@ const initialState ={
     phoneNumber:"Phone Number",
     dob:"Date Of Birth",
     address:"Address",
+
+    profile : "",
     
 }
 
@@ -22,6 +24,8 @@ export function personalReducer(state=initialState, action){
                 return {...state , dob:action.payload}
             case "CHANGE_ADDRESS":
                 return {...state , address:action.payload}
+            case "CHANGE_PROFILE":
+                    return { ...state , profile:action.payload}
             default:
                 return state 
         }

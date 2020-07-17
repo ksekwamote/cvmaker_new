@@ -152,12 +152,26 @@ function RedditTextField(props) {
     },
   });
   
+  const useStyles3 = makeStyles((theme) => ({
+    root: {
+      '& .MuiTextField-root': {
+        margin: theme.spacing(5),
+        width: 500,
+      },
+    },
+  }));
 
-  export  function Textfield(props){
+export  function Textfield(props){
     const classes = useStyles();
         return <RedditTextField  className = {classes.margin} {...props}/>
 }
 export function Textfield2(props){
     const classes = useStyles2();
         return <RedditTextField  className = {classes.margin} {...props}/>
+}
+
+export function Multiline(props){
+    const classes = useStyles3();
+    return <TextField className={classes.root} {...props}/>
+
 }

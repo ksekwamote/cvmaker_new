@@ -151,7 +151,7 @@ export default class Templates extends Component {
 
        <div className="block">
 
-       <a href="/cvmaker" className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+       <a href="/multi" className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
       
    </div>
 

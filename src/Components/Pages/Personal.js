@@ -1,33 +1,22 @@
 
 import React, { Component } from 'react'
-import {
-  fade,
-  ThemeProvider,
-  withStyles,
-  makeStyles,
-  createMuiTheme,
-} from '@material-ui/core/styles';
-import 'date-fns';
-import InputBase from '@material-ui/core/InputBase';
-import InputLabel from '@material-ui/core/InputLabel';
-//import TextField from '@material-ui/core/TextField';
-import FormControl from '@material-ui/core/FormControl';
-import { green } from '@material-ui/core/colors';
 import Grid from '@material-ui/core/Grid';
 import MaterialUIPickers from "../GUI/Datepicker"
 import Header from "../Fragments/Header"
 import Footer from "../Fragments/Footer"
-import {Textfield, Textfield2} from "../GUI/Textfield"
+import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
-import {changeFirstname, changeSurname , changeAddress , changeEmail ,changePhoneNumber} from "../action/index"
+import {changeFirstname, changeSurname , changeAddress , changeEmail ,changePhoneNumber, nextStep} from "../action/index"
 
-export default function() {
+import TextField from '@material-ui/core/TextField';
 
 
 
-  
+export default function(props) {
 
-    //const{value , handleChange , onSubmit} = this.props;
+    
+
+   
     const dispatch = useDispatch();
 
 
@@ -38,7 +27,7 @@ export default function() {
 
 
 <div>
-      <Header/>
+
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
         <h1>PERSONAL INFORMATION</h1>
@@ -109,7 +98,7 @@ export default function() {
         variant="filled"
         id="reddit-input"
       /> 
-        
+  
         {'       '} <MaterialUIPickers/>
 
      
@@ -122,10 +111,10 @@ export default function() {
     </Grid>
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a href="/personal_information"  className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
-
+              <a href="#" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              
         </div>
-    <Footer/>
+
     </div>
 
       </div>

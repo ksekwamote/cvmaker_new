@@ -45,3 +45,30 @@ export const changeAddress = (address) => {
 
     };
 }
+
+
+
+export const changeProfile =(profile) =>{
+    return {
+        type:"CHANGE_PROFILE",
+        payload: profile
+    }
+}
+
+export const nextStep = () =>{
+    
+    return{
+
+        type:"NEXT_STEP"
+    }
+
+}
+
+export const prevStep = () =>{
+    
+    return{
+
+        type:"PREV_STEP"
+    }
+
+}
