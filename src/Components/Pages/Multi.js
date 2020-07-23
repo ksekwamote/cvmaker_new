@@ -12,9 +12,9 @@ import {useSelector} from "react-redux"
 
  function SwitchSteps(){
      const steps = useSelector(state => state.steper)
-    console.log(steps)
     
-
+     console.log(steps)
+    
         switch(steps){
             case 1:
                 return <Personal/>

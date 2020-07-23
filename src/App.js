@@ -13,9 +13,11 @@ import Profile from "./Components/Pages/Profile"
 import Multi from "./Components/Pages/Multi"
 
 function App() {
+ 
+
   return (
     <div>
-          
+         
        <Route component={Profile} path="/profile"/>
         <Route component={Home} path="/home" />
         <Route component={Templates} path="/templates"/>

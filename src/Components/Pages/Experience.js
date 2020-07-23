@@ -9,16 +9,24 @@ import {useSelector , useDispatch} from "react-redux"
 import RichTextEditor from 'react-rte';
 import {nextStep , prevStep} from "../action/index"
 import Richtext from "../GUI/Richtext"
+import {changeEmployer , changeJob , changeJobStartDate , changeJobEndDate ,changeJobDescription } from "../action/index"
 
- 
-
- 
 
 export default function Experience(){
 
+  const formRef = React.createRef();
+  const dispatch = useDispatch();
+
+ const save = () => {
+  const form = formRef.current;
+  dispatch(changeJobDescription(form.state.value.toString('html')))
  
-    const dispatch = useDispatch();
+}
+
+ 
+
    
+ 
 
     return (
         <React.Fragment>
@@ -42,6 +50,7 @@ export default function Experience(){
         type="text"
         variant="filled"
         id="employer"
+        onChange ={e => dispatch(changeEmployer(e.target.value))}
         
 
       />
@@ -54,6 +63,7 @@ export default function Experience(){
         defaultValue="Software Developer"
         variant="filled"
        id="jobTitle"
+       onChange ={e => dispatch(changeJob(e.target.value))}
       />
     <br></br>
 
@@ -64,6 +74,7 @@ export default function Experience(){
         type="text"
         variant="filled"
        id="jstartDate"
+       onChange ={e => dispatch(changeJobStartDate(e.target.value))}
       />
    
 
@@ -74,9 +85,16 @@ export default function Experience(){
         type="email"
         variant="filled"
         id="jendDate"
+
+        onChange ={e => dispatch(changeJobEndDate(e.target.value))}
       />
          <br></br>
-         <Richtext/>
+
+         <Richtext
+            ref ={formRef}
+            onBlur ={e => save()}
+           
+         />
   
       <br></br>
       

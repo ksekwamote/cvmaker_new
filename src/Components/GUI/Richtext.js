@@ -19,10 +19,12 @@ export default class Richtext extends Component {
       // Send the changes up to the parent component as an HTML string.
       // This is here to demonstrate using `.toString()` but in a real app it
       // would be better to avoid generating a string on each change.
+    
       this.props.onChange(
         value.toString('html')
       );
     }
+    //console.log(value.toString("html"))
   };
 
   render () {
@@ -51,6 +53,10 @@ export default class Richtext extends Component {
         value={this.state.value}
         onChange={this.onChange}
         toolbarConfig={toolbarConfig}
+        placeholder="Job Description: Describe in detail , the nature of your Job"
+        style={{height: 500}}
+     
+        {...this.props}
       />
     );
   }
