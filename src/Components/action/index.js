@@ -78,44 +78,49 @@ export const changeProfile =(profile) =>{
 
 //WORK EXPERIENCE
 
-export const changeEmployer = (employer) => {
+export const changeEmployer = (employer ,num) => {
     return {
         type:"CHANGE_EMPLOYER",
-        payload:employer
+        payload:employer,
+        index:num
 
     }
 }
 
-export const changeJob = (job_title) => {
+export const changeJob = (job_title ,num) => {
     return {
         type:"CHANGE_JOB",
-        payload: job_title
+        payload: job_title,
+        index:num
 
     }
 }
 
-export const changeJobStartDate = (jobStartDate) => {
+export const changeJobStartDate = (jobStartDate ,num) => {
     return {
         type:"CHANGE_JOB_STARTDATE",
-        payload: jobStartDate
+        payload: jobStartDate,
+        index:num
 
     }
 }
 
-export const changeJobEndDate = (jobEndDate) => {
+export const changeJobEndDate = (jobEndDate ,num) => {
     return {
         type:"CHANGE_JOB_ENDDATE",
-        payload: jobEndDate
+        payload: jobEndDate,
+        index:num
 
     }
 }
 
 
 
-export const changeJobDescription = (jobDescription) => {
+export const changeJobDescription = (jobDescription ,num) => {
     return {
         type:"CHANGE_JOB_DESCRIPTION",
-        payload: jobDescription
+        payload: jobDescription,
+        index:num
 
     }
 }

@@ -10,23 +10,14 @@ import RichTextEditor from 'react-rte';
 import {nextStep , prevStep} from "../action/index"
 import Richtext from "../GUI/Richtext"
 import {changeEmployer , changeJob , changeJobStartDate , changeJobEndDate ,changeJobDescription } from "../action/index"
+import Work from "../Fragments/Work"
 
 
 export default function Experience(){
 
-  const formRef = React.createRef();
+  const work = useSelector(state => state.experiences.work)
+  console.log(work)
   const dispatch = useDispatch();
-
- const save = () => {
-  const form = formRef.current;
-  dispatch(changeJobDescription(form.state.value.toString('html')))
- 
-}
-
- 
-
-   
- 
 
     return (
         <React.Fragment>
@@ -39,71 +30,14 @@ export default function Experience(){
         <div style={{textAlign:"center"}}>
         <h1>WORK EXPERIENCE</h1>
         </div>
+
+      { work.map((item, index )=>(
+
+          <Work index ={index} />
+      ))  }
         
-    <Grid container justify="space-around">
-    <form noValidate>
-      
-      
-      <Textfield
-        label="Employer"
-        name="employer"
-        type="text"
-        variant="filled"
-        id="employer"
-        onChange ={e => dispatch(changeEmployer(e.target.value))}
         
-
-      />
-
-    
-        <Textfield
-        label="Job Title"
-
-        type="text"
-        defaultValue="Software Developer"
-        variant="filled"
-       id="jobTitle"
-       onChange ={e => dispatch(changeJob(e.target.value))}
-      />
-    <br></br>
-
-      <Textfield
-        label="Start Date"
-        name="jstartDate"
-        defaultValue="Jan 2020"
-        type="text"
-        variant="filled"
-       id="jstartDate"
-       onChange ={e => dispatch(changeJobStartDate(e.target.value))}
-      />
    
-
-      <Textfield
-        label="End Date"
-        name= "jendDate"
-        defaultValue="Present"
-        type="email"
-        variant="filled"
-        id="jendDate"
-
-        onChange ={e => dispatch(changeJobEndDate(e.target.value))}
-      />
-         <br></br>
-
-         <Richtext
-            ref ={formRef}
-            onBlur ={e => save()}
-           
-         />
-  
-      <br></br>
-      
-
-     
-
-    
-    </form>
-    </Grid>
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
    

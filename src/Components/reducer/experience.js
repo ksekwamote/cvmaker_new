@@ -1,31 +1,48 @@
-const initalState = 
+const initialState =
+{
+    work: 
+    [
         {
             employer:"",
-            jobTitle: "",
-            jstartDate: "",
-            jendDate: "",
-            jobObjective: ""
-    }
+            position:"",
+            jstartDate:"",
+            jendDate:"",
+            jdescription:""
+
+        }
 
 
 
-export function experienceReducer(state=initalState, action){
+    ]
+
+}
+
+
+
+
+export function experienceReducer(state=initialState, action){
 
     switch(action.type){
-        case "CHANGE_EMPLOYER":
-            return {...state , employer: action.payload }
-
+        case "CHANGE_EMPLOYER":{
+            
+            [...initialState.work , initialState.work[action.index].employer=action.payload].pop()
+            return initialState
+        }
         case "CHANGE_JOB":
-            return {...state , jobTitle: action.payload}
+            [...initialState.work , initialState.work[action.index].position=action.payload].pop()
+            return initialState
 
         case "CHANGE_JOB_STARTDATE":
-            return {...state , jstartDate: action.payload}
+            [...initialState.work , initialState.work[action.index].jstartDate=action.payload].pop()
+            return initialState
 
         case "CHANGE_JOB_ENDDATE":
-            return {...state , jendDate: action.payload}
+            [...initialState.work , initialState.work[action.index].jendDate=action.payload].pop()
+            return initialState
 
         case "CHANGE_JOB_DESCRIPTION":
-            return {...state , jobObjectives:action.payload }
+            [...initialState.work , initialState.work[action.index].jdescription=action.payload].pop()
+            return initialState
         
         default:
             return state
