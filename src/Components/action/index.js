@@ -126,10 +126,6 @@ export const changeJobDescription = (jobDescription ,num) => {
 }
 
 
-
-
-
-
 export const addExperience =() =>{
 
     return {
@@ -144,4 +140,9 @@ export const remExperience =() =>{
         type: "REMOVE_EXPERIENCE"
     }
 
+}
+export const addNumber =() => {
+    return{
+        type: "ADD_NUMBER"
+    }
 }

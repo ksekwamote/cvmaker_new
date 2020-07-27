@@ -17,11 +17,12 @@ export default function Work (props){
     const formRef = React.createRef();
     const dispatch = useDispatch();
     const i = props.index
+
+    console.log(i)
   
    const save = () => {
     const form = formRef.current;
     dispatch(changeJobDescription(form.state.value.toString('html'),i))
-   
   }
   
 
@@ -29,7 +30,7 @@ export default function Work (props){
 
     <Grid container justify="space-around">
     <form noValidate>
-      
+      {console.log("index: "+i)}
       <Textfield
         label="Employer"
         name="employer"
