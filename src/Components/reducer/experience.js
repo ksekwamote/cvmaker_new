@@ -33,12 +33,18 @@ const initialState = {
 
 }
 
+var exp ={
+    employer:"",
+            position:"",
+            jstartDate:"",
+            jendDate:"",
+            jdescription:""    
+}
 
 
 
 
 export function experienceReducer(state=initialState, action){
-        console.log("Action.index: "+ action.index)
     switch(action.type){
         case "CHANGE_EMPLOYER":{
             
@@ -65,7 +71,13 @@ export function experienceReducer(state=initialState, action){
             ...state,
             values: {
               ...state.values,
-              work: [...state.values.work, {}]
+              work: [...state.values.work, {
+                employer:"",
+                        position:"",
+                        jstartDate:"",
+                        jendDate:"",
+                        jdescription:"<p><br></p>"   
+            }]
             }
           }
         case "REMOVE_EXPERIENCE":

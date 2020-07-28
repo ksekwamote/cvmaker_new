@@ -11,6 +11,7 @@ import Personal from "./Components/Pages/Personal"
 import Multiline from "./Components/Pages/Multiline"
 import Profile from "./Components/Pages/Profile"
 import Multi from "./Components/Pages/Multi"
+import Qualities from './Components/Pages/Qualities'
 
 function App() {
  
@@ -24,6 +25,7 @@ function App() {
         <Route component={Personal} path="/personal_information"/>
         <Route component={Multiline} path="/cvmaker"/>
         <Route component={Multi} path="/multi"/>
+        <Route component={Qualities} path="/qualities"/>
     </div>
   );
 }

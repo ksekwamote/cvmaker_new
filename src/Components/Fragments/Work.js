@@ -17,8 +17,9 @@ export default function Work (props){
     const formRef = React.createRef();
     const dispatch = useDispatch();
     const i = props.index
+    const defaultValues = useSelector(state => state.experiences.values.work[i])
+    const jobDescription = defaultValues.jdescription
 
-    console.log(i)
   
    const save = () => {
     const form = formRef.current;
@@ -37,6 +38,7 @@ export default function Work (props){
         type="text"
         variant="filled"
         id="employer"
+        defaultValue={defaultValues.employer}
         onChange ={e => dispatch(changeEmployer(e.target.value, i ))}
         
 
@@ -47,7 +49,7 @@ export default function Work (props){
         label="Job Title"
 
         type="text"
-        defaultValue="Software Developer"
+        defaultValue={defaultValues.position}
         variant="filled"
        id="jobTitle"
        onChange ={e => dispatch(changeJob(e.target.value, i))}
@@ -57,7 +59,7 @@ export default function Work (props){
       <Textfield
         label="Start Date"
         name="jstartDate"
-        defaultValue="Jan 2020"
+        defaultValue={defaultValues.jstartDate}
         type="text"
         variant="filled"
        id="jstartDate"
@@ -68,7 +70,7 @@ export default function Work (props){
       <Textfield
         label="End Date"
         name= "jendDate"
-        defaultValue="Present"
+        defaultValue={defaultValues.jendDate}
         type="email"
         variant="filled"
         id="jendDate"

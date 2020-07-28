@@ -24,7 +24,7 @@ export default class Richtext extends Component {
         value.toString('html')
       );
     }
-    //console.log(value.toString("html"))
+    console.log(value)
   };
 
   render () {
@@ -48,6 +48,8 @@ export default class Richtext extends Component {
         ]
       };
 
+      console.log(this.state.value)
+
     return (
       <RichTextEditor
         value={this.state.value}
@@ -57,7 +59,10 @@ export default class Richtext extends Component {
         style={{height: 500}}
      
         {...this.props}
+        
       />
+
+     
     );
   }
 }

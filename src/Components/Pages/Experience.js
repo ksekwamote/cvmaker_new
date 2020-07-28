@@ -1,9 +1,6 @@
 
-import React, { PropTypes } from 'react'
-import Grid from '@material-ui/core/Grid';
-import MaterialUIPickers from "../GUI/Datepicker"
-import Header from "../Fragments/Header"
-import Footer from "../Fragments/Footer"
+import React from 'react'
+
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
 import RichTextEditor from 'react-rte';
@@ -20,7 +17,6 @@ import {connect} from "react-redux"
   const num = useSelector(state => state.experiences.number)
   console.log(num)
 
-  //<div>Counter: {num}</div>
 
     return (
         <React.Fragment>
@@ -31,7 +27,6 @@ import {connect} from "react-redux"
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
         <h1>WORK EXPERIENCE</h1>
-    <div>Counter: {num}</div>
     
         </div>
         
@@ -59,7 +54,7 @@ import {connect} from "react-redux"
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
               <a href="#" onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a href="#" onClick={e => dispatch(addNumber())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a href="#" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
         </div>
 
     </div>
@@ -76,11 +71,7 @@ import {connect} from "react-redux"
 
 const mapStateToProps = (state, dispatch) => {
   return {
-    works: state.experiences.values.work,
-    addWork: () => dispatch(addExperience()),
-    remWork: () => dispatch(remExperience()),
-    backStep:() => dispatch(prevStep()),
-    nextStep: () =>dispatch(nextStep()),
+    works: state.experiences.values.work
 
 
   }

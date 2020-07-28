@@ -10,6 +10,7 @@ import Header from "../Fragments/Header"
 import Footer from "../Fragments/Footer"
 import {useSelector} from "react-redux"
 
+
  function SwitchSteps(){
      const steps = useSelector(state => state.steper)
     
@@ -23,7 +24,11 @@ import {useSelector} from "react-redux"
             case 3:
                 return <Experience/>
             case 4:
+                return <Qualities/>
+            case 5:
                 return <Education/>
+            case 6: 
+                return <Reference/>
             default:
                 return <Personal/>
 

@@ -66,6 +66,13 @@ export const changeAddress = (address) => {
     };
 }
 
+export const changeHobbies = (hobbies) => {
+    return {
+        type: "ADD_HOBBIES",
+        payload: hobbies
+    }
+}
+
 
 //PROFILE 
 export const changeProfile =(profile) =>{
@@ -141,8 +148,125 @@ export const remExperience =() =>{
     }
 
 }
-export const addNumber =() => {
+export const addNumber = () => {
     return{
         type: "ADD_NUMBER"
     }
 }
+
+
+//QUALITIES 
+export const changeQualities = (qualities) =>{
+    return{
+        type:"CHANGE_QUALITIES",
+        payload: qualities
+    }
+
+}
+
+//EDUCATION  
+export const changeFieldOfStudy =(fos , num) =>{
+    return {
+        type: "CHANGE_FIELD_OF_STUDY",
+        payload: fos,
+        index: num    
+    }
+
+}
+
+export const changeSchoolName =(input , num) =>{
+    return {
+        type: "CHANGE_SCHOOL_NAME",
+        payload: input,
+        index: num
+    }
+
+}
+
+export const changeStartDate =(input , num) =>{
+    return {
+        type: "CHANGE_START_DATE",
+        payload: input,
+        index: num
+    }
+
+}
+
+export const changeGradDate =(input , num) =>{
+    return {
+        type: "CHANGE_GRAD_DATE",
+        payload: input,
+        index: num
+    }
+
+}
+
+export const addEducation =() =>{
+    return{
+        type:"ADD_EDUCATION"
+    }
+}
+
+export const remEducation = () =>{
+    return{
+        type: "REM_EDUCATION"
+    }
+}
+
+//REFERENCE 
+
+export const changeReferentName = (text , index) =>{
+    return {
+        type:"ADD_REFERENT_NAME",
+        payload: text,
+        index: index
+    }
+}
+
+export const changeOccupation = (text , index) =>{
+    return {
+        type:"ADD_OCCUPATION",
+        payload: text,
+        index: index
+    }
+}
+
+export const changeCompany = (text , index) =>{
+    return {
+        type:"ADD_COMPANY",
+        payload: text,
+        index: index
+    }
+}
+
+export const changeRPhoneNumber = (text , index) =>{
+    return {
+        type:"ADD_RPHONE_NUMBER",
+        payload: text,
+        index: index
+    }
+}
+
+export const changeRemail = (text , index) =>{
+    return {
+        type:"ADD_REMAIL",
+        payload: text,
+        index: index
+    }
+}
+
+
+
+export const addReference =()=>{
+    return {
+        type:"ADD_REFERENCE"
+    }
+}
+export const remReference =()=>{
+    return {
+        type:"REM_REFERENCE"
+    }
+}
+
+
+

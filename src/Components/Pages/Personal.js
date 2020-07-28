@@ -6,7 +6,7 @@ import Header from "../Fragments/Header"
 import Footer from "../Fragments/Footer"
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
-import {changeFirstname, changeSurname , changeAddress , changeEmail ,changePhoneNumber, nextStep} from "../action/index"
+import {changeFirstname,changeHobbies, changeSurname , changeAddress , changeEmail ,changePhoneNumber, nextStep} from "../action/index"
 
 import TextField from '@material-ui/core/TextField';
 
@@ -91,12 +91,13 @@ export default function(props) {
       />
       <br></br>
       <Textfield
-        label="Website"
+        label="Hobbies and Interests"
 
         defaultValue=""
         type="text"
         variant="filled"
         id="reddit-input"
+        onChange={e => dispatch(changeHobbies(e.target.value))}
       /> 
   
         {'       '} <MaterialUIPickers/>
