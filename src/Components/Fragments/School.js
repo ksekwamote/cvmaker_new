@@ -12,10 +12,26 @@ export default function(props){
     const defaultValues = useSelector(state => state.experiences.values.work[i])
             const dispatch = useDispatch();
 
+            var title;
+            if (i>=1){
+            title = <h2>Education #{i+1}</h2>
+            }
+            else{
+              title=""
+            }
+           
+
     return(
 
         <Grid container justify="space-around">
     <form noValidate>
+    <div style={{textAlign:"center"}}>
+        {
+          title
+        }
+
+    </div>
+
       <Textfield
         label="Field Of Study"
         name="fos"

@@ -5,6 +5,8 @@ import "../assets/CSS/flex-slider.css"
 import "../assets/CSS/font-awesome.css"
 import "../assets/CSS/owl-carousel.css"
 import Footer from "../Fragments/Footer"
+import FadeIn from 'react-fade-in';
+import { Fade } from '@material-ui/core'
 
 export default class Home extends Component {
 
@@ -108,9 +110,16 @@ export default class Home extends Component {
                         <p>Climb the ladder to corporate success through an award  winning professional Resume or CV maker. All our CV's are  <strong>Recommended by HR Experts</strong></p>
                         <a href="/templates" class="main-button-slider">Create My CV &#8594;</a>
                     </div>
+                    
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <FadeIn
+                        transitionDuration={1500}
+                        delay={100}
+                        >
                         <img src={require("../assets/images/slider-icon.png")} class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic"></img>
+                        </FadeIn>
                     </div>
+                  
                 </div>
             </div>
         </div>

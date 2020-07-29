@@ -1,18 +1,3 @@
-/**const initialState =
-{
-    number:0,
-    work: 
-    [
-        {
-            employer:"",
-            position:"",
-            jstartDate:"",
-            jendDate:"",
-            jdescription:""
-        } 
-    ]
-
-} **/
 
 const initialState = {
     number:0 ,    

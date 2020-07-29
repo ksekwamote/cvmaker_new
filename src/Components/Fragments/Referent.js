@@ -10,9 +10,23 @@ import { changeRemail, addReference, remReference ,changeReferentName,changeOccu
 export default function Referent(props) {
         const i  = props.index
         const dispatch = useDispatch()
+        var title;
+            if (i>=1){
+            title = <h2>Reference #{i+1}</h2>
+            }
+            else{
+              title=""
+            }
     return (
         <Grid container justify="space-around">
         <form noValidate>
+        <div style={{textAlign:"center"}}>
+        {
+          title
+        }
+
+    </div>
+
           <Textfield
             label="Referent Name"
             name="rname"
@@ -56,6 +70,8 @@ export default function Referent(props) {
             id="email"
             onChange ={e => dispatch(changeRemail(e.target.value, i))}
           />
+
+          <br></br>
 
             <Textfield
             label="Phone Number "

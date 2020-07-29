@@ -3,12 +3,14 @@ import Grid from '@material-ui/core/Grid';
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
 import {nextStep , prevStep ,changeQualities} from "../action/index"
-
+import FadeIn from 'react-fade-in';
 
 export default function Qualities() {
     const dispatch = useDispatch();
    
     return (
+
+      <FadeIn>
         <React.Fragment>
       <div>
 
@@ -17,8 +19,10 @@ export default function Qualities() {
 
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h1>QUALITIES</h1>
-        <br></br><br></br>
+        <h1>QUALIFICATIONS</h1>
+      
+
+        <p>List key achievements, skills, experience, and the qualifications <br></br> that are most relevant to the position you're applying for.</p>
         </div>
         
     <Grid container justify="space-around">
@@ -38,8 +42,8 @@ export default function Qualities() {
     </Grid>
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a href="#" onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a href="#" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a href="#Experience" onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
+              <a href="#Education" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
 
         </div>
 
@@ -47,5 +51,6 @@ export default function Qualities() {
 
       </div>
       </React.Fragment>
+      </FadeIn>
     )
 }

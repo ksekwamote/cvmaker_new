@@ -7,9 +7,8 @@ import Footer from "../Fragments/Footer"
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
 import {changeFirstname,changeHobbies, changeSurname , changeAddress , changeEmail ,changePhoneNumber, nextStep} from "../action/index"
-
 import TextField from '@material-ui/core/TextField';
-
+import FadeIn from 'react-fade-in';
 
 
 export default function(props) {
@@ -22,6 +21,7 @@ export default function(props) {
 
     return (
 
+      <FadeIn>
       <React.Fragment>
       <div>
 
@@ -31,6 +31,7 @@ export default function(props) {
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
         <h1>PERSONAL INFORMATION</h1>
+        <p style={{ textAlign:"center"}}>Tell potential employers a little about yourself. <br></br> Contact details will be used to identify and get in touch with you.   </p>
         </div>
         
     <Grid container justify="space-around">
@@ -112,7 +113,7 @@ export default function(props) {
     </Grid>
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a href="#" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a href="#Profile" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
               
         </div>
 
@@ -120,6 +121,7 @@ export default function(props) {
 
       </div>
       </React.Fragment>
+      </FadeIn>
     )
   }
 

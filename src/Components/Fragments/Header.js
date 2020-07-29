@@ -16,12 +16,12 @@ export default function Header() {
     <header class="header-areas header-stickys">
         <div class="containers">
             <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                       
-                        <a href="#" class="logo">Resume Factory</a>
-                    
-                        <ul class="nav">
+                <div class="col-12" style={{backgroundColor:'#fff'}}>
+                    <nav class="main-nav" >
+                        
+                        <a style={{marginLeft:100 , marginTop:20}} href="#" class="logo">Resume Factory</a>
+                   
+                        <ul style={{marginRight:75}} class="nav">
                             <li class="scroll-to-section"><a href="#welcome" class="active"><strong>Home</strong></a></li>
                             <li class="scroll-to-section"><a href="#about"><strong>About</strong></a></li>
                             <li class="scroll-to-section"><a href="#whyus"><strong>Services</strong></a></li>

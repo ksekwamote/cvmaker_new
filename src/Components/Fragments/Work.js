@@ -25,13 +25,25 @@ export default function Work (props){
     const form = formRef.current;
     dispatch(changeJobDescription(form.state.value.toString('html'),i))
   }
+   var title;
+   if (i>=1){
+   title = <h2>Experience #{i+1}</h2>
+   }
+   else{
+     title=""
+   }
   
 
     return (
 
     <Grid container justify="space-around">
     <form noValidate>
-      {console.log("index: "+i)}
+    <div style={{textAlign:"center"}}>
+        {
+          title
+        }
+
+    </div>
       <Textfield
         label="Employer"
         name="employer"

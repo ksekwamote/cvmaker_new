@@ -1,19 +1,19 @@
 
 import React, { Component } from 'react'
 import Grid from '@material-ui/core/Grid';
-import Header from "../Fragments/Header"
-import Footer from "../Fragments/Footer"
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
 import {changeProfile} from "../action/index"
 import {nextStep , prevStep} from "../action/index"
-
+import { CSSTransition } from "react-transition-group"
+import Zoom from "@material-ui/core/Zoom"
+import FadeIn from 'react-fade-in';
 
 export default function Profile (){
   
     const dispatch = useDispatch();
     return (
-
+      <FadeIn>
       <React.Fragment>
       <div>
 
@@ -22,8 +22,9 @@ export default function Profile (){
 
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h1>PROFILE</h1>
-        <br></br><br></br>
+        <h1>SUMMARY</h1>
+        <p>A resume summary statement is a one- to two-sentence professional introduction <br></br>that is added to highlight your most valuable skills and experiences.</p>
+        <br></br>
         </div>
         
     <Grid container justify="space-around">
@@ -43,8 +44,8 @@ export default function Profile (){
     </Grid>
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a href="#" onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a href="#" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a href="#Personal_Information" onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
+              <a href="#Experience" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
 
         </div>
 
@@ -52,6 +53,8 @@ export default function Profile (){
 
       </div>
       </React.Fragment>
+      </FadeIn>
+ 
     )
   }
 

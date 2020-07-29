@@ -321,7 +321,7 @@ header
 }
 
 .header-areas {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -335,7 +335,7 @@ header
 
 .header-areas .main-nav {
   min-height: 80px;
-  background: transparent;
+  background-color: #fff;
 }
 
  .header-areas {
@@ -573,7 +573,7 @@ header
 .header-areas .main-nav .menu-trigger.active span,
 .header-areas .main-nav .menu-trigger.active span:before,
 .header-areas .main-nav .menu-trigger.active span:after {
-  background-color: transparent;
+  background-color:#fff;
   width: 100%;
 }
 
