@@ -10,6 +10,7 @@ import {changeEmployer ,addNumber, changeJob , changeJobStartDate , changeJobEnd
 import Work from "../Fragments/Work"
 import {connect} from "react-redux"
 import FadeIn from 'react-fade-in';
+import Grid from '@material-ui/core/Grid';
 
  function Experience(props){
 
@@ -21,6 +22,7 @@ import FadeIn from 'react-fade-in';
 
     return (
       <FadeIn>
+        <Grid container justify="center" alignItems="center">
         <React.Fragment>
                 <div>
 
@@ -28,7 +30,7 @@ import FadeIn from 'react-fade-in';
 
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h1>WORK EXPERIENCE</h1>
+        <h2>WORK EXPERIENCE</h2>
       <p>Many employers regard the description of work experience  as the most important part of <br></br> a resume. As such, this section could be key in moving you forward in the hiring process.</p>
         </div>
         
@@ -65,7 +67,9 @@ import FadeIn from 'react-fade-in';
       </div>
 
         </React.Fragment>
+        </Grid>
         </FadeIn>
+      
     )
 
 

@@ -15,7 +15,13 @@ export default function(props) {
 
     
 
-   
+   const stylesi ={
+     info:{
+       textAlign: "center",
+        padding:"30px"
+
+     }
+   }
     const dispatch = useDispatch();
 
 
@@ -30,11 +36,11 @@ export default function(props) {
 
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h1>PERSONAL INFORMATION</h1>
-        <p style={{ textAlign:"center"}}>Tell potential employers a little about yourself. <br></br> Contact details will be used to identify and get in touch with you.   </p>
+        <h2>PERSONAL INFORMATION</h2>
+        <p styles={stylesi.info} >Tell potential employers a little about yourself. <br></br> Contact details will be used to identify and get in touch with you.   </p>
         </div>
         
-    <Grid container justify="space-around">
+    <Grid container justify="center">
     <form noValidate>
       
       

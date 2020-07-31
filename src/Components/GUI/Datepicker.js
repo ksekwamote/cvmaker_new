@@ -27,6 +27,12 @@ const useStyles2 = makeStyles((theme) => ({
     margin: {
       margin: theme.spacing(1.5),
       width:300,
+      ['@media (max-width:450px)']:{
+        width:155
+      },
+      ['@media (max-width:660px)']:{
+        width:250
+      }
     },
   }));
 

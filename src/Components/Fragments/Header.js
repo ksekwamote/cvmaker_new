@@ -1,7 +1,37 @@
-import React from 'react'
+import React, { Component } from 'react'
 import "../assets/CSS/Header.css"
+import $ from 'jquery'
 
-export default function Header() {
+export default class Header extends Component {
+    
+    constructor(props){
+        super(props)
+        this.state = {
+
+        }
+    }
+
+    componentDidMount () {
+        $(".submenu").on("click", function() {
+            var width = $(window).width();
+            if (width < 992) {
+              $(".submenu ul").toggleClass("active");
+            }
+           
+          })
+
+          if ($(".menu-trigger").length) {
+            $(".menu-trigger").on("click", function() {
+              $(this).toggleClass("active");
+              $(".header-areas .nav").slideToggle(200);
+            });
+          }
+
+    }
+
+
+   
+   render(){
     return (
         <div>
 
@@ -19,7 +49,7 @@ export default function Header() {
                 <div class="col-12" style={{backgroundColor:'#fff'}}>
                     <nav class="main-nav" >
                         
-                        <a style={{marginLeft:100 , marginTop:20}} href="#" class="logo">Resume Factory</a>
+                        <a  href="#" id="log" class="logo">Resume Factory</a>
                    
                         <ul style={{marginRight:75}} class="nav">
                             <li class="scroll-to-section"><a href="#welcome" class="active"><strong>Home</strong></a></li>
@@ -38,7 +68,7 @@ export default function Header() {
                             <li class="scroll-to-section"><a href="#contact-us"><strong>Contact Us</strong></a></li>
                         </ul>
                         <a class='menu-trigger'>
-                            <span>Menu</span>
+                            <span id="span">Menu</span>
                         </a>
                     
                     </nav>
@@ -51,4 +81,5 @@ export default function Header() {
             
         </div>
     )
+   }
 }

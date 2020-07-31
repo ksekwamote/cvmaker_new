@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import "../assets/CSS/templatemo-art-factory.css"
-import "../assets/CSS/bootstrap.min.css"
-import "../assets/CSS/flex-slider.css"
-import "../assets/CSS/font-awesome.css"
-import "../assets/CSS/owl-carousel.css"
 import Footer from "../Fragments/Footer"
 import FadeIn from 'react-fade-in';
 import { Fade } from '@material-ui/core'
+import $ from 'jquery'
+import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
+
+
 
 export default class Home extends Component {
 
@@ -20,31 +20,21 @@ export default class Home extends Component {
     }
 
     componentDidMount () {
-        const carousel = document.createElement("script");
-        carousel.src = "../assets/js/owl-carousel.js";
-        carousel.async = true;
 
-        const scrollreveal = document.createElement("script");
-        scrollreveal.src = "../assets/js/scrollreveal.min.js";
-        scrollreveal.async = true;
+        $(".submenu").on("click", function() {
+            var width = $(window).width();
+            if (width < 992) {
+              $(".submenu ul").toggleClass("active");
+            }
+           
+          })
 
-        const waypoints = document.createElement("script");
-        waypoints.src = "../assets/js/waypoints.min.js";
-        waypoints.async = true;
-
-        const jquery = document.createElement("script");
-        jquery.src = "../assets/js/jquery.counterup.min.js";
-        jquery.async = true;
-
-        const imgfix = document.createElement("script");
-        imgfix.src = "../assets/js/imgfix.min.js";
-        imgfix.async = true;
-
-        document.body.appendChild(jquery);
-        document.body.appendChild(imgfix);
-        document.body.appendChild(waypoints);
-        document.body.appendChild(scrollreveal);
-        document.body.appendChild(carousel);
+          if ($(".menu-trigger").length) {
+            $(".menu-trigger").on("click", function() {
+              $(this).toggleClass("active");
+              $(".header-area .nav").slideToggle(200);
+            });
+          }
     }
 
     render() {
@@ -63,14 +53,18 @@ export default class Home extends Component {
     
     
   
+
+    
+           
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        
+                
                         <a href="#" class="logo">Resume Factory</a>
-                       
+                     
+                 
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#welcome" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#about">About</a></li>
@@ -88,14 +82,15 @@ export default class Home extends Component {
                             <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li>
                         </ul>
                         <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                   
+                            <span >Menu</span>
+                            </a>
+                    
                     </nav>
                 </div>
             </div>
         </div>
     </header>
+
    
                     
 

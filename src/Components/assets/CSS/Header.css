@@ -613,6 +613,19 @@ header
   color: #f55858;
 }
 
+#log{
+
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.menu-trigger{
+  background-color: #00b4c6;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
 @media (max-width: 1200px) {
   .header-areas .main-nav .nav li {
     padding-left: 12px;
@@ -630,7 +643,14 @@ header
     box-shadow: none;
     text-align: center;
   }
-  .header-areas .containers {
+
+  #log{
+
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+
+  .header-areas .container {
     padding: 0px;
   }
   .header-areas .logo {
@@ -643,9 +663,9 @@ header
     overflow: hidden;
   }
   .header-areas .main-nav .nav {
-    float: none;
-    width: 100%;
-    margin-top: 80px !important;
+    float: right;
+    width: 65%;
+    margin-top: -15px !important;
     display: none;
     -webkit-transition: all 0s ease 0s;
     -moz-transition: all 0s ease 0s;
@@ -664,8 +684,8 @@ header
     padding-right: 0px !important;
   }
   .header-areas .main-nav .nav li a {
-    height: 50px !important;
-    line-height: 50px !important;
+    height: 25px !important;
+    line-height: 25px !important;
     padding: 0px !important;
     border: none !important;
     background: #fff !important;
@@ -674,6 +694,8 @@ header
   .header-areas .main-nav .nav li a:hover {
     background: #eee !important;
   }
+ 
+
   .header-areas .main-nav .nav > li > a:hover,
   .header-areas .main-nav .nav .submenu > ul > li > a:hover {
     color: #f55858;

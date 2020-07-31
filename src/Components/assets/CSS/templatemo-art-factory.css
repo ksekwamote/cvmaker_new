@@ -612,6 +612,59 @@ header
   color: #f55858;
 }
 
+/***********/
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+
+
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
@@ -642,9 +695,9 @@ header
     overflow: hidden;
   }
   .header-area .main-nav .nav {
-    float: none;
-    width: 100%;
-    margin-top: 80px !important;
+    float: right;
+    width: 65%;
+    margin-top: -15px !important;
     display: none;
     -webkit-transition: all 0s ease 0s;
     -moz-transition: all 0s ease 0s;
@@ -663,8 +716,8 @@ header
     padding-right: 0px !important;
   }
   .header-area .main-nav .nav li a {
-    height: 50px !important;
-    line-height: 50px !important;
+    height: 25px !important;
+    line-height: 25px !important;
     padding: 0px !important;
     border: none !important;
     background: #fff !important;
@@ -673,6 +726,8 @@ header
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
   }
+ 
+
   .header-area .main-nav .nav > li > a:hover,
   .header-area .main-nav .nav .submenu > ul > li > a:hover {
     color: #f55858;
@@ -811,7 +866,7 @@ TRY IT ... with or without CENTER CENTER
     margin-bottom: 100px;
   }
   .welcome-area .header-text {
-    top: 55% !important;
+    top: 60% !important;
     transform: perspective(1px) translateY(-50%) !important;
     text-align: center;
   }

@@ -13,6 +13,8 @@ import {
   import FormControl from '@material-ui/core/FormControl';
   import { green } from '@material-ui/core/colors';
   import Grid from '@material-ui/core/Grid';
+import { useMediaQuery } from 'react-responsive'
+
 
   const CssTextField = withStyles({
     root: {
@@ -107,6 +109,14 @@ function RedditTextField(props) {
     margin: {
       margin: theme.spacing(1.5),
       width:300,
+      ['@media (max-width:450px)']:{
+        width:155
+      },
+      ['@media (max-width:660px)']:{
+        width:250
+      }
+
+      
       
       
     },
@@ -119,7 +129,13 @@ function RedditTextField(props) {
       },
       margin: {
         margin: theme.spacing(1.5),
-        width:625,
+        width:625, 
+        ['@media (max-width:450px)']:{
+          width:327
+        },
+        ['@media (max-width:660px)']:{
+          width:525
+        }
         
       },
     }));
