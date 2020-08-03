@@ -112,8 +112,8 @@ function RedditTextField(props) {
       ['@media (max-width:450px)']:{
         width:155
       },
-      ['@media (max-width:660px)']:{
-        width:250
+      ['@media screen and (min-width:450px) and  (max-width:660px)']:{
+        width:200
       }
 
       
@@ -133,8 +133,8 @@ function RedditTextField(props) {
         ['@media (max-width:450px)']:{
           width:327
         },
-        ['@media (max-width:660px)']:{
-          width:525
+        ['@media screen and (min-width:450px) and (max-width:660px)']:{
+          width:425
         }
         
       },

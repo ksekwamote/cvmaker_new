@@ -22,8 +22,10 @@ export default function Profile (){
 
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h1>SUMMARY</h1>
+        <h4>SUMMARY</h4>
+        <div style={{textAlign:"center",paddingRight:50 , paddingLeft:50, wordBreak: "break-word"}}>
         <p>A resume summary statement is a one- to two-sentence professional introduction <br></br>that is added to highlight your most valuable skills and experiences.</p>
+        </div>
         <br></br>
         </div>
         

@@ -30,8 +30,8 @@ const useStyles2 = makeStyles((theme) => ({
       ['@media (max-width:450px)']:{
         width:155
       },
-      ['@media (max-width:660px)']:{
-        width:250
+      ['@media screen and (min-width:450px) and  (max-width:660px)']:{
+        width:200
       }
     },
   }));

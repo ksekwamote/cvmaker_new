@@ -18,7 +18,7 @@ export default function(props) {
    const stylesi ={
      info:{
        textAlign: "center",
-        padding:"30px"
+        padding:"30px",
 
      }
    }
@@ -36,10 +36,12 @@ export default function(props) {
 
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h2>PERSONAL INFORMATION</h2>
-        <p styles={stylesi.info} >Tell potential employers a little about yourself. <br></br> Contact details will be used to identify and get in touch with you.   </p>
+        <h4 classn>PERSONAL INFORMATION</h4>
+        <div style={{textAlign:"center",paddingRight:50 , paddingLeft:50, wordBreak: "break-word"}}>
+        <p styles={{width:50 ,wordBreak: "break-word"}} >Tell potential employers a little about yourself. <br></br> Contact details will be used to identify and get in touch with you.   </p>
         </div>
-        
+        </div>
+      
     <Grid container justify="center">
     <form noValidate>
       
