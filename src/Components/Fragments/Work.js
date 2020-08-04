@@ -27,7 +27,7 @@ export default function Work (props){
   }
    var title;
    if (i>=1){
-   title = <h2>Experience #{i+1}</h2>
+   title = <h4>Experience #{i+1}</h4>
    }
    else{
      title=""

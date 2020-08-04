@@ -12,7 +12,7 @@ export default function Referent(props) {
         const dispatch = useDispatch()
         var title;
             if (i>=1){
-            title = <h2>Reference #{i+1}</h2>
+            title = <h4>Reference #{i+1}</h4>
             }
             else{
               title=""

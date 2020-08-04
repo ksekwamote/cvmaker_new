@@ -14,7 +14,7 @@ export default function(props){
 
             var title;
             if (i>=1){
-            title = <h2>Education #{i+1}</h2>
+            title = <h4>Education #{i+1}</h4>
             }
             else{
               title=""

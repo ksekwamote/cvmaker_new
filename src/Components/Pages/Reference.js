@@ -17,11 +17,14 @@ export default function Reference() {
 
       <div>
 
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h1>REFERENCE</h1>
+        <h4>REFERENCE</h4>
+
+        <div style={{textAlign:"center",paddingRight:50 , paddingLeft:50, wordBreak: "break-word"}}>
         <p>A reference is someone who your future employer will contact to verify your credentials.</p>
         <p>A positive recommendation by your references has great potential to help you get you hired </p>
+        </div>
         </div>
         
       <div>

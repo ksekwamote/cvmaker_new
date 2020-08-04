@@ -20,7 +20,7 @@ export default function Profile (){
 
         <div>
 
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
         <h4>SUMMARY</h4>
         <div style={{textAlign:"center",paddingRight:50 , paddingLeft:50, wordBreak: "break-word"}}>

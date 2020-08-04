@@ -34,7 +34,7 @@ export default function(props) {
 
 <div>
 
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
         <h4 classn>PERSONAL INFORMATION</h4>
         <div style={{textAlign:"center",paddingRight:50 , paddingLeft:50, wordBreak: "break-word"}}>

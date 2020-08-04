@@ -17,12 +17,14 @@ export default function Education() {
 
       <div>
 
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h1>EDUCATION</h1>
+        <h4>EDUCATION</h4>
 
+        <div style={{textAlign:"center",paddingRight:50 , paddingLeft:50, wordBreak: "break-word"}}>
         <p>Education is an important piece of information employers will look for on your resume.</p>
-    
+        </div>
+
         </div>
         
       <div>

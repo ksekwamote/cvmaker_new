@@ -1,0 +1,22 @@
+.Richtext{
+
+    padding-left: 10;
+    padding-right: 10;
+    width: 600px;
+}
+
+
+
+@media (max-width:450px){
+    .Richtext{
+        width: 357px;
+    }
+
+}
+
+@media (min-width:450px) and (max-width:660px){
+    .Richtext{
+        width: 425px;
+    }
+}
+

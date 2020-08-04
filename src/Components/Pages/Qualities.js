@@ -17,12 +17,14 @@ export default function Qualities() {
 
         <div>
 
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h1>QUALIFICATIONS</h1>
+        <h4>QUALIFICATIONS</h4>
       
-
+        <div style={{textAlign:"center",paddingRight:50 , paddingLeft:50, wordBreak: "break-word"}}>
         <p>List key achievements, skills, experience, and the qualifications <br></br> that are most relevant to the position you're applying for.</p>
+        </div>
+        
         </div>
         
     <Grid container justify="space-around">
@@ -44,7 +46,6 @@ export default function Qualities() {
               <br></br><br></br>
               <a href="#Experience" onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
               <a href="#Education" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
-
         </div>
 
     </div>

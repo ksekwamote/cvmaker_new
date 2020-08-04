@@ -28,10 +28,12 @@ import Grid from '@material-ui/core/Grid';
 
       <div>
 
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center"}}>
-        <h2>WORK EXPERIENCE</h2>
-      <p>Many employers regard the description of work experience  as the most important part of <br></br> a resume. As such, this section could be key in moving you forward in the hiring process.</p>
+        <h4>WORK EXPERIENCE</h4>
+        <div style={{textAlign:"center",paddingRight:50 , paddingLeft:50, wordBreak: "break-word"}}>
+            <p>Many employers regard the description of work experience  as the most important part of <br></br> a resume. As such, this section could be key in moving you forward in the hiring process.</p>
+      </div>
         </div>
         
       <div>
