@@ -1,0 +1,241 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 0px;
+}
+
+.left {
+  width: 13%;
+}
+
+.right {
+  width: 87%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 0px;
+}
+ul{
+			display:inline-block;
+			padding-right:20px;
+	
+		}
+</style>
+</head>
+<body style="font-family:Arial; font-size:12px;">
+
+<h1><%= firstname + "  "+ surname  %></h1>
+
+<hr>
+
+<!---CONTACTS--->
+<div class="row">
+  <div class="column left">
+    <h4 style="background-color:#000; color:#FFF; width:45%;">CONTACT</h4>
+  </div>
+  <div class="column right">
+  	<div style="float:right;">
+    <p style="margin:0;"><b>Email:</b> &nbsp; <%= email %></p>
+    <p style="margin:0;"><b>Website:</b> &nbsp; https://github.com/ksekwamote</p>
+    <p style="margin:0;"><b>Phone:</b> &nbsp; <%= phoneNumber  %></p>
+    </div>
+  </div>
+</div>
+
+<!---OBJECTIVE--->
+<div class="row">
+  <div class="column left">
+    <h4 style="background-color:#000; color:#FFF; width:45%;">OBJECTIVE</h4>
+  </div>
+  <div class="column right">
+  	<div>
+		<p><%= objective %></p>
+    </div>
+  </div>
+</div>
+
+<!---WORK EXPERIENCE--->
+<div class="row">
+  <div class="column left">
+    <h4 style="background-color:#000; color:#FFF; width:45%;">WORK EXPERIENCE</h4>
+  </div>
+       <!------WORK----->
+  <div class="column right">
+  		<div class="column left" style="width:75%;">    		
+                <p><b> <%=employer %></b></p>
+        <p><%= jobTitle%></p>
+        <ul style="margin-top:0px;">
+                		<li> <%= jobObjective %></li>
+                <li>Assit students in practical IT assignments</li>
+        </ul>     
+        </div>
+         <div class="column right" style="width:25%; float:right;">
+        		<p><b><%= jstartDate + " -- " +jendDate %></b></p> 
+         </div>
+         
+         
+         <div class="column left" style="width:75%;">        		
+                <p><b>Amazing Grace Motors</b></p>
+        <p>Graphic Designer</p>               
+        </div>
+         <div class="column right" style="width:25%; float:right;">       
+        		<p><b>Jan 2014 -- July 2014</b></p>            
+         </div>
+         
+          <div class="column left" style="width:75%;">        		
+                <p><b>Shakinah Sports</b></p>
+        <p>Back-end Developer</p>               
+        </div>
+         <div class="column right" style="width:25%; float:right;">       
+        		<p><b>Feb 2017 - Nov 2017</b></p>            
+         </div>
+         
+            <div class="column left" style="width:75%;">        		
+                <p><b>Central Transport Organisation</b></p>
+        <p>IT Technician</p>               
+        </div>
+         <div class="column right" style="width:25%; float:right;">       
+        		<p><b>July 2019 -- Present</b></p>            
+         </div>
+         
+  </div>
+  
+ <!----------------QUALIFICATIONS--------------->
+<div class="row">
+  <div class="column left">
+    <h4 style="background-color:#000; color:#FFF; width:45%;">QUALIFICATIONS</h4>
+  </div>
+  <div class="column right">
+	
+	 <div id="C">	
+			<ul id="list">	
+			<li>PYTHON</li>
+			<li>JAVA</li>
+			<li>VISUAL BASIC</li>
+			<li>C#</li>
+			<li>C++</li>
+			<br>
+			</ul>
+			
+			<ul id="list">	
+			<li>JAVASCRIPT</li>
+			<li>JQUERY</li>
+			<li>PHOTOSHOP</li>
+			<li>JOOMLA</li>
+			<li>WORDPRESS</li>
+			<br>
+			</ul>
+
+			<ul id="list">	
+			<li>Microsoft SQL Server</li>
+			<li>HTML</li>
+			<li>SQL</li>
+			<li>CSS</li>
+			<li>ASP.NET</li>
+			<br>
+			</ul>
+		
+	 </div>
+  		
+  </div>
+</div>
+
+<!---------------EDUCATION----------------->
+<div class="row">
+  <div class="column left">
+    <h4 style="background-color:#000; color:#FFF; width:45%;">EDUCATION</h4>
+  </div>
+       <!------WORK----->
+  <div class="column right">
+  		<div class="column left" style="width:70%;">    		
+                <p><b>Bachelor of Science(Computer Science and Information Technology)</b></p>
+        <p>University Of Kwazulu-Natal</p>
+        <ul style="margin-top:0px;">
+                		<li> Advanced System Analysis and Designs</li>
+                <li>Networking and Database Management</li>
+		<li>Applied Systems Implementation
+</li>
+        </ul>     
+        </div>
+         <div class="column right" style="width:30%; float:right;">
+        		<p><b>January 2014 -- December 2017</b></p> 
+         </div>
+         
+         
+         <div class="column left" style="width:70%;">        		
+                <p><b>Bachelor of Science Honors(Computer Science)</b></p>
+        <p>University Of Kwazulu-Natal</p>    
+		<ul style="margin-top:0px;">
+                		<li> Artificial Intelligence</li>
+                <li>Cryptography & Network Security</li>
+		<li>Machine Learning
+</li>
+		<li>Optimization and Modelling
+</li>
+        </ul>            
+        </div>
+         <div class="column right" style="width:30%; float:right;">       
+        		<p><b>January 2018 -- December 2018</b></p>            
+         </div>
+         
+  </div>
+
+<!------------INTERESTS------------>
+<div class="row">
+  <div class="column left">
+    <h4 style="background-color:#000; color:#FFF; width:45%; margin:0;">INTERESTS</h4>
+  </div>
+  <div class="column right">
+  	<div>
+		<p style="margin-top:0px;">Music,Reading,Painting,Playing Video Games,Board Games</p>
+    </div>
+  </div>
+</div>
+
+<!------------REFERENCE------------>
+<div class="row">
+  <div class="column left">
+    <h4 style="background-color:#000; color:#FFF; width:45%; margin:0;">REFERENCE</h4>
+  </div>
+  <div class="column right">
+  	<div>
+    
+    		<p style="margin:0;">V Kapuisire , Principle Programmer  at CTO</p>
+            	<p style="margin:0;"><b>Email:&nbsp;</b> vkapuisire@gov.bw</p>
+            	<p style="margin:0;" ><b>Phone:&nbsp;</b> +267 659 6794</p>
+                
+                	<br>
+		<p style="margin:0;">Mr Edgar Jembere , Lecture at University Of Kwazulu Natal</p>
+            	<p style="margin:0;"><b>Email:&nbsp;</b> jemberee@ukzn.ac.za</p>
+            	<p style="margin:0;"><b>Phone:&nbsp;</b> +27 31 260 1035</p>
+		
+	
+
+	
+    </div>
+  </div>
+</div>
+
+
+  
+  
+</div>     
+               
+  </div>
+</div>
+
+
+</body>
+</html>
+
