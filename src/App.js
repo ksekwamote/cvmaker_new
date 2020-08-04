@@ -20,7 +20,7 @@ function App() {
     <div>
          
        <Route component={Profile} path="/profile"/>
-        <Route component={Home} path="/home" />
+        <Route component={Home} path="/" />
         <Route component={Templates} path="/templates"/>
         <Route component={Personal} path="/personal_information"/>
         <Route component={Multiline} path="/cvmaker"/>
