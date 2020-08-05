@@ -5,7 +5,7 @@ import FadeIn from 'react-fade-in';
 import { Fade } from '@material-ui/core'
 import $ from 'jquery'
 import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
-
+import { HashRouter, Route, Link } from "react-router-dom";
 
 
 export default class Home extends Component {
@@ -62,7 +62,7 @@ export default class Home extends Component {
                 <div class="col-12">
                     <nav class="main-nav">
                 
-                        <a href="#" class="logo">Resume Factory</a>
+                        <a href="#" id="homelogo" class="logo">Resume Factory</a>
                      
                  
                         <ul class="nav">
@@ -81,7 +81,7 @@ export default class Home extends Component {
                             </li>
                             <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li>
                         </ul>
-                        <a class='menu-trigger'>
+                        <a id="mobile-menu" class='menu-trigger'>
                             <span >Menu</span>
                             </a>
                     
@@ -92,6 +92,7 @@ export default class Home extends Component {
     </header>
 
    
+
                     
 
     <div class="welcome-area" id="welcome">
@@ -101,9 +102,9 @@ export default class Home extends Component {
             <div class="container">
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <h1>Create a Proffesional CV  <strong>Online FREE</strong></h1>
+                        <h1 id="intro">Create a Proffesional CV  <strong>Online FREE</strong></h1>
                         <p>Climb the ladder to corporate success through an award  winning professional Resume or CV maker. All our CV's are  <strong>Recommended by HR Experts</strong></p>
-                        <a href="/templates" class="main-button-slider">Create My CV &#8594;</a>
+                        <a class="main-button-slider"><Link style={{color:"#fff"}} to="/templates">Create My CV &#8594;</Link></a>
                     </div>
                     
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">

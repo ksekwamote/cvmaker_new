@@ -34,7 +34,6 @@ db.on('error', err => {
 })
 
 
-console.log("Hello World");
 
 const educationRouter  = require('./routes/education');
 const experienceRouter = require('./routes/experience')

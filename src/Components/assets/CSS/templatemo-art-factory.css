@@ -348,7 +348,7 @@ header
 .header-area .main-nav .logo {
   line-height: 80px;
   color: #fff;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -358,6 +358,7 @@ header
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
 
 .header-area .main-nav .nav {
   float: right;
@@ -654,14 +655,29 @@ div.content {
   }
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
+  
+ 
 }
+
+#mobile-menu{
+  margin-top: -2px;
+}
+
 
 @media screen and (max-width: 400px) {
   .sidebar a {
     text-align: center;
     float: none;
   }
+  #homelogo {
+    font-size: 25px;
+  }
+  #intro{
+    font-size: 13px;
+  }
 }
+  
+  
 
 
 
@@ -673,9 +689,12 @@ div.content {
   .header-area .main-nav:before {
     display: none;
   }
+  
 }
 
 @media (max-width: 991px) {
+
+
   .header-area {
     padding: 0px 15px;
     height: 80px;
@@ -687,7 +706,9 @@ div.content {
   }
   .header-area .logo {
     margin-left: 30px;
+ 
   }
+  
   .header-area .menu-trigger {
     display: block !important;
   }
@@ -892,6 +913,9 @@ TRY IT ... with or without CENTER CENTER
   .welcome-area .header-text img {
     width: 80%;
     margin-top: 20px;
+  }
+  .logo{
+    font-size: 15px;
   }
 }
 

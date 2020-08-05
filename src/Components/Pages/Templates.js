@@ -8,6 +8,7 @@ import "../assets/CSS/owl-carousel.css"
 import Header from "../Fragments/Header"
 import Footer from "../Fragments/Footer"
 import $ from 'jquery';
+import { Link } from "react-router-dom";
 
 
 
@@ -49,7 +50,7 @@ export default class Templates extends Component {
             <div className="wrapper" style={{textAlign:"center"}}>
 
       
-           <h1 style={{ marginTop:"-40px"}}>Resume Templates</h1>
+           <h4 style={{ marginTop:"-40px"}}>Resume Templates</h4>
            
 
        <div className="radio-toolbar" >
@@ -151,7 +152,7 @@ export default class Templates extends Component {
 
        <div className="block">
 
-       <a href="/multi" className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+       <a className="main-button"><Link style={{color:"#fff"}} to="/multi">&nbsp; &nbsp; Continue &nbsp; &nbsp;</Link></a>
       
    </div>
 

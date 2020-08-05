@@ -121,7 +121,7 @@ export default function(props) {
     </Grid>
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a href="#Profile" onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
               
         </div>
 
