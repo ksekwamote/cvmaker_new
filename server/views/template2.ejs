@@ -35,7 +35,7 @@ ul{
 </head>
 <body style="font-family:Arial; font-size:12px;">
 
-<h1><%= firstname + "  "+ surname  %></h1>
+<h1><%= personer.firstname + "  "+ personer.surname  %></h1>
 
 <hr>
 
@@ -46,9 +46,9 @@ ul{
   </div>
   <div class="column right">
   	<div style="float:right;">
-    <p style="margin:0;"><b>Email:</b> &nbsp; <%= email %></p>
+    <p style="margin:0;"><b>Email:</b> &nbsp; <%= personer.email %></p>
     <p style="margin:0;"><b>Website:</b> &nbsp; https://github.com/ksekwamote</p>
-    <p style="margin:0;"><b>Phone:</b> &nbsp; <%= phoneNumber  %></p>
+    <p style="margin:0;"><b>Phone:</b> &nbsp; <%= personer.phoneNumber  %></p>
     </div>
   </div>
 </div>
@@ -60,7 +60,7 @@ ul{
   </div>
   <div class="column right">
   	<div>
-		<p><%= objective %></p>
+		<p>objective</p>
     </div>
   </div>
 </div>
@@ -73,15 +73,15 @@ ul{
        <!------WORK----->
   <div class="column right">
   		<div class="column left" style="width:75%;">    		
-                <p><b> <%=employer %></b></p>
-        <p><%= jobTitle%></p>
+                <p><b> Google</b></p>
+        <p>Software develper</p>
         <ul style="margin-top:0px;">
-                		<li> <%= jobObjective %></li>
+                		<li> Doing stuff</li>
                 <li>Assit students in practical IT assignments</li>
         </ul>     
         </div>
          <div class="column right" style="width:25%; float:right;">
-        		<p><b><%= jstartDate + " -- " +jendDate %></b></p> 
+        		<p><b> June 2020 --------- Jan 2021 ></b></p> 
          </div>
          
          

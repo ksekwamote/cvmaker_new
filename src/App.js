@@ -8,7 +8,6 @@ import Templates from './Components/Pages/Templates';
 import Home from "./Components/Pages/Home";
 import {Route , Switch, BrowserRouter , HashRouter } from "react-router-dom"
 import Personal from "./Components/Pages/Personal"
-import Multiline from "./Components/Pages/Multiline"
 import Profile from "./Components/Pages/Profile"
 import Multi from "./Components/Pages/Multi"
 import Qualities from './Components/Pages/Qualities'
@@ -26,7 +25,6 @@ function App() {
         <Route exact path="/" component={Home}  />
         <Route component={Templates} path="/templates"/>
         <Route component={Personal} path="/personal_information"/>
-        <Route component={Multiline} path="/cvmaker"/>
         <Route component={Multi} path="/multi"/>
         <Route component={Qualities} path="/qualities"/>
 

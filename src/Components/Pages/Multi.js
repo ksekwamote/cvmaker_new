@@ -4,13 +4,14 @@ import Experience from './Experience';
 import Qualities from './Qualities'
 import Education from './Education';
 import Reference from './Reference';
-import Interests from './Interests';
+
 import Profile from './Profile'
 import Header from "../Fragments/Header"
 import Footer from "../Fragments/Footer"
 import {useSelector} from "react-redux"
 import { CSSTransition } from "react-transition-group"
 import FadeIn from 'react-fade-in';
+import Download from "./Download";
 
  function SwitchSteps(){
      const steps = useSelector(state => state.steper)
@@ -31,7 +32,7 @@ import FadeIn from 'react-fade-in';
             case 6: 
                 return <Reference/>
             default:
-                return <Personal/>
+                return <Download/>
 
         }
 

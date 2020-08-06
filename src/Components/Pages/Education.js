@@ -42,8 +42,8 @@ export default function Education() {
       <div id="bottom"></div>
 
 <div style={{textAlign:"center"}}>
-<a href="#bottom" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addEducation())}>+</a>{'      '}
-      <a href="#bottom" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remEducation())}>-</a>
+<a  class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addEducation())}>+</a>{'      '}
+      <a  class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remEducation())}>-</a>
       </div>
       
         

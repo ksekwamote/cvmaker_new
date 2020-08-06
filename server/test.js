@@ -1,14 +1,19 @@
 const express = require('express')
 const fs = require('fs')
 const pdf  = require('html-pdf')
-	
+const cors = require('cors')
+const bodyParser = require('body-parser');	
 const app = express();
 const ejs = require('ejs');
+
 
 const port = process.env.PORT || 5001;
 
 app.use(express.json());
 app.set('view engine' , 'ejs');
+app.use(cors());
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json());
 const htmls = fs.readFileSync('./templates/template1.html', 'utf8')
 app.get('/resume',(req, res) => {
 
@@ -35,6 +40,12 @@ app.post('/cv', (req,res) =>{
 	
 })
 
+app.get('/download', (req,res) => {
+	console.log("download")
+	res.download('C:\\Users\\ksekwamote\\Documents\\REACT\\edit\\resume_factory\\server\\report.pdf', 'report.pdf')
+	
+})
+
 
 app.post('/pdf', (req,res) =>{
 	
@@ -53,6 +64,7 @@ app.post('/pdf', (req,res) =>{
 
 /*export data into then ejs file*/
 app.post('/create-resume' , (req, res) => {
+	console.log("sikhona")
 	ejs.renderFile('./views/template2.ejs',req.body , function(err, result){
 
 		if (result){
@@ -65,7 +77,7 @@ app.post('/create-resume' , (req, res) => {
 		}
 	})
 
-	pdf.create(html).toFile('./resume.pdf',function(err, res){
+	pdf.create(html).toFile('./public/resume.pdf',function(err, res){
 
 		if(err) return console.log(err);
 			console.log(res);

@@ -52,8 +52,8 @@ import Grid from '@material-ui/core/Grid';
 <div id="bottom"></div>
 
 <div style={{textAlign:"center"}}>
-<a href="#bottom" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addExperience())}>+</a>{'      '}
-      <a href="#bottom" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remExperience())}>-</a>
+<a  class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addExperience())}>+</a>{'      '}
+      <a class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remExperience())}>-</a>
       </div>
       
         

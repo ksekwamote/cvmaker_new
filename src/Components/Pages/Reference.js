@@ -4,12 +4,25 @@ import {useSelector , useDispatch} from "react-redux"
 import {prevStep, nextStep, addReference, remReference ,changeReferentName,changeOccupation,changeCompany,changeRPhoneNumber} from "../action/index"
 import Referent from "../Fragments/Referent"
 import FadeIn from 'react-fade-in';
+import axios from "axios"
+
+
+const onSubmit = (reduxState , dispatch) =>
+ {
+
+ axios.post("http://localhost:5001/create-resume",reduxState)
+
+ dispatch(nextStep())
+} 
 
 export default function Reference() {
 
+
  const dispatch = useDispatch();
  const schools = useSelector(state => state.reference.values.refree)
-    return (
+ const reduxState = useSelector(state => state)
+ 
+ return (
 
       <FadeIn>
         <React.Fragment>
@@ -44,16 +57,16 @@ export default function Reference() {
       <div id="bottom"></div>
 
 <div style={{textAlign:"center"}}>
-<a href="#bottom" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addReference())}>+</a>{'      '}
-      <a href="#bottom" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remReference())}>-</a>
+<a  class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addReference())}>+</a>{'      '}
+      <a class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remReference())}>-</a>
       </div>
       
         
        
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a  style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
+              <a style={{color:'#fff'}} onClick={e => onSubmit(reduxState , dispatch)} className="main-button">&nbsp; &nbsp; MAKE CV &nbsp; &nbsp;</a>
         </div>
 
     </div>
