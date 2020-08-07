@@ -42,7 +42,11 @@ app.post('/cv', (req,res) =>{
 
 app.get('/download', (req,res) => {
 	console.log("download")
-	res.download('C:\\Users\\ksekwamote\\Documents\\REACT\\edit\\resume_factory\\server\\report.pdf', 'report.pdf')
+	res.download(__dirname + '/report.pdf', 'report.pdf')
+	
+})
+app.get('/My_Resume', (req,res) => {
+	res.sendFile(__dirname + '/public/resume.pdf', 'resume.pdf')
 	
 })
 
@@ -64,7 +68,7 @@ app.post('/pdf', (req,res) =>{
 
 /*export data into then ejs file*/
 app.post('/create-resume' , (req, res) => {
-	console.log("sikhona")
+
 	ejs.renderFile('./views/template2.ejs',req.body , function(err, result){
 
 		if (result){

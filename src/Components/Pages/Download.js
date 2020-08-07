@@ -9,9 +9,36 @@ import FadeIn from 'react-fade-in';
 import { Grid } from '@material-ui/core';
 import axios from 'axios';
 import {saveAs} from 'file-saver';
+import $ from "jquery"
 
 
-const createAndDownloadPdf =() => {
+
+export default class Download extends Component{
+  
+      constructor(props){
+        super(props)  
+        this.createAndDownloadPdf = this.createAndDownloadPdf.bind(this)
+
+        this.state = {
+
+            hello:""
+
+          }
+
+      }
+
+
+      componentDidMount =()=> {
+
+        $("#btn_download").click(function(){
+          console.log("heyoo")
+          window.open('http://localhost:5001/My_Resume');
+      })
+
+
+      }
+
+  createAndDownloadPdf = () => {
 
     return event => {
         event.preventDefault();
@@ -29,9 +56,7 @@ const createAndDownloadPdf =() => {
  }
 
 
-export default function Download (){
-  
-
+  render(){
     return (
       <FadeIn>
       <React.Fragment>
@@ -50,7 +75,7 @@ export default function Download (){
         
         <br></br><br></br>
 
-        <Buttons onClick={e => createAndDownloadPdf} />
+        <Buttons id="btn_download" onClick={e => this.createAndDownloadPdf} />
         </div>
         </div>
       
@@ -61,6 +86,6 @@ export default function Download (){
  
     )
   }
-
+}
 
 

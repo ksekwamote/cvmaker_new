@@ -18,8 +18,8 @@ function App() {
 
   return (
     <div>
-         
-
+        
+        
     <HashRouter basename="/">
        <Route component={Profile} path="/profile"/>
         <Route exact path="/" component={Home}  />
