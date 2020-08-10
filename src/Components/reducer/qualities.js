@@ -1,5 +1,11 @@
 const initialState = {
-    qualities: ""
+    qualities: `Wordpress, Joomla
+
+    HTML5, CSS, JS
+    
+    Adobe Photoshop
+    
+    Sketch`
 }
 
 export default function qualitiesReducer(state= initialState , action){

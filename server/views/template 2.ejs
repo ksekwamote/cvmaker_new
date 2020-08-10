@@ -1,0 +1,160 @@
+<html>
+<head>
+	<title>   </title>
+	<style type="text/css">
+		* {
+  box-sizing: border-box;
+  		font-family: Arial;
+}
+		.column {
+  float: left;
+  padding: 10px;
+  height: 1100px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 35%;
+}
+
+.right {	
+  width: 65%;
+}
+
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+	</style>
+</head>
+<body>
+	
+
+	<div class="row">
+  		<div class="column left" style="background-color:#f4f4f4;">
+  			<h4 style="margin-top:80px">INFO</h4>
+  			<hr>
+    			<table>
+    				<tr style="height: 50px;" >
+    					<td><b>Address </b></td>
+    					<td style="padding: 10px; word-wrap: break-word;"><%= personer.address %></td>
+
+    				</tr>
+
+    				<tr>
+    					<td><b>Phone </b></td>
+    					<td> <%= personer.phoneNumber %> </td>
+
+    				</tr>
+
+    				<tr>
+    					<td><b>Email </b></td>
+    					<td>  <%= personer.email %></td>
+
+    				</tr>
+
+    			</table>
+    		
+    		<div>
+    		<p><b>DATE/PLACE OF BIRTH</b></p>
+    		<p><%= personer.dob %></p>
+    		<p>Gantsi</p>
+    		</div>
+    		<br>
+
+    		<div>
+    			<p><b>DRIVING LICENSE</b></p>
+    			<p>Full</p>
+    			
+    		</div>
+
+    		<br>
+
+    		<div>
+    			<p><b>NATIONALITY</b></p>
+    			<p>USA</p>
+    			
+    		</div>
+
+    		<h4 style="margin-top:40px">SKILLS</h4>
+  			<hr>
+
+
+          <p><%= quality.qualities %></p>
+
+  		</div>
+
+  		<div class="column right" style="padding-left: 10px;" >
+  			<div align="center">
+
+  				<h2><%= personer.firstname + "  "+ personer.surname  %></h2>
+    			<p>SOFTWARE DEVELOPER</p>
+  			</div>
+
+  			<h4 style="margin-top:-23px">PROFILE</h4>
+  			<hr style="margin-top: -15px;">
+  			<p>
+  				<%= profiler.profile %>
+  			</p>
+
+
+
+  			<h4>EMPLOYMENT HISTORY</h4>
+  			<hr style="margin-top: -15px;">
+
+        <% experiences.values.work.forEach(function(item) { %>
+  			<div>
+
+  			<p> <b><%= item.position %> , <%= item.employer %></b></p>
+			     <p style="margin-top: -10px;"> <%= item.jstartDate %> -   <%= item.jendDate %></p>
+			     <div style="margin-top: -10px;">
+                <%- item.jdescription  %>
+            </div>
+	     	</div>
+
+     <% }); %>
+
+			
+
+			<h4>EDUCATION</h4>
+  			<hr style="margin-top: -15px;">
+
+        <% education.values.education.forEach(function(item) { %>
+  			<div>
+
+  				<p><b><%= item.schoolName %></b></p>
+			<p style="margin-top: -10px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p style="margin-top: -10px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
+  			</div>
+
+        <% }); %>
+
+
+  			<h4>REFERENCE</h4>
+  			<hr style="margin-top: -15px;">
+
+        <% reference.values.refree.forEach(function(item) { %>
+
+  			<div>
+  				<p><b><%= item.referent %>, <%= item.company %></b></p>
+			<p style="margin-top: -10px;"><i><%= item.occupation %></i></p>
+			<p style="margin-top: -10px;"><b>Tel: <%= item.phone %></b></p>
+  			</div>
+
+        <% }); %>
+
+  			
+
+
+    			
+  		</div>
+
+	</div>
+
+</body>
+</html>

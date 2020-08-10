@@ -1,0 +1,128 @@
+<html>
+<head>
+
+	<style type="text/css">
+		.row{
+
+			display: flex;
+
+		}
+
+		.column{
+
+			flex:50%;
+
+		}
+
+		p, li{
+
+			font-size: 14px;
+		}
+
+		body{
+				margin-left: 10px;
+				margin-right:10px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div  style="margin-left: 30px; margin-right: 30px;">
+	<div>
+	<h2><%= personer.firstname + "  "+ personer.surname  %></h2>
+
+	<p><%= personer.address %><p>
+
+	<p style="margin-top: -15px;"><%= personer.phoneNumber + " "+   personer.email %></p>
+	</div>
+	<hr style="height:3px; background-color: rgb(0, 0, 0);">
+
+	<div>
+	<h3>OBJECTIVES</h3>
+	<p><%= profiler.profile %></p>
+	<h3>SKILLS</h3>
+	
+		
+		<p><%= quality.qualities %></p>
+
+	</div>
+
+	<hr style="height:3px; background-color: black;">
+	<h3>PROFESSIONAL EXPERIENCE</h3>
+	<hr style="height:3px; background-color: black;">
+	<div class="row" style=" margin-top:25px;">
+
+
+	   <% experiences.values.work.forEach(function(item) { %>
+
+		<div class="column">
+			<p style="margin-top: -10px;"> <b><%= item.position %></b> , <i><%= item.employer %></i></p>
+		
+			<p style="margin-top: -10px;"> <b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+	
+			<div style="margin-top: -10px;">
+                <%- item.jdescription  %>
+             </div>
+			
+		</div>
+		<br> 
+		 <% }); %>
+
+
+	</div>
+
+
+	<hr style="height:3px; background-color: black;">
+	<h3>CERTIFICATIONS</h3>
+	<hr style="height:3px; background-color: black;">
+	<div class="row" style=" margin-top:25px;">
+
+
+
+		<% education.values.education.forEach(function(item) { %>
+
+		<div class="column" >
+			<p  style="margin-top: -10px;"><b><%= item.schoolName %></b></p>
+			<p  style="margin-top: -10px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p  style="margin-top: -10px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
+			
+		</div>
+
+		<br>
+
+	  <% }); %>
+
+
+	</div>
+
+	<hr style="height:3px; background-color: black;">
+	<h3>REFERENCES</h3>
+	<hr style="height:3px; background-color: black;">
+	<div class="row" style="margin-top: 25px;">
+
+			
+
+	<% reference.values.refree.forEach(function(item) { %>
+		<div class="column">
+			<p style="margin-top: -10px;"><b><%= item.referent %>, <%= item.company %></b></p>
+			<p style="margin-top: -10px;"><i><%= item.occupation %></i></p>
+			<p style="margin-top: -10px;"><b>Tel: <%= item.phone %></b></p>
+			
+		</div>
+
+		<br>
+
+		  <% }); %>
+
+	
+
+
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

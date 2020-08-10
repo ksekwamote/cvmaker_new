@@ -1,10 +1,10 @@
 const initialState ={
-    firstname:"Firstname",
-    surname:"Surname",
-    email:"Email",
-    phoneNumber:"Phone Number",
+    firstname:"Zach Galifianakis",
+    surname:"Galifianakis",
+    email:"zacgal@yahoo.com",
+    phoneNumber:"+267 77105790",
     dob:"Date Of Birth",
-    address:"Address",
+    address:"P O BOX 233, Gantsi , Botswana",
 
     hobbies : "",
     

@@ -63,6 +63,7 @@ app.use('/personal', personalRouter)
 
 app.use('/qualities' , qualitiesRouter)
 app.use('/reference',referenceRouter)
+
 app.get('/download',function(req,res){
 
 	res.download('C:\\Users\\Mandla\\Documents\\REACT\\cvmaker\\server\\report.pdf', 'report.pdf')
