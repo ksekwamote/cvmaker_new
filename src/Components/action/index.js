@@ -268,5 +268,12 @@ export const remReference =()=>{
     }
 }
 
+export const changeTemplate =(text) =>{
+    return {
+        type: "CHANGE_TEMPLATE",
+        payload: text
+    }
+}
+
 
 

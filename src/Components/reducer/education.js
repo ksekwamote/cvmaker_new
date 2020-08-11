@@ -5,9 +5,16 @@ const initialState = {
              {
                 fieldOfStudy:"Bachelor of Computer Science and Information Technlogies ",
                 schoolName:"University of Kwazulu-Natal",
-                startDate:"June 2019",
+                startDate:"June 2017",
                 gradDate:"July 2020"
-             }   
+             } ,
+             {
+                fieldOfStudy:"Bachelor of Computer Science Honours",
+                schoolName:"University of Kwazulu-Natal",
+                startDate:"July 2020",
+                gradDate:"Present"
+             } 
+
 
         ]
 

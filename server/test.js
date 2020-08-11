@@ -25,7 +25,7 @@ app.get('/resume',(req, res) => {
 var html;
 app.post('/cv', (req,res) =>{
 	
-	ejs.renderFile('./views/template 2.ejs',req.body , function(err, result){
+	ejs.renderFile('./views/temp 3.ejs',req.body , function(err, result){
 
 		if (result){
 
@@ -69,7 +69,7 @@ app.post('/pdf', (req,res) =>{
 /*export data into then ejs file*/
 app.post('/create-resume' , (req, res) => {
 
-	ejs.renderFile('./views/template 2.ejs',req.body , function(err, result){
+	ejs.renderFile('./views/temp 3.ejs',req.body , function(err, result){
 
 		if (result){
 

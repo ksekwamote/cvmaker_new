@@ -9,12 +9,23 @@ import Header from "../Fragments/Header"
 import Footer from "../Fragments/Footer"
 import $ from 'jquery';
 import { Link } from "react-router-dom";
+import {useSelector , useDispatch} from "react-redux"
+import {changeTemplate} from "../action/index"
 
-
+const mapStateToProps = (state, dispatch) => {
+    return {
+      works: state.experiences.values.work
+  
+  
+    }
+  
+  }
 
 export default class Templates extends Component {
         constructor(props){
             super(props)
+            const works  = props.works
+            
             this.state ={
 
 
@@ -24,6 +35,8 @@ export default class Templates extends Component {
 
 
     componentDidMount () {
+        
+      
         
         $(document).ready(function(){
 
@@ -43,12 +56,14 @@ export default class Templates extends Component {
 	}
 
     render() {
+        
+                
         return (
             <div>
                 <Header/>
                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             <div className="wrapper" style={{textAlign:"center"}}>
-
+                {console.log(this.works)}
       
            <h4 style={{ marginTop:"-40px"}}>Resume Templates</h4>
            

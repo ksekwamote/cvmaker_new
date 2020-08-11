@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		* {
+  box-sizing: border-box;
+  font-family: Arial;
+ 
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 120px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img.left{
+
+	float: left;
+	
+	margin-top: -60px;
+	margin-left: 30px;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+}
+
+.p{
+  font-size: 13px
+}
+
+
+
+	</style>
+</head>
+<body>
+  		
+
+  		<div class="row">
+  <div class="column left" style="background-color:#333f4f; color:#333f4f; ">
+  	
+  	<div  style="background-color: #ededed; height: 1100px;">
+  		<br>
+
+  		<div align="center">
+
+  			<img src="kutlo.jpg" alt="Avatar" class="avatar">
+
+  			<h3>CONTACT</h2>
+  			<p><b>Phone</b></p>
+  			<p><%= personer.phoneNumber %></p>
+  			<p><b>Email</b></p>
+  			<p><%= personer.email %></p>
+  			<p><b>Address</b></p>
+  			<p><%= personer.address %></p>
+  			<br>
+  		<h3>SKILL</h3>
+  			
+
+  		</div>
+  		
+  		<br>
+  		<p><%= quality.qualities %></p>
+
+	<br>
+	<div align="center">
+
+		<h3>FOLLOW ME</h3>
+		<p><b>Facebook</b></p>
+			<p>facebook.com/ksekwamote</p>
+
+			<p><b>LinkedIn</b></p>
+			<p>linkedin.com/ksekwamote</p>
+
+
+			<p><b>Twitter</b></p>
+			<p>twitter.com/ksekwamote</p>
+
+			<br><br><br>
+
+
+		
+
+	</div>
+	
+
+
+
+
+  	</div>
+    
+  </div>
+  <div class="column right" style="background-color:#333f4f;">
+  	<div align="center" style=" color: white;">
+
+  		  <h2><%= personer.firstname + "  "+ personer.surname  %></h2>
+   		 <p>SOFTWARE DEVELOPER</p>
+  		
+
+  	</div>
+
+  	<br>
+
+  	<div>
+
+  			<table>
+    				<tr style="height: 20px;" >
+    					
+    					<td valign="top" style="padding:20px;">
+    						<img src="users.png">
+    					</td>
+
+
+    					<td>
+    						
+    							<h2>ABOUT ME </h2>
+    							<p><%= profiler.profile %></p>
+
+    					</td>
+    					
+
+    				</tr>
+
+    			</table>
+  	</div>
+
+  	<div>
+  		
+
+  		<table>
+    				<tr style="height: 20px;" >
+    					
+    					<td valign="top" style="padding:20px;">
+    						<img src="gears.png">
+    					</td>
+
+
+    					<td>
+    						
+    							<h2>EXPERIENCE </h2>
+
+              <% experiences.values.work.forEach(function(item) { %>
+    							<div>
+
+              			<p> <b><%= item.position.toUpperCase() %></b></p>
+              			<p style="margin-top: 0px; float: right;"><b> <%= item.jstartDate %> --------- <%= item.jendDate %></b></p>
+              			<p> <b><%= item.employer %></b></p>
+
+            			          <div>
+                                  <%- item.jdescription  %>
+                           </div>
+			
+		          </div>
+
+    <% }); %>
+
+    					</td>
+    					
+
+    				</tr>
+
+    			</table>
+
+
+  	</div>
+
+  	<div>
+
+
+  		<table>
+    				<tr style="height: 20px;" >
+    					
+    					<td valign="top" style="padding:20px;">
+    						<img src="registers.png">
+    					</td>
+
+
+    					<td>
+    						<h2>EDUCATION</h2>
+
+                <% education.values.education.forEach(function(item) { %>
+
+    						<div>
+
+    		      	<p style="margin-top: 0px; float: right; "><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
+  				      <p><b><%= item.schoolName %></b></p>
+  				
+
+			         <p style="margin-top: 0px;"><i><%= item.fieldOfStudy %></i></p>
+  			</div>
+
+           <% }); %>
+
+					
+  					</td>
+    					
+
+    				</tr>
+
+    			</table>
+  		
+
+
+  	 </div>
+
+
+
+
+      <div>
+
+
+      <table>
+            <tr style="height: 20px;" >
+              
+              <td valign="top" style="padding:20px;">
+                <img src="registers.png">
+              </td>
+
+
+              <td>
+                <h2>REFERENCE</h2>
+
+               <% reference.values.refree.forEach(function(item) { %>
+      <div>
+          <p><b><%= item.referent %>, <%= item.company %></b></p>
+      <p style="margin-top: 0px;"><i> <%= item.occupation %></i></p>
+      <p style="margin-top: 0px;">Email: <%= item.email %></p>
+      <p style="margin-top: 0px;">Phone Number: <%= item.phone %></p>
+        </div>
+
+        <br>
+
+        <% }); %>
+
+               
+            </td>
+              
+
+            </tr>
+
+          </table>
+      
+
+
+     </div>
+
+
+
+
+
+
+
+  
+  </div>
+</div>
+
+
+
+</body>
+</html>

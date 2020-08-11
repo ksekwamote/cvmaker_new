@@ -1,10 +1,10 @@
 const initialState ={
-    firstname:"Zach Galifianakis",
-    surname:"Galifianakis",
-    email:"zacgal@yahoo.com",
-    phoneNumber:"+267 77105790",
+    firstname:"Sam ",
+    surname:"Peterson",
+    email:"peterson2020@fakeemail.com",
+    phoneNumber:"+11 230 909 8298",
     dob:"Date Of Birth",
-    address:"P O BOX 233, Gantsi , Botswana",
+    address:"30 Rockefeller Plaza, NewYork, NY",
 
     hobbies : "",
     

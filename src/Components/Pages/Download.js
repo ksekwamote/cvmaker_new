@@ -17,7 +17,7 @@ export default class Download extends Component{
   
       constructor(props){
         super(props)  
-        this.createAndDownloadPdf = this.createAndDownloadPdf.bind(this)
+        //this.createAndDownloadPdf = this.createAndDownloadPdf.bind(this)
 
         this.state = {
 
@@ -38,6 +38,8 @@ export default class Download extends Component{
 
       }
 
+
+      /** 
   createAndDownloadPdf = () => {
 
     return event => {
@@ -54,6 +56,7 @@ export default class Download extends Component{
     
 }
  }
+ */
 
 
   render(){
@@ -75,7 +78,7 @@ export default class Download extends Component{
         
         <br></br><br></br>
 
-        <Buttons id="btn_download" onClick={e => this.createAndDownloadPdf} />
+        <Buttons id="btn_download"  />
         </div>
         </div>
       
