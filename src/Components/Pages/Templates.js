@@ -11,8 +11,11 @@ import $ from 'jquery';
 import { Link } from "react-router-dom";
 import {useSelector , useDispatch} from "react-redux"
 import {changeTemplate} from "../action/index"
+import {connect} from "react-redux"
+import { bindActionCreators } from 'redux'
 
-const mapStateToProps = (state, dispatch) => {
+
+const mapStateToProps = (state , dispatch) => {
     return {
       works: state.experiences.values.work
   
@@ -21,18 +24,24 @@ const mapStateToProps = (state, dispatch) => {
   
   }
 
-export default class Templates extends Component {
-        constructor(props){
-            super(props)
-            const works  = props.works
-            
-            this.state ={
+const mapDispatchToProps = (dispatch) => {
+    return {
 
+        pick_template : (par => dispatch(changeTemplate(par)))
 
-
-            }
     }
+}
 
+class Templates extends Component {
+
+    constructor(props){
+        super(props)
+        this.state ={
+            template:"template1"
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
+     
 
     componentDidMount () {
         
@@ -53,17 +62,24 @@ export default class Templates extends Component {
     })
     
     
-	}
+    }
+    
+    handleChange = e => {
+        this.setState({template:e.target.value})
+        console.log(e.target.value)
+    }
 
     render() {
         
-                
+               const {works}  = this.props; 
+             
+
         return (
             <div>
                 <Header/>
                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             <div className="wrapper" style={{textAlign:"center"}}>
-                {console.log(this.works)}
+                {console.log(works)}
       
            <h4 style={{ marginTop:"-40px"}}>Resume Templates</h4>
            
@@ -84,8 +100,9 @@ export default class Templates extends Component {
                    <li className="pad10">
                    
                    
-                           <input type="radio" id="template1" name="template" value="template1"></input>
-                           <label for="template1">Template 1</label>
+                           <input type="radio" id="template1" onChange ={this.handleChange} name="template" value="template1"></input>
+                           
+                           <label for="template1" >Template 1</label>
 
                    </li>
                </lu>
@@ -105,8 +122,8 @@ export default class Templates extends Component {
                    <li className="pad10">
                    
                    
-                           <input type="radio" id="template2" name="template" value="template2"></input>
-                           <label for="template2">Template 2</label>
+                           <input type="radio" id="template2" onChange={this.handleChange} name="template" value="template2"></input>
+                           <label for="template2"  >Template 2</label>
 
                    </li>
                </lu>
@@ -126,8 +143,8 @@ export default class Templates extends Component {
                    <li className="pad10">
                    
                    
-                           <input type="radio" id="template3" name="template" value="template3"></input>
-                           <label for="template3">Template 3</label>
+                           <input type="radio" id="template3" onChange={this.handleChange} name="template" value="template3"></input>
+                           <label for="template3" >Template 3</label>
 
                    </li>
                </lu>
@@ -149,8 +166,8 @@ export default class Templates extends Component {
                    <li className="pad10">
                    
                    
-                           <input type="radio" id="template4" name="template" value="template4"></input>
-                           <label for="template4">Template 4</label>
+                           <input type="radio" id="template4" name="template"onChange={this.handleChange} value="template4"></input>
+                           <label for="template4" >Template 4</label>
 
                    </li>
                </lu>
@@ -167,7 +184,7 @@ export default class Templates extends Component {
 
        <div className="block">
 
-       <a className="main-button"><Link style={{color:"#fff"}} to="/multi">&nbsp; &nbsp; Continue &nbsp; &nbsp;</Link></a>
+       <a className="main-button" onClick={this.props.pick_template(this.state.template)} ><Link style={{color:"#fff"}} to="/multi">&nbsp; &nbsp; Continue &nbsp; &nbsp;</Link></a>
       
    </div>
 
@@ -181,3 +198,6 @@ export default class Templates extends Component {
         )
     }
 }
+
+
+export default connect(mapStateToProps ,mapDispatchToProps)(Templates)

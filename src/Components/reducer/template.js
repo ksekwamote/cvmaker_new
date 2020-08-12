@@ -1,11 +1,9 @@
-const initialState = {
-    template: "template1"
-}
 
-export default function qualitiesReducer(state= initialState , action){
+
+export default function templateReducer(state= "template1" , action){
     switch(action.type){
         case "CHANGE_TEMPLATE":
-            return {...state , template:action.payload}
+            return action.payload
         default:
             return state
     }

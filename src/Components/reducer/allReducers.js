@@ -6,6 +6,7 @@ import {experienceReducer} from "./experience"
 import qualitiesReducer from './qualities'
 import {educatonReducer} from "./education"
 import {referenceReducer} from "./reference"
+import templateReducer from "./template"
 
  export const allReducers  = combineReducers({
     profiler : profileReducer,
@@ -14,5 +15,6 @@ import {referenceReducer} from "./reference"
     experiences: experienceReducer,
     quality: qualitiesReducer,
     education:educatonReducer,
-    reference : referenceReducer
+    reference : referenceReducer,
+    templates: templateReducer
 })

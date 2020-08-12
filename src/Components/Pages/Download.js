@@ -18,10 +18,10 @@ export default class Download extends Component{
       constructor(props){
         super(props)  
         //this.createAndDownloadPdf = this.createAndDownloadPdf.bind(this)
-
+          this.checkFile = this.checkFile.bind(this)
         this.state = {
 
-            hello:""
+            loading: false
 
           }
 
@@ -31,32 +31,34 @@ export default class Download extends Component{
       componentDidMount =()=> {
 
         $("#btn_download").click(function(){
-          console.log("heyoo")
           window.open('http://localhost:5001/My_Resume');
       })
 
 
       }
 
+      fetchData = () =>{
+        this.setState({loading : true})
+      }
 
-      /** 
-  createAndDownloadPdf = () => {
 
-    return event => {
-        event.preventDefault();
 
-                axios.get('http://localhost:5001/download', {responseType: 'blob'})
+  checkFile = () => {
+
+   
+               
+      axios.get('http://localhost:5001/download')
                     .then((res) => {
-                      
-                        const pdfBlob = new Blob([res.data], {type: 'application/pdf'});
-
-                    saveAs(pdfBlob, 'newPdf.pdf');
 
             })
+
+            .catch(error => {
+              this.setState({loading:true})
+            })
     
-}
+
  }
- */
+
 
 
   render(){
@@ -78,7 +80,19 @@ export default class Download extends Component{
         
         <br></br><br></br>
 
-        <Buttons id="btn_download"  />
+        <Buttons id="btn_download"  onClick ={this.fetchData} disabled ={this.state.loadingloading}/>
+        {this.state.loading && <div >
+          <div className="spinner-grow text-muted"></div>
+<div className="spinner-grow text-primary"></div>
+<div className="spinner-grow text-success"></div>
+<div className="spinner-grow text-info"></div>
+<div className="spinner-grow text-warning"></div>
+<div className="spinner-grow text-danger"></div>
+<div className="spinner-grow text-secondary"></div>
+<div className="spinner-grow text-dark"></div>
+<div className="spinner-grow text-light"></div>
+          
+          </div>} 
         </div>
         </div>
       

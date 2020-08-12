@@ -8,6 +8,7 @@ const ejs = require('ejs');
 
 
 const port = process.env.PORT || 5001;
+var newpdf='resume.pdf';
 
 app.use(express.json());
 app.set('view engine' , 'ejs');
@@ -46,7 +47,7 @@ app.get('/download', (req,res) => {
 	
 })
 app.get('/My_Resume', (req,res) => {
-	res.sendFile(__dirname + '/public/resume.pdf', 'resume.pdf')
+	res.sendFile(__dirname + '/public/'+newpdf, 'resume.pdf')
 	
 })
 
@@ -66,10 +67,31 @@ app.post('/pdf', (req,res) =>{
 	
 })
 
+
 /*export data into then ejs file*/
+const chooseFile = (filename) =>{
+
+	switch(filename){
+		case "template1":
+			return './views/template 1.ejs'
+		case "template2":
+			return './views/template 2.ejs'
+		case "template3":
+			return './views/template 3.ejs'
+		case "template4":
+			return './views/template 4.ejs'
+		default:
+			return './views/template 1.ejs'
+	}
+
+
+}
+
 app.post('/create-resume' , (req, res) => {
 
-	ejs.renderFile('./views/temp 3.ejs',req.body , function(err, result){
+	const filename = chooseFile(req.body.templates);
+
+	ejs.renderFile(filename,req.body , function(err, result){
 
 		if (result){
 
@@ -80,8 +102,10 @@ app.post('/create-resume' , (req, res) => {
 			console.log(err);
 		}
 	})
-
-	pdf.create(html).toFile('./public/resume.pdf',function(err, res){
+	const randomNumber =(Math.floor(Math.random() * 10000000000) + 100000000)
+	const newFile = 'resume'+ randomNumber.toString()+'.pdf'
+	newpdf =newFile
+	pdf.create(html).toFile('./public/'+newFile,function(err, res){
 
 		if(err) return console.log(err);
 			console.log(res);
