@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import Buttons from "../GUI/Button"
 import Zoom from "@material-ui/core/Zoom"
@@ -9,6 +8,9 @@ import axios from 'axios';
 import $ from "jquery"
 import { Facebook, Twitter } from 'react-sharingbuttons'
 import 'react-sharingbuttons/dist/main.css'
+import { PayPalButton } from "react-paypal-button-v2";
+
+
 
 
 
@@ -107,7 +109,7 @@ export default class Download extends Component{
             <Grid justify="center">
 
 <span style={{textAlign:"center", justifyContent:"center" , marginLeft:500, paddingLeft:500} }>
-<div style={{borderStyle:"solid",padding:10, borderRadius:10, height:300, width:400 ,marginLeft:500, backgroundColor:'#c4e0e4'}}>
+<div style={{borderStyle:"solid",padding:10, borderRadius:10, height:600, maxHeight:1200, width:700 ,marginLeft:500, backgroundColor:'#c4e0e4'}}>
                   <h3 style={{color:"black"}}>KINDLY SUPPORT US</h3>
                   <br></br>
               <p>This is a free application but is very expensive to maintain. We feel it was important to create this platform to
@@ -116,6 +118,17 @@ export default class Download extends Component{
 
               <Facebook url={url} />
               <Twitter url={url} shareText={shareText} />
+
+              <PayPalButton
+        amount="0.01"
+        // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+        onSuccess={(details, data) => {
+          alert("Transaction completed by " + details.payer.name.given_name);
+ 
+          // OPTIONAL: Call your server to save the transaction
+          
+        }}
+      />
 
 
 
