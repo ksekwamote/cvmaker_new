@@ -90,7 +90,7 @@ class Templates extends Component {
 
                <lu>
                    <li className="pad10" >
-                       <img id="myImg" className="template1" src= {require("../assets/images/templates/template 1.png")}></img>
+                       <img id="myImg" className="template1" src= {require("../assets/images/templates/template 1.png")} alt="Template 1"></img>
                            <div id="myModal" class="modal">
                                <span className="close">&times;</span>
                                
@@ -102,7 +102,7 @@ class Templates extends Component {
                    
                            <input type="radio" id="template1" onChange ={this.handleChange} name="template" value="template1"></input>
                            
-                           <label for="template1" >Template 1</label>
+                           <label for="template1" >Simplex</label>
 
                    </li>
                </lu>
@@ -112,7 +112,7 @@ class Templates extends Component {
 
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template2" src={require("../assets/images/templates/template 2.jpg")} alt="Snow" ></img>
+                       <img id="myImg" className="template2" src={require("../assets/images/templates/template 2.jpg")} alt="Template 2" ></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>
                              
@@ -123,7 +123,7 @@ class Templates extends Component {
                    
                    
                            <input type="radio" id="template2" onChange={this.handleChange} name="template" value="template2"></input>
-                           <label for="template2"  >Template 2</label>
+                           <label for="template2"  >Camel Stripe</label>
 
                    </li>
                </lu>
@@ -133,7 +133,7 @@ class Templates extends Component {
 
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template3" src={require("../assets/images/templates/template 3.png")} alt="Snow" ></img>
+                       <img id="myImg" className="template3" src={require("../assets/images/templates/template 3.png")} alt="Template 3" ></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>
                            
@@ -144,7 +144,7 @@ class Templates extends Component {
                    
                    
                            <input type="radio" id="template3" onChange={this.handleChange} name="template" value="template3"></input>
-                           <label for="template3" >Template 3</label>
+                           <label for="template3" >Stripe Navy</label>
 
                    </li>
                </lu>
@@ -155,7 +155,7 @@ class Templates extends Component {
 
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template4" src={require("../assets/images/templates/template 4.jpg")} alt="Snow"></img>
+                       <img id="myImg" className="template4" src={require("../assets/images/templates/template 4.jpg")} alt="Template 4"></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>
                            
@@ -167,7 +167,101 @@ class Templates extends Component {
                    
                    
                            <input type="radio" id="template4" name="template"onChange={this.handleChange} value="template4"></input>
-                           <label for="template4" >Template 4</label>
+                           <label for="template4" >Navy Seal</label>
+
+                   </li>
+               </lu>
+           </div>
+
+            </div>
+            <br></br>
+            <div className="radio-toolbar" >
+          
+           <div className="pad20">
+
+               <lu>
+                   <li className="pad10">
+                       <img id="myImg" className="template5" src={require("../assets/images/templates/template 5.png")} alt="Template 5"></img>
+                           <div id="myModal" className="modal">
+                               <span className="close">&times;</span>
+                           
+                                  
+                           </div>
+                   </li>
+
+                   <li className="pad10">
+                   
+                   
+                           <input type="radio" id="template5" name="template"onChange={this.handleChange} value="template5"></input>
+                           <label for="template4" >Cappuccino</label>
+
+                   </li>
+               </lu>
+           </div>
+
+
+           <div className="pad20">
+
+               <lu>
+                   <li className="pad10">
+                       <img id="myImg" className="template6" src={require("../assets/images/templates/template 6.png")} alt="Template 6"></img>
+                           <div id="myModal" className="modal">
+                               <span className="close">&times;</span>
+                           
+                                  
+                           </div>
+                   </li>
+
+                   <li className="pad10">
+                   
+                   
+                           <input type="radio" id="template6" name="template"onChange={this.handleChange} value="template6"></input>
+                           <label for="template6" >Blueberry</label>
+
+                   </li>
+               </lu>
+           </div>
+
+
+           <div className="pad20">
+
+               <lu>
+                   <li className="pad10">
+                       <img id="myImg" className="template7" src={require("../assets/images/templates/template 7.png")} alt="Template 7"></img>
+                           <div id="myModal" className="modal">
+                               <span className="close">&times;</span>
+                           
+                                  
+                           </div>
+                   </li>
+
+                   <li className="pad10">
+                   
+                   
+                           <input type="radio" id="template7" name="template"onChange={this.handleChange} value="template7"></input>
+                           <label for="template7" >Golden Navy</label>
+
+                   </li>
+               </lu>
+           </div>
+
+           <div className="pad20">
+
+               <lu>
+                   <li className="pad10">
+                       <img id="myImg" className="template8" src={require("../assets/images/templates/template 8.png")} alt="template8"></img>
+                           <div id="myModal" className="modal">
+                               <span className="close">&times;</span>
+                           
+                                  
+                           </div>
+                   </li>
+
+                   <li className="pad10">
+                   
+                   
+                           <input type="radio" id="template8" name="template" onChange={this.handleChange} value="template8"></input>
+                           <label for="template8" >Golden Sky</label>
 
                    </li>
                </lu>

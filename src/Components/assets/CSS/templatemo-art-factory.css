@@ -728,6 +728,7 @@ div.content {
   }
   .header-area .main-nav .nav li:first-child {
     border-top: 1px solid #eee;
+
   }
   .header-area .main-nav .nav li {
     width: 100%;
@@ -785,6 +786,10 @@ div.content {
   .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
   }
+}
+
+#emoji{
+  font-size: 200px;
 }
 
 @media (min-width: 992px) {
@@ -865,6 +870,9 @@ TRY IT ... with or without CENTER CENTER
     color: #fff;
     margin-bottom: 30px;
   }
+  #emoji{
+    font-size: 150px;
+  }
 }
 
 @media (max-width: 820px) {
@@ -916,6 +924,10 @@ TRY IT ... with or without CENTER CENTER
   }
   .logo{
     font-size: 15px;
+  }
+
+  #emoji{
+    font-size: 125px;
   }
 }
 

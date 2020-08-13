@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Template 1</title>
+
+	<style type="text/css">
+		.row{
+
+			display: flex;
+
+		}
+
+		.column{
+
+			flex:50%;
+
+		}
+
+		body{
+			font-family: Arial;
+		}
+
+		h3 {
+
+				color: #259ceb
+			}
+
+	</style>
+</head>
+<body>
+
+	<div style="margin-left: 15px; margin-right: 15px;">
+	<div style="float: right; margin-top: -5px">
+	
+	<p>P O BOX 343, Kgaphamadi Ward, Gantsi<p>
+	<p ><%= personer.email %></p>
+	<p><%= personer.phoneNumber %> </p>
+	</div>
+	<h1><%= personer.firstname %> </h1>
+	<h1 style="color:#259ceb" ><%= personer.surname  %> </h1>
+
+	<hr style="height:3px; background-color: black;">
+
+	<div>
+	<h3>Objectives</h3>
+	<p><%= profiler.profile %></p>
+	<h3>Skills</h3>
+	
+			<p><%= quality.qualities %></p>
+	</div>
+
+	<hr style="height:3px; background-color: black;">
+	<h3>Proffesional Experience</h3>
+	
+	<div class="row" style=" margin-top:25px;">
+		
+	   <% experiences.values.work.forEach(function(item) { %>
+
+		<div class="column">
+			<p style="margin-top: -10px;"> <b><%= item.position %></b> , <i><%= item.employer %></i></p>
+		
+			<p style="margin-top: -10px;"> <b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+	
+			<div style="margin-top: -10px;">
+                <%- item.jdescription  %>
+             </div>
+			
+		</div>
+		<br> 
+		 <% }); %>
+
+	</div>
+
+
+	<hr style="height:3px; background-color: black;">
+	<h3>Certification</h3>
+	
+	<div class="row" style=" margin-top:25px;">
+
+		<% education.values.education.forEach(function(item) { %>
+
+		<div class="column" >
+			<p  style="margin-top: -10px;"><b><%= item.schoolName %></b></p>
+			<p  style="margin-top: -10px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p  style="margin-top: -10px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
+			
+		</div>
+
+		<br>
+
+	  <% }); %>
+	</div>
+
+	<hr style="height:3px; background-color: black;">
+	<h3>References</h3>
+	
+	<div class="row" style="margin-top: 25px;">
+
+		<% reference.values.refree.forEach(function(item) { %>
+		<div class="column">
+			<p style="margin-top: -10px;"><b><%= item.referent %>, <%= item.company %></b></p>
+			<p style="margin-top: -10px;"><i><%= item.occupation %></i></p>
+			<p style="margin-top: -10px;"><b>Tel: <%= item.phone %></b></p>
+			
+		</div>
+
+		<br>
+
+		  <% }); %>
+
+	</div>
+
+  </div>
+
+
+</body>
+</html>

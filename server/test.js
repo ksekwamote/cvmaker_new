@@ -42,8 +42,7 @@ app.post('/cv', (req,res) =>{
 })
 
 app.get('/download', (req,res) => {
-	console.log("download")
-	res.download(__dirname + '/report.pdf', 'report.pdf')
+	res.sendFile(__dirname + '/public/'+newpdf, 'resume.pdf')
 	
 })
 app.get('/My_Resume', (req,res) => {
@@ -80,6 +79,14 @@ const chooseFile = (filename) =>{
 			return './views/template 3.ejs'
 		case "template4":
 			return './views/template 4.ejs'
+		case "template5":
+			return './views/template 5.ejs'
+		case "template6":
+			return './views/template 6.ejs'
+		case "template7":
+			return './views/template 7.ejs'
+		case "template8":
+			return './views/template 8.ejs'
 		default:
 			return './views/template 1.ejs'
 	}

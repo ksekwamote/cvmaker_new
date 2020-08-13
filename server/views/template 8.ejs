@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		* {
+  box-sizing: border-box;
+  color: white;
+  font-family: Arial;
+  margin: 0px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 150px; 
+  /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left {
+  width: 35%;
+   padding-right: 35px;
+}
+
+.right {
+  width: 65%;
+}
+
+li,p,b,i{
+
+	color:#333f4f;
+}
+
+
+
+	</style>
+
+
+</head>
+<body>
+		<div align="center" style=" border-style: solid; border-color:#D4AF37;   height:150px; padding-top: 25px; " class="row">
+
+				<h1 style="color:#278bb9"><%= personer.firstname.toUpperCase() + "  "+ personer.surname.toUpperCase()  %></h1>
+				<br>
+				<p style="color:#D4AF37">SOFTWARE DEVELOPER</p>
+
+		</div>
+
+  		<div class="row">
+  <div class="column left" style="background-color:#fff; color:#241601;  ">
+  	
+  	<div  style=" padding-left:10px; height: 1100px;">
+  		<br>
+
+  		<div >
+
+
+  			<h3 style="padding: 10px; color:#278bb9; background-color: #bfe2f1">CONTACT</h2>
+  			<p>&#128241; &nbsp; <%= personer.phoneNumber %></p>
+  			<br>
+  			<p> &#9993; &nbsp; <%= personer.email %></p>
+  			<br>
+  			<p>&#128234; &nbsp; <%= personer.address %></p>
+  			<br>
+
+  			<div>
+
+		<h3 style="padding: 10px; color:#278bb9; background-color: #bfe2f1 " >EDUCATION</h3>
+
+				<% education.values.education.forEach(function(item) { %>
+				<div style="padding-bottom: 1px;">
+  				<p><b><%= item.schoolName %></b></p>
+			<p style="margin-top: 0px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p><b><%= item.startDate %> - <%= item.gradDate %></b></p>
+			
+  			</div>
+  					<br>
+  			 <% }); %>
+	</div>
+	
+	<br>
+  		<h3 style="padding: 10px; color:#278bb9; background-color: #bfe2f1 " >SKILL</h3>
+  			
+
+  		</div>
+  		
+  		<br>
+  		<p><%= quality.qualities %></p>
+	<br>
+	
+	
+
+
+
+
+  	</div>
+    
+  </div>
+  <div class="column right" style="background-color:#fff; ">
+
+  	<br>
+
+  	<div >
+
+  			<table>
+    				<tr style="height: 20px;" >
+    					
+    					
+
+
+    					<td style="border-left: 1px solid black; padding-left: 15px;">
+    						
+    							<h2 style=" padding: 10px; width: 300px; color:#278bb9; background-color: #bfe2f1">ABOUT ME </h2>
+    								<br>
+    					
+  				<p><%= profiler.profile %></p>
+  	
+
+    					</td>
+    					
+
+    				</tr>
+
+    			</table>
+  	</div>
+
+  	<div>
+  		
+
+  		<table>
+    				
+  				<tr style="height: 20px;" >
+  					<br>
+    					<td style="border-left: 1px solid black; padding-left: 15px;">
+    						
+    							<h2 style="padding: 10px; width: 300px; color:#278bb9; background-color: #bfe2f1">EXPERIENCE </h2>
+    								<br>
+    								<% experiences.values.work.forEach(function(item) { %>
+    					<div>
+
+			  			<p> <b><%= item.position.toUpperCase() %></b></p>
+			  			<p style="margin-top: 0px; float: right;"><b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+			  			<p> <b><%= item.employer %></b></p>
+
+			  			<div>
+			                <%- item.jdescription  %>
+			            </div>
+						
+						
+					</div>
+					<br>
+				 <% }); %>
+
+    						</td>
+    					
+
+    				</tr>
+
+    			</table>
+
+
+  	</div>
+
+
+
+  		<div>
+  		
+
+  		<table>
+    				
+  				<tr style="height: 20px;" >
+  					<br>
+    					<td style="border-left: 1px solid black; padding-left: 15px;">
+    						
+    							<h2 style="padding: 10px; width: 300px; color:#278bb9; background-color: #bfe2f1">REFERENCE </h2>
+    								<br>
+    											<% reference.values.refree.forEach(function(item) { %>
+							<div>
+				  				<p><b><%= item.referent %>, <%= item.company %></b></p>
+							<p style="margin-top: 0px;"><i><%= item.occupation %></i></p>
+							<p style="margin-top: 0px;">Email: <%= item.email %></p>
+				  			</div>
+
+				  					<br>
+
+				  			<% }); %>	
+
+    						</td>
+    					
+
+    				</tr>
+
+    			</table>
+
+
+  	</div>
+
+  
+  </div>
+</div>
+
+
+
+
+
+
+
+			<!---
+  <div class="column" style="background-color:#333f4f;">
+  	<div align="center" style="justify-content: center; margin-top:20px; #D4AF37 ">
+  		<h1>KUTLO</h1>
+    <h1>SEKWAMOTE</h1>
+  	</div>
+  </div>
+  <div class="column" style="background-color:#333f4f;">
+    <table>
+    				<tr style="height: 50px;" >
+    					<td><b>Address </b></td>
+    					<td style="padding: 10px; word-wrap: break-word;"> P O BOX 771, GANTSI, BOTSWANA</td>
+
+    				</tr>
+
+    				<tr>
+    					<td><b>Phone </b></td>
+    					<td> +267 77105790 </td>
+
+    				</tr>
+
+    				<tr>
+    					<td><b>Email </b></td>
+    					<td> ksekwamote @gmail.com</td>
+
+    				</tr>
+
+    			</table>
+
+
+  </div>
+
+</div>
+
+
+<div style="margin-left:20px; margin-right:20px;  color:#333f4f;">
+	<br>
+	<h3 style="color:#333f4f; font-weight:900; ">Summary</h3>
+	<hr>
+
+	<p style="color:#333f4f; padding-top:10px; ">
+		Results driven individual with four years experience desiring to bring engineering and telecommunication experience to a software engineering position at ABC Company. Searching for the oppotunirt to bring 8+ years experience , and server maintenance to a software engineer position with ABC Company incorporating critical thinking, problem solving and leadership.
+
+
+	</p>
+
+	<br>
+	<h3 style="color:#333f4f; font-weight:900; ">Skills</h3>
+	<hr>
+
+	<br><br>
+
+	<ul  style="display: inline-block; margin-top: -15px; color:#333f4f;">
+		<li>JAVA</li>
+		<li>PYTHON</li>
+		<li>C++</li>
+		<li>C#</li>
+		<li>RUBY</li>
+
+	</ul>
+
+	<ul  style="display: inline-block; margin-left: 150px; margin-top: -15px; color:#333f4f;">
+		<li>UNITY</li>
+		<li>Android Studio</li>
+		<li>Visual Basic</li>
+		<li>HASKELL</li>
+		<li>C</li>
+
+	</ul>
+
+	<ul  style="display: inline-block; margin-left: 150px; margin-top: -15px; color:#333f4f;">
+		<li>Javascript</li>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>Angular JS</li>
+		<li>Node.js</li>
+
+	</ul>
+
+	<br><br>
+	<h3 style="color:#333f4f; font-weight:900; ">Experience</h3>
+	<hr>
+	<br>
+
+		<div>
+
+  			<p> <b>Back-End Developer , Shakinah Sports</b></p>
+			<p style="margin-top: 0px;"> January 2017 - August 2017</p>
+			<p>A company that rents out stadiums for sports or entertainment purposes. </p>
+
+
+
+			<ul style="margin-top: 5px;">
+				<li>Facilitate back-end aspect of things</li>
+				<li>Make sure everything was insynch with everything</li>
+				<li>Communicate well with the front end stuff</li>
+				<li>Make sure data storage and app is in synch</li>
+			</ul>
+		</div>
+			<br>
+		<div>
+
+			<p> <b>IT Internship ,Central Transport Organisation</b></p>
+			<p style="margin-top: 0px;">July 2019 - Present</p>
+			<p>A government parastatal that procures, maintains and services state owned vehicles</p>
+
+			<ul style="margin-top: 5px;">
+				<li>Mantain server </li>
+				<li>Provide and facilitate end user assistance</li>
+				<li> Maintain computer parifinalia</li>
+				<li>Make sure data storage and app is in synch</li>
+			</ul>
+		</div>
+
+	<br><br>
+	<h3 style="color:#333f4f; font-weight:900; ">Education</h3>
+	<hr>
+	<br>
+
+	<div>
+
+  				<p><b>University of Kwazulu-Natal</b></p>
+			<p style="margin-top: 0px;"><i>Bachelor of Computer Science and Information Technlogies </i></p>
+			<p style="margin-top: 0px;"><b>July 2015 - November 2017</b></p>
+  			</div>
+
+  			<br>
+
+			<div>
+  				<p><b>University of Kwazulu-Natal</b></p>
+			<p style="margin-top: 0px;"><i>Bachelor of Computer Science Honours</i></p>
+			<p style="margin-top: 0px;"><b>November 2018</b></p>
+		
+  			</div>
+
+  	<br>
+	<h3 style="color:#333f4f; font-weight:900; ">Reference</h3>
+	<hr>
+	<br>
+
+	<div>
+  				<p><b>Miss V Kapuisire, CTO</b></p>
+			<p style="margin-top: 0px;"><i>Principle Programmer</i></p>
+			<p style="margin-top: 0px;"><b>Tel: 71 686 888</b></p>
+  			</div>
+
+-->
+
+
+
+
+
+</body>
+</html>

@@ -11,6 +11,8 @@ import Personal from "./Components/Pages/Personal"
 import Profile from "./Components/Pages/Profile"
 import Multi from "./Components/Pages/Multi"
 import Qualities from './Components/Pages/Qualities'
+import Emailsent from "./Components/Pages/Emailsent"
+import Download from "./Components/Pages/Download"
 
 
 function App() {
@@ -21,12 +23,15 @@ function App() {
         
         
     <HashRouter basename="/">
+
        <Route component={Profile} path="/profile"/>
         <Route exact path="/" component={Home}  />
         <Route component={Templates} path="/templates"/>
         <Route component={Personal} path="/personal_information"/>
         <Route component={Multi} path="/multi"/>
         <Route component={Qualities} path="/qualities"/>
+        <Route component={Emailsent} path="/email_sent"/>
+        <Route component={Download} path="/download"/>
 
         </HashRouter>
     

@@ -1,6 +1,5 @@
 {
-
-  "homepage":"https://ksekwamote.github.io/cvmaker_new/home",
+  "homepage": "https://ksekwamote.github.io/cvmaker_new/home",
   "name": "resume_factory",
   "version": "0.1.0",
   "private": true,
@@ -26,6 +25,7 @@
     "react-rich-text-editor": "^2.1.2",
     "react-rte": "^0.16.1",
     "react-scripts": "3.4.1",
+    "react-sharingbuttons": "^1.0.0",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
     "scrollreveal": "^4.0.7",
