@@ -5,11 +5,14 @@ import Zoom from "@material-ui/core/Zoom"
 import FadeIn from 'react-fade-in';
 import { Grid } from '@material-ui/core';
 import axios from 'axios';
+import Facebook from 'react-sharingbuttons/dist/buttons/Facebook'
+import Twitter from 'react-sharingbuttons/dist/buttons/Twitter'
 
 import $ from "jquery"
-import { Facebook, Twitter } from 'react-sharingbuttons'
-import 'react-sharingbuttons/dist/main.css'
 
+import 'react-sharingbuttons/dist/main.css'
+import { PayPalButton } from "react-paypal-button-v2";
+import ReactPayPal from "../Fragments/ReactPayPal"
 
 
 
@@ -21,6 +24,7 @@ export default class Download extends Component{
         super(props)  
         //this.createAndDownloadPdf = this.createAndDownloadPdf.bind(this)
           this.checkFile = this.checkFile.bind(this)
+         
         this.state = {
 
             loading: true,
@@ -56,7 +60,8 @@ export default class Download extends Component{
         }, 3000);
       }
 
-  
+
+   
 
 
   checkFile = () => {
@@ -79,18 +84,14 @@ export default class Download extends Component{
 
  }
 
- sharingButtons = () => {
-  const url = 'https://github.com/caspg/react-sharingbuttons'
-  const shareText = 'Check this site!'
-}
+ 
 
 
 
   render(){
     const url = 'https://github.com/caspg/react-sharingbuttons'
-    const shareText = 'Check this site!'
-  
-    
+    const shareText = 'Guys i just found the perferct site to create a resume, very proffesional!'
+
     return (
       <FadeIn>
       <React.Fragment>
@@ -106,17 +107,31 @@ export default class Download extends Component{
 
             <Grid justify="center">
 
-<span style={{textAlign:"center", justifyContent:"center" , marginLeft:500, paddingLeft:500} }>
-<div style={{borderStyle:"solid",padding:10, borderRadius:10, height:300, width:400 ,marginLeft:500, backgroundColor:'#c4e0e4'}}>
-                  <h3 style={{color:"black"}}>KINDLY SUPPORT US</h3>
-                  <br></br>
+            <span style={{textAlign:"center", justifyContent:"center" , marginLeft:500, paddingLeft:500} }>
+            <div style={{borderStyle:"solid",padding:10, borderRadius:10, height:450, width:400 ,marginLeft:500, backgroundColor:'#c4e0e4'}}>
+             <h3 style={{color:"black"}}>KINDLY SUPPORT US</h3>
+              <br></br>
               <p>This is a free application but is very expensive to maintain. We feel it was important to create this platform to
               help and assist those who are unable to do Resumes for themselves. To support this endavour by AFRICAN DEVELOPERS. You 
               can DONATE via PAYPAL or SHARE our webiste on your social media.</p>
 
-              <Facebook url={url} />
+              <Facebook url={url} shareText={shareText} />
               <Twitter url={url} shareText={shareText} />
+              <PayPalButton
+                    amount="8.00"
+                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+                    onSuccess={(details, data) => {
+                      alert("Transaction completed by " + details.payer.name.given_name);
+            
+                      // OPTIONAL: Call your server to save the transaction
+                      
+                    }}
+                    options={{
+                      clientId: "AZFoQTy8SIilPxdMmHc6F3zIlST067a5xUFijD4AXSKB5eF3B-qRRSGgN5a-Myz2ZL4B21zv8lAl9VZ0"
+                   }}
+           />
 
+                   
 
 
 

@@ -53,6 +53,7 @@ export default function(props) {
         variant="filled"
         onChange = {e => dispatch(changeFirstname(e.target.value))}
         id="firstname"
+        required 
         
 
       />
@@ -66,6 +67,7 @@ export default function(props) {
         variant="filled"
         onChange={e => dispatch(changeSurname(e.target.value))}
         id="reddit-input"
+        required 
       />
     <br></br>
 
@@ -77,6 +79,7 @@ export default function(props) {
         variant="filled"
        onChange={e => dispatch(changeAddress(e.target.value))}
         id="reddit-input"
+        required 
       />
       <br></br>
 
@@ -88,6 +91,7 @@ export default function(props) {
         variant="filled"
         onChange={e => dispatch(changeEmail(e.target.value))}
         id="reddit-input"
+        required 
       />
         <Textfield
         label="Phone Number"
@@ -97,10 +101,11 @@ export default function(props) {
         type="text"
       onChange={e => dispatch(changePhoneNumber(e.target.value))}
         id="reddit-input"
+        required 
       />
       <br></br>
       <Textfield
-        label="Hobbies and Interests"
+        label="Occupation"
 
         defaultValue=""
         type="text"
@@ -113,17 +118,17 @@ export default function(props) {
 
      
 
-       
+        <div style={{textAlign:"center"}} className="block">
+              <br></br><br></br>
+              <a type="submit" style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+    
+        </div>
 
         
 
     </form>
     </Grid>
-    <div style={{textAlign:"center"}} className="block">
-              <br></br><br></br>
-              <a style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
-              
-        </div>
+
 
     </div>
 

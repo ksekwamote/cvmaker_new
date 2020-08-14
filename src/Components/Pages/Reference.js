@@ -14,7 +14,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { Link } from "react-router-dom";
-
+import ReactPayPal from "../Fragments/ReactPayPal"
 
 const onSubmit = (reduxState , dispatch) =>
  {
@@ -32,6 +32,7 @@ export default function Reference() {
  const reduxState = useSelector(state => state)
  
  const [open, setOpen] = React.useState(false);
+ const [checkout, setCheckout] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -124,6 +125,11 @@ export default function Reference() {
         </DialogActions>
       </Dialog>
     </div>
+
+
+    
+
+
 
         </React.Fragment>
         </FadeIn>
