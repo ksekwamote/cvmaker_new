@@ -6,7 +6,7 @@ const initialState ={
     dob:"Date Of Birth",
     address:"30 Rockefeller Plaza, NewYork, NY",
 
-    hobbies : "",
+    occupation: "Software Developer",
     
 }
 
@@ -24,8 +24,8 @@ export function personalReducer(state=initialState, action){
                 return {...state , dob:action.payload}
             case "CHANGE_ADDRESS":
                 return {...state , address:action.payload}
-            case "ADD_HOBBIES":
-                return {...state , hobbies:action.payload}
+            case "ADD_CURRENT_OCCUPATION":
+                return {...state , occupation:action.payload}
             default:
                 return state 
         }

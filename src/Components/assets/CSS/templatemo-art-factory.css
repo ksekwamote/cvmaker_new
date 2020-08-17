@@ -805,6 +805,15 @@ div.content {
 #needHelp{
 
   cursor: pointer;
+  color: #f55858;
+  font-size: 12px;
+
+}
+
+#needHelp:hover{
+
+  color: #0088e8;
+
 }
 
 /* 
@@ -1481,7 +1490,7 @@ footer .copyright {
 ---------------------------------------------
 preloader
 --------------------------------------------- 
-**/
+
 
 #preloader {
   overflow: hidden;
@@ -1562,4 +1571,4 @@ preloader
   }
 }
 
-
+**/

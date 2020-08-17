@@ -6,7 +6,7 @@ import Header from "../Fragments/Header"
 import Footer from "../Fragments/Footer"
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
-import {changeFirstname,changeHobbies, changeSurname , changeAddress , changeEmail ,changePhoneNumber, nextStep} from "../action/index"
+import {changeFirstname,changeCurrentOccupation, changeSurname , changeAddress , changeEmail ,changePhoneNumber, nextStep} from "../action/index"
 import TextField from '@material-ui/core/TextField';
 import FadeIn from 'react-fade-in';
 
@@ -23,6 +23,9 @@ export default function(props) {
      }
    }
     const dispatch = useDispatch();
+
+    const personal = useSelector(state => state.personer);
+
 
 
     return (
@@ -43,7 +46,7 @@ export default function(props) {
         </div>
       
     <Grid container justify="center">
-    <form noValidate>
+    <form validate >
       
       
       <Textfield
@@ -53,6 +56,7 @@ export default function(props) {
         variant="filled"
         onChange = {e => dispatch(changeFirstname(e.target.value))}
         id="firstname"
+        defaultValue={personal.firstname}
         required 
         
 
@@ -63,22 +67,25 @@ export default function(props) {
         label="Surname"
 
         type="text"
-        defaultValue=""
+
         variant="filled"
         onChange={e => dispatch(changeSurname(e.target.value))}
         id="reddit-input"
+        defaultValue={personal.surname}
         required 
+
       />
     <br></br>
 
       <Textfield2
         label="Address"
  
-        defaultValue=""
+
         type="text"
         variant="filled"
        onChange={e => dispatch(changeAddress(e.target.value))}
         id="reddit-input"
+        defaultValue={personal.address}
         required 
       />
       <br></br>
@@ -86,21 +93,23 @@ export default function(props) {
       <Textfield
         label="Email"
         
-        defaultValue=""
+
         type="email"
         variant="filled"
         onChange={e => dispatch(changeEmail(e.target.value))}
         id="reddit-input"
+        defaultValue={personal.email}
         required 
         
       />
         <Textfield
         label="Phone Number"
 
-        defaultValue="+267 77105790"
+
         variant="filled"
         type="text"
       onChange={e => dispatch(changePhoneNumber(e.target.value))}
+      defaultValue={personal.phoneNumber}
         id="reddit-input"
         required 
       />
@@ -108,11 +117,11 @@ export default function(props) {
       <Textfield
         label="Occupation"
 
-        defaultValue=""
+        defaultValue={personal.occupation}
         type="text"
         variant="filled"
         id="reddit-input"
-        onChange={e => dispatch(changeHobbies(e.target.value))}
+        onChange={e => dispatch(changeCurrentOccupation(e.target.value))}
       /> 
   
         {'       '} <MaterialUIPickers/>
@@ -121,7 +130,7 @@ export default function(props) {
 
         <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a type="submit" style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a id="needHelp" type="submit" style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
     
         </div>
 

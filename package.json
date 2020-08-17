@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "date-fns": "^2.14.0",
+    "emailjs-com": "^2.6.3",
     "emotion": "^10.0.27",
     "file-saver": "^2.0.2",
     "is-hotkey": "^0.1.6",

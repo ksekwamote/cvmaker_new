@@ -9,7 +9,7 @@ import Richtext from "../GUI/Richtext"
 export default function(props){
 
     const i = props.index
-    const defaultValues = useSelector(state => state.experiences.values.work[i])
+    const defaultValues = useSelector(state => state.education.values.education[i])
             const dispatch = useDispatch();
 
             var title;
@@ -38,7 +38,7 @@ export default function(props){
         type="text"
         variant="filled"
         id="fos"
-       // defaultValue={defaultValues.employer}
+        defaultValue={defaultValues.fieldOfStudy}
         onChange ={e => dispatch(changeFieldOfStudy(e.target.value, i ))}
         
 
@@ -49,7 +49,7 @@ export default function(props){
         label="School Name"
 
         type="text"
-       // defaultValue={defaultValues.position}
+        defaultValue={defaultValues.schoolName}
         variant="filled"
        id="schoolName"
        onChange ={e => dispatch(changeSchoolName(e.target.value, i))}
@@ -59,7 +59,7 @@ export default function(props){
       <Textfield
         label="Start Date"
     
-       // defaultValue={defaultValues.jstartDate}
+       defaultValue={defaultValues.startDate}
         type="text"
         variant="filled"
        id="startDate"
@@ -70,7 +70,7 @@ export default function(props){
       <Textfield
         label="End Date"
    
-       // defaultValue={defaultValues.jendDate}
+        defaultValue={defaultValues.gradDate}
         type="text"
         variant="filled"
         id="gradDate"

@@ -14,8 +14,9 @@ export default class Home extends Component {
 
         super(props)
         this.state ={
-
-
+                name: "",
+                email:"",
+                message:""
         }
     }
 
@@ -35,9 +36,44 @@ export default class Home extends Component {
               $(".header-area .nav").slideToggle(200);
             });
           }
+
+          $("#welcomeButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#welcome").offset().top
+            }, 2000);
+        });
+
+        $("#aboutButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#about").offset().top
+            }, 2000);
+        });
+
+        $("#whyusButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#whyus").offset().top
+            }, 2000);
+        });
+
+        $("#frequently-questionButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#frequently-question").offset().top
+            }, 2000);
+        });
+
+        $("#contact-usButton").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#contact-us").offset().top
+            }, 2000);
+        });
+
     }
 
+   
+
     render() {
+
+        
         return (
             <div className="body">
 
@@ -66,20 +102,11 @@ export default class Home extends Component {
                      
                  
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#welcome" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#about">About</a></li>
-                            <li class="scroll-to-section"><a href="#whyus">Services</a></li>
-                            <li class="scroll-to-section"><a href="#frequently-question">Frequently Questions</a></li>
-                            <li class="submenu">
-                                <a href="javascript:;">Drop Down</a>
-                                <ul>
-                                    <li><a href="">About Us</a></li>
-                                    <li><a href="">Features</a></li>
-                                    <li><a href="">FAQ's</a></li>
-                                    <li><a href="">Blog</a></li>
-                                </ul>
-                            </li>
-                            <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li>
+                            <li style={{cursor:"pointer"}}  class="scroll-to-section"><a id="welcomeButton" class="active">Home</a></li>
+                            <li style={{cursor:"pointer"}}  class="scroll-to-section"><a id="aboutButton" >About</a></li>
+                            <li style={{cursor:"pointer"}}  class="scroll-to-section"><a id="whyusButton" >Services</a></li>
+                            <li style={{cursor:"pointer"}}  class="scroll-to-section"><a id="frequently-questionButton" >Frequently Questions</a></li>
+                            <li style={{cursor:"pointer"}}  class="scroll-to-section"><a id="contact-usButton" >Contact Us</a></li>
                         </ul>
                         <a id="mobile-menu" class='menu-trigger'>
                             <span >Menu</span>
@@ -335,22 +362,22 @@ export default class Home extends Component {
                           <div class="row">
                             <div class="col-md-6 col-sm-12">
                               <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Full Name" required class="contact-field"></input>
+                                <input name="name" type="text" onChange={e => this.setState({name:e.target.value})} id="name" placeholder="Full Name" required class="contact-field"></input>
                               </fieldset>
                             </div>
                             <div class="col-md-6 col-sm-12">
                               <fieldset>
-                                <input name="email" type="text" id="email" placeholder="E-mail" required class="contact-field"></input>
+                                <input name="email" type="text"  onChange={e => this.setState({email:e.target.value})} id="email" placeholder="E-mail" required class="contact-field"></input>
                               </fieldset>
                             </div>
                             <div class="col-lg-12">
                               <fieldset>
-                                <textarea name="message" rows="6" id="message" placeholder="Your Message" required class="contact-field"></textarea>
+                                <textarea name="message" rows="6"  onChange={e => this.setState({message:e.target.value})} id="message" placeholder="Your Message" required class="contact-field"></textarea>
                               </fieldset>
                             </div>
                             <div class="col-lg-12">
                               <fieldset>
-                                <button type="submit" id="form-submit" class="main-button">Send It</button>
+                                <button href="mailto:ksekwamote@mail.com?subject= Send your email here" type="submit" id="form-submit" class="main-button">Send It</button>
                               </fieldset>
                             </div>
                           </div>

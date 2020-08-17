@@ -52,20 +52,11 @@ export default class Header extends Component {
                         <a  href="#" id="log" class="logo">Resume Factory</a>
                    
                         <ul style={{marginRight:75}} class="nav">
-                            <li class="scroll-to-section"><a href="#welcome" class="active"><strong>Home</strong></a></li>
-                            <li class="scroll-to-section"><a href="#about"><strong>About</strong></a></li>
-                            <li class="scroll-to-section"><a href="#whyus"><strong>Services</strong></a></li>
-                            <li class="scroll-to-section"><a href="#frequently-question"><strong>Frequently Questions</strong></a></li>
-                            <li class="submenu">
-                                <a href="javascript:;"><strong>Drop Down</strong></a>
-                                <ul>
-                                    <li><a href="">About Us</a></li>
-                                    <li><a href="">Features</a></li>
-                                    <li><a href="">FAQ's</a></li>
-                                    <li><a href="">Blog</a></li>
-                                </ul>
-                            </li>
-                            <li class="scroll-to-section"><a href="#contact-us"><strong>Contact Us</strong></a></li>
+                            <li class="scroll-to-section"><a href="/" class="active"><strong>Home</strong></a></li>
+                            <li class="scroll-to-section"><a href="/"><strong>About</strong></a></li>
+                            <li class="scroll-to-section"><a href="/"><strong>Services</strong></a></li>
+                            <li class="scroll-to-section"><a href="/"><strong>Frequently Questions</strong></a></li>
+                            <li class="scroll-to-section"><a href="/"><strong>Contact Us</strong></a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span id="span">Menu</span>

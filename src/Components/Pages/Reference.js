@@ -15,6 +15,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { Link } from "react-router-dom";
 import ReactPayPal from "../Fragments/ReactPayPal"
+import Email from "../Fragments/Email"
+
 
 const onSubmit = (reduxState , dispatch) =>
  {
@@ -73,7 +75,7 @@ export default function Reference() {
 
       }
          <div style={{textAlign:"center"}} className="block">
-            <a id="needHelp" style={{color:'red', fontSize:12}} onClick={handleClickOpen}>Need some help?</a>
+           <Email/>
           </div>
     <br></br>
       </div>
@@ -96,40 +98,6 @@ export default function Reference() {
     </div>
 
       </div>
-
-      <div>
-      
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Creating a Resume or CV can be quite difficult or cumbersome exercise and we understand. 
-         Send us your email below so we can contact you and do the whole thing for you. &#128525; &#128525;
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            fullWidth
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            No Thanks! 
-          </Button>
-          <Button onClick={handleClose} color="primary">
-          <Link to="/email_sent"> Send</Link>
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </div>
-
-
-    
-
-
 
         </React.Fragment>
         </FadeIn>

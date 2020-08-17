@@ -10,6 +10,7 @@ import { changeRemail, addReference, remReference ,changeReferentName,changeOccu
 export default function Referent(props) {
         const i  = props.index
         const dispatch = useDispatch()
+        const defaultValues = useSelector(state => state.reference.values.refree[i])
         var title;
             if (i>=1){
             title = <h4>Reference #{i+1}</h4>
@@ -34,7 +35,7 @@ export default function Referent(props) {
             variant="filled"
             id="rname"
             
-           // defaultValue={defaultValues.employer}
+            defaultValue={defaultValues.referent}
          onChange ={e => dispatch(changeReferentName(e.target.value, i ))}
     
           />
@@ -44,7 +45,7 @@ export default function Referent(props) {
             label="Occupation"
     
             type="text"
-           // defaultValue={defaultValues.position}
+           defaultValue={defaultValues.occupation}
             variant="filled"
            id="occupation"
           onChange ={e => dispatch(changeOccupation(e.target.value, i))}
@@ -54,7 +55,7 @@ export default function Referent(props) {
           <Textfield
             label="Company Name"
         
-           // defaultValue={defaultValues.jstartDate}
+            defaultValue={defaultValues.company}
             type="text"
             variant="filled"
            id="company"
@@ -65,7 +66,7 @@ export default function Referent(props) {
           <Textfield
             label="Email"
        
-           // defaultValue={defaultValues.jendDate}
+            defaultValue={defaultValues.email}
             type="email"
             variant="filled"
             id="email"
@@ -77,7 +78,7 @@ export default function Referent(props) {
             <Textfield
             label="Phone Number "
        
-           // defaultValue={defaultValues.jendDate}
+            defaultValue={defaultValues.phone}
             type="text"
             variant="filled"
             id="phone"

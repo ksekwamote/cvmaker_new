@@ -6,6 +6,7 @@ import { Fade } from '@material-ui/core'
 import $ from 'jquery'
 import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
 import { HashRouter, Route, Link } from "react-router-dom";
+import Email from "../Fragments/Email"
 
 
 
@@ -75,7 +76,12 @@ export default class Emailsent extends Component {
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                         <h1 id="intro"><strong>EMAIL SENT </strong></h1>
-                        <p>We'll get back to you as soon as possible , most likely in an hour. Stay put, we got you. </p>
+                        <p>Check your inbox for a response.</p>
+                        <p>if there is no email ... make sure you have the right email and send again 
+                        <Email/>
+                             </p>
+                        
+
                         <a class="main-button-slider"><Link style={{color:"#fff"}} to="/templates">HAVE ANOTHER GO AT IT &#8594;</Link></a>
                     </div>
                     

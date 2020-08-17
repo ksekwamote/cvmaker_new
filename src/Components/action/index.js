@@ -66,10 +66,10 @@ export const changeAddress = (address) => {
     };
 }
 
-export const changeHobbies = (hobbies) => {
+export const changeCurrentOccupation = (occ) => {
     return {
-        type: "ADD_HOBBIES",
-        payload: hobbies
+        type: "ADD_CURRENT_OCCUPATION",
+        payload: occ
     }
 }
 
@@ -274,6 +274,7 @@ export const changeTemplate =(text) =>{
         payload: text
     }
 }
+
 
 
 

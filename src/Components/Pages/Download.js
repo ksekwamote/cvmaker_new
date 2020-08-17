@@ -13,7 +13,7 @@ import $ from "jquery"
 import 'react-sharingbuttons/dist/main.css'
 import { PayPalButton } from "react-paypal-button-v2";
 import ReactPayPal from "../Fragments/ReactPayPal"
-
+import emailjs from 'emailjs-com';
 
 
 
