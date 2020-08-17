@@ -73,7 +73,7 @@ export default function Reference() {
 
       }
          <div style={{textAlign:"center"}} className="block">
-            <a style={{color:'red', fontSize:12}} onClick={handleClickOpen}>Need some help?</a>
+            <a id="needHelp" style={{color:'red', fontSize:12}} onClick={handleClickOpen}>Need some help?</a>
           </div>
     <br></br>
       </div>
@@ -81,16 +81,16 @@ export default function Reference() {
       <div id="bottom"></div>
 
 <div style={{textAlign:"center"}}>
-<a  class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addReference())}>+</a>{'      '}
-      <a class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remReference())}>-</a>
+<a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addReference())}>+</a>{'      '}
+      <a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remReference())}>-</a>
       </div>
       
         
        
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a style={{color:'#fff'}} onClick={e => onSubmit(reduxState , dispatch)} className="main-button">&nbsp; &nbsp; MAKE CV &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => onSubmit(reduxState , dispatch)} className="main-button">&nbsp; &nbsp; MAKE CV &nbsp; &nbsp;</a>
         </div>
 
     </div>

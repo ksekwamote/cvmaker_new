@@ -64,7 +64,7 @@ import { Link } from "react-router-dom";
 
       }
          <div style={{textAlign:"center"}} className="block">
-    <a style={{color:'red', fontSize:12}} onClick={handleClickOpen}>Need some help?</a>
+    <a id="needHelp" style={{color:'red', fontSize:12}} onClick={handleClickOpen}>Need some help?</a>
     </div>
     <br></br>
 
@@ -75,16 +75,16 @@ import { Link } from "react-router-dom";
 <div id="bottom"></div>
 
 <div style={{textAlign:"center"}}>
-<a  class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addExperience())}>+</a>{'      '}
-      <a class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remExperience())}>-</a>
+<a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addExperience())}>+</a>{'      '}
+      <a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remExperience())}>-</a>
       </div>
       
         
        
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
         </div>
 
     </div>

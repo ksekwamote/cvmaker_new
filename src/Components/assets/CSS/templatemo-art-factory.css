@@ -798,6 +798,15 @@ div.content {
   }
 }
 
+@media (max-height: 650px){
+   #intro { font-size: 30px;}
+}
+
+#needHelp{
+
+  cursor: pointer;
+}
+
 /* 
 ---------------------------------------------
 welcome
@@ -917,6 +926,7 @@ TRY IT ... with or without CENTER CENTER
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 40px;
+    
   }
   .welcome-area .header-text img {
     width: 80%;

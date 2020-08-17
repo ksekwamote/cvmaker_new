@@ -92,6 +92,7 @@ export default function(props) {
         onChange={e => dispatch(changeEmail(e.target.value))}
         id="reddit-input"
         required 
+        
       />
         <Textfield
         label="Phone Number"
