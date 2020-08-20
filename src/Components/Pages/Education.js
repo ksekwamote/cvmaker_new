@@ -9,6 +9,9 @@ export default function Education() {
 
  const dispatch = useDispatch();
  const schools = useSelector(state => state.education.values.education)
+ const personal = useSelector(state => state.personer);
+
+
     return (
 
       <FadeIn>

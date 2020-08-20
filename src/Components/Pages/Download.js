@@ -12,7 +12,7 @@ import $ from "jquery"
 
 import 'react-sharingbuttons/dist/main.css'
 import { PayPalButton } from "react-paypal-button-v2";
-import ReactPayPal from "../Fragments/ReactPayPal"
+//import ReactPayPal from "../Fragments/ReactPayPal"
 import emailjs from 'emailjs-com';
 
 
@@ -84,6 +84,23 @@ export default class Download extends Component{
 
  }
 
+ /**
+  * 
+  *  <PayPalButton
+                    amount="8.00"
+                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+                    onSuccess={(details, data) => {
+                      alert("Transaction completed by " + details.payer.name.given_name);
+            
+                      // OPTIONAL: Call your server to save the transaction
+                      
+                    }}
+                    options={{
+                      clientId: "AZFoQTy8SIilPxdMmHc6F3zIlST067a5xUFijD4AXSKB5eF3B-qRRSGgN5a-Myz2ZL4B21zv8lAl9VZ0"
+                   }}
+           />
+  */
+
  
 
 
@@ -117,25 +134,8 @@ export default class Download extends Component{
 
               <Facebook url={url} shareText={shareText} />
               <Twitter url={url} shareText={shareText} />
-              <PayPalButton
-                    amount="8.00"
-                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
-                    onSuccess={(details, data) => {
-                      alert("Transaction completed by " + details.payer.name.given_name);
-            
-                      // OPTIONAL: Call your server to save the transaction
-                      
-                    }}
-                    options={{
-                      clientId: "AZFoQTy8SIilPxdMmHc6F3zIlST067a5xUFijD4AXSKB5eF3B-qRRSGgN5a-Myz2ZL4B21zv8lAl9VZ0"
-                   }}
-           />
 
-                   
-
-
-
-
+          
 
 </div>
 

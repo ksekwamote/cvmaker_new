@@ -5,11 +5,11 @@ const initialState = {
         work: 
     [
         {
-            employer:"Google Inc",
-            position:"Back-End Developer",
-            jstartDate:"January 2017",
-            jendDate:" August 2017",
-            jdescription:"A company that rents out stadiums for sports or entertainment purposes."
+            employer:"",
+            position:"",
+            jstartDate:"",
+            jendDate:"",
+            jdescription:""
         } 
         
     ]

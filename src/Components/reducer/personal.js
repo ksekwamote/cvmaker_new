@@ -1,12 +1,12 @@
 const initialState ={
-    firstname:"Sam ",
-    surname:"Peterson",
-    email:"peterson2020@fakeemail.com",
-    phoneNumber:"+11 230 909 8298",
-    dob:"Date Of Birth",
-    address:"30 Rockefeller Plaza, NewYork, NY",
+    firstname:"Kutlo",
+    surname:"Sekwamote",
+    email:"sekmote@gmail.com",
+    phoneNumber:"+267 5345 3434",
+    dob:"",
+    address:"P O BOX 24",
 
-    occupation: "Software Developer",
+    occupation: "",
     
 }
 

@@ -20,6 +20,20 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { Link } from "react-router-dom";
 import Email from "../Fragments/Email"
+import { textValidation , validator } from "../Pages/Personal";
+
+
+const simpleValidation = (value) => {
+  if (value == ""){
+      return "This field is required"
+  }
+  else {
+    return "valid"
+  }
+
+}
+
+
 
  function Experience(props){
 
@@ -35,6 +49,12 @@ import Email from "../Fragments/Email"
     setOpen(false);
   };
 
+
+  const validateList = () => {
+
+   
+
+  }
 
 
     return (

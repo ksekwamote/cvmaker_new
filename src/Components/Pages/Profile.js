@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react'
+import React, { Component ,useState} from 'react'
 import Grid from '@material-ui/core/Grid';
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
@@ -9,12 +9,54 @@ import { CSSTransition } from "react-transition-group"
 import Zoom from "@material-ui/core/Zoom"
 import FadeIn from 'react-fade-in';
 import Email from "../Fragments/Email"
+import { validator} from "../Pages/Personal"
 
+
+const addressValidation = (value) => {
+
+ 
+
+
+    if (value == ""){
+        return "This field is required"
+    }
+    else {
+      return "valid"
+    }
+   
+
+
+}
 
 export default function Profile (){
   
     const dispatch = useDispatch();
     const profile = useSelector(state => state.profiler.profile);
+    const [validProfile , validateProfile] = useState({
+      error: false,
+      help: ""
+    })
+
+
+    const next = (theprofile) =>{
+
+     
+      validator(addressValidation(theprofile), validateProfile)
+
+     
+  
+    if ( !validProfile.error ){
+            
+         return true
+    }
+    else {
+  
+      return false
+     
+    }
+  
+  }
+
 
    
 
@@ -45,19 +87,23 @@ export default function Profile (){
           rows={10}     
           defaultValue={profile}
           onChange ={e => dispatch(changeProfile(e.target.value))}
+          onBlur= {e => validator( addressValidation(e.target.value) ,validateProfile)} 
           variant="outlined"
+          error ={validProfile.error}
+          helperText ={ validProfile.help}
         />  
         
 
     </form>
     </Grid>
     <div style={{textAlign:"center"}} className="block">
+      <br></br>
         <Email/>
     </div>
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a id="needHelp"  style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a id="needHelp"  style={{color:'#fff'}} onClick={e => dispatch(prevStep()) } className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => next(profile) ?  dispatch(nextStep()) : console.log("ERROR")} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
 
    
       

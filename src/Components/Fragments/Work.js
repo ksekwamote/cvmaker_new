@@ -1,5 +1,5 @@
 
-import React, { PropTypes } from 'react'
+import React, { PropTypes , useState } from 'react'
 import Grid from '@material-ui/core/Grid';
 import MaterialUIPickers from "../GUI/Datepicker"
 import Header from "../Fragments/Header"
@@ -10,7 +10,7 @@ import RichTextEditor from 'react-rte';
 import {nextStep , prevStep} from "../action/index"
 import Richtext from "../GUI/Richtext"
 import {changeEmployer , changeJob , changeJobStartDate , changeJobEndDate ,changeJobDescription } from "../action/index"
-
+import {validator} from "../Pages/Personal"
 
 
 export default function Work (props){
@@ -19,6 +19,36 @@ export default function Work (props){
     const i = props.index
     const defaultValues = useSelector(state => state.experiences.values.work[i])
     const jobDescription = defaultValues.jdescription
+
+    const [validEmployer , validateEmployer] = useState({
+      error: false,
+      help: ""
+    })
+    const [validPosition, validatePosition] = useState({
+     error: false ,
+     help: ""
+   })
+    const [validJstartDate , validateJstartDate] = useState({
+     error: false ,
+     help: ""
+   })
+    const [validJendDate , validateJendDate] = useState({
+     error: false ,
+     help: ""
+   })
+    
+
+   const simpleValidation = (value) => {
+    if (value == ""){
+        return "This field is required"
+    }
+    else {
+      return "valid"
+    }
+  
+  }
+  
+
 
   
    const save = () => {
@@ -33,6 +63,10 @@ export default function Work (props){
      title=""
    }
   
+
+
+
+
 
     return (
 
@@ -52,6 +86,9 @@ export default function Work (props){
         id="employer"
         defaultValue={defaultValues.employer}
         onChange ={e => dispatch(changeEmployer(e.target.value, i ))}
+        onBlur= {e => validator(simpleValidation(e.target.value) ,validateEmployer)} 
+        error ={validEmployer.error}
+        helperText ={ validEmployer.help}
         
 
       />
@@ -65,6 +102,9 @@ export default function Work (props){
         variant="filled"
        id="jobTitle"
        onChange ={e => dispatch(changeJob(e.target.value, i))}
+       onBlur= {e => validator(simpleValidation(e.target.value) ,validatePosition)} 
+       error ={validPosition.error}
+       helperText ={ validPosition.help}
       />
     <br></br>
 
@@ -76,6 +116,9 @@ export default function Work (props){
         variant="filled"
        id="jstartDate"
        onChange ={e => dispatch(changeJobStartDate(e.target.value, i))}
+       onBlur= {e => validator(simpleValidation(e.target.value) ,validateJstartDate)} 
+       error ={validJstartDate.error}
+       helperText ={ validJstartDate.help}
       />
    
 
@@ -88,6 +131,9 @@ export default function Work (props){
         id="jendDate"
 
         onChange ={e => dispatch(changeJobEndDate(e.target.value, i))}
+        onBlur= {e => validator(simpleValidation(e.target.value) ,validateJendDate)} 
+        error ={validJendDate.error}
+        helperText ={ validJendDate.help}
       />
          <br></br>
 

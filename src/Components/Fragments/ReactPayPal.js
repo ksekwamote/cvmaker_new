@@ -1,5 +1,6 @@
 import React from 'react'
 
+/** 
 export default function ReactPayPal() {
     const [paid, setPaid] = React.useState(false);
     const [error, setError] = React.useState(null);
@@ -54,3 +55,4 @@ export default function ReactPayPal() {
         </div>
     )
 }
+*/
