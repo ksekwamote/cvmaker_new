@@ -4,12 +4,41 @@ import {useSelector , useDispatch} from "react-redux"
 import {prevStep, nextStep, addEducation, remEducation} from "../action/index"
 import School from "../Fragments/School"
 import FadeIn from 'react-fade-in';
+import { simpleValidation } from "../Pages/Experience"
 
 export default function Education() {
 
  const dispatch = useDispatch();
  const schools = useSelector(state => state.education.values.education)
  const personal = useSelector(state => state.personer);
+
+ const [validate, setValidate] = React.useState(false);
+
+ 
+
+ const next = () => {
+
+   setValidate(true)
+
+
+   for(var i=0; i< schools.length ; i++){
+
+      if (simpleValidation(schools[i].fieldOfStudy)=="valid" && simpleValidation(schools[i].schoolName)=="valid" && simpleValidation(schools[i].startDate)=="valid" && simpleValidation(schools[i].gradDate)=="valid"){
+
+             continue
+      }
+
+      else{
+           return false
+
+
+           
+      }
+
+   }
+
+  return true 
+ }
 
 
     return (
@@ -35,7 +64,7 @@ export default function Education() {
 
       schools.map( (item, index) => (
         <FadeIn>
-          <School index ={index} />
+          <School index ={index} validate ={validate} />
           </FadeIn>
       )) 
 
@@ -54,7 +83,7 @@ export default function Education() {
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
               <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => next() ? dispatch(nextStep()): console.log("Nope")} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
         </div>
 
     </div>

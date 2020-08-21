@@ -12,9 +12,8 @@ import Email from "../Fragments/Email"
 import { validator} from "../Pages/Personal"
 
 
-const addressValidation = (value) => {
+const simpleValidation = (value) => {
 
- 
 
 
     if (value == ""){
@@ -41,17 +40,17 @@ export default function Profile (){
     const next = (theprofile) =>{
 
      
-      validator(addressValidation(theprofile), validateProfile)
+      validator(simpleValidation(theprofile), validateProfile)
 
      
   
-    if ( !validProfile.error ){
+    if ( simpleValidation(theprofile)== "valid" ){
             
-         return true
+      dispatch(nextStep())
     }
     else {
   
-      return false
+      console.log("error")
      
     }
   
@@ -87,7 +86,7 @@ export default function Profile (){
           rows={10}     
           defaultValue={profile}
           onChange ={e => dispatch(changeProfile(e.target.value))}
-          onBlur= {e => validator( addressValidation(e.target.value) ,validateProfile)} 
+          onBlur= {e => validator( simpleValidation(e.target.value) ,validateProfile)} 
           variant="outlined"
           error ={validProfile.error}
           helperText ={ validProfile.help}
@@ -103,7 +102,7 @@ export default function Profile (){
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
               <a id="needHelp"  style={{color:'#fff'}} onClick={e => dispatch(prevStep()) } className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a id="needHelp" style={{color:'#fff'}} onClick={e => next(profile) ?  dispatch(nextStep()) : console.log("ERROR")} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => next(profile) } className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
 
    
       

@@ -19,7 +19,7 @@ export const textValidation = (value) => {
   const letters = /^[a-zA-Z\s'-]*$/;
 
 
-    if (value == ""){
+    if (value.length == 0){
         return "This field is required"
     }
     else if (letters.test(value) ){
@@ -39,7 +39,7 @@ export const addressValidation = (value) => {
   const letters = /^[a-zA-Z0-9\s,'-]*$/;
 
 
-    if (value == ""){
+    if (value.length == 0){
         return "This field is required"
     }
     else if (letters.test(value) ){
@@ -59,7 +59,7 @@ export const numberValidation = (value) =>{
   const regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
 
 
-  if (value == ""){
+  if (value.length == 0){
       return "This field is required"
   }
   else if (regex.test(value) ){
@@ -77,7 +77,7 @@ export const emailValidation = (value) =>{
   const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 
-  if (value == ""){
+  if (value.length == 0){
       return "This field is required"
   }
   else if (regex.test(value) ){
@@ -163,19 +163,28 @@ export default function(props) {
 
     const next = (firstname ,surname , address , email , phone) =>{
 
-        validator(textValidation(firstname), validateName)
-        validator(textValidation(surname), validateSurname)
-        validator(addressValidation(address), validateAddress)
-        validator(emailValidation(email), validateEmail)
-        validator(numberValidation(phone), validatePhone)
+
+
+      
+      validateFields(textValidation(firstname), validateName)
+      validateFields(textValidation(surname), validateSurname)
+      validateFields(addressValidation(address), validateAddress)
+      validateFields(emailValidation(email), validateEmail)
+      validateFields(numberValidation(phone), validatePhone)
+
+
+
+
+
     
-      if ( !validName.error && !validSurname.error && !validAddress.error && !validEmail.error && !validPhone.error  ){
-              
-           return true
+      if ( textValidation(firstname)=="valid" && textValidation(surname)=="valid" && addressValidation(address)=="valid" && emailValidation(email)=="valid" && numberValidation(phone)=="valid"  ){
+        
+        dispatchs(nextStep())
+        
       }
       else {
     
-        return false
+        console.log("error somewhere")
        
       }
     
@@ -303,7 +312,7 @@ export default function(props) {
 
         <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a id="needHelp" type="submit" style={{color:'#fff'}} onClick={e => next(personal.firstname ,personal.surname ,personal.address,personal.email,personal.phoneNumber) ? dispatchs(nextStep()) : console.log("error") }
+              <a id="needHelp" type="submit" style={{color:'#fff'}} onClick={e => next(personal.firstname ,personal.surname ,personal.address,personal.email,personal.phoneNumber) }
                className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
     
         </div>

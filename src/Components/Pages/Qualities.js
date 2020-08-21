@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useState} from 'react'
 import Grid from '@material-ui/core/Grid';
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
@@ -13,20 +13,48 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { Link } from "react-router-dom";
 import Email from "../Fragments/Email"
+import { validator} from "../Pages/Personal"
+
+
+const simpleValidation = (value) => {
+  if (value == ""){
+      return "This field is required"
+  }
+  else {
+    return "valid"
+  }
+
+}
+
 
 export default function Qualities() {
     const dispatch = useDispatch();
-    const [open, setOpen] = React.useState(false);
+  
     const qualities = useSelector(state => state.quality.qualities);
+    const [validQuality , validateQuality] = useState({
+      error: false,
+      help: ""
+    })
 
+    const next = (qualities) =>{
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+     
+      validator(simpleValidation(qualities), validateQuality)
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+     
+  
+    if ( simpleValidation(qualities)== "valid" ){
+            
+      dispatch(nextStep())
+    }
+    else {
+  
+      console.log("error")
+     
+    }
+  
+  }
+
    
     return (
 
@@ -59,6 +87,9 @@ export default function Qualities() {
           onChange ={ e=> {dispatch(changeQualities(e.target.value))}}
           variant="outlined"
           defaultValue={qualities}
+          onBlur= {e => validator( simpleValidation(e.target.value) ,validateQuality)} 
+          error ={validQuality.error}
+          helperText ={ validQuality.help}
         />  
 
     </form>
@@ -70,7 +101,7 @@ export default function Qualities() {
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
               <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => next(qualities) } className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
         </div>
 
     </div>

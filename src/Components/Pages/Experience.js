@@ -21,9 +21,11 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { Link } from "react-router-dom";
 import Email from "../Fragments/Email"
 import { textValidation , validator } from "../Pages/Personal";
+import { getNodeText } from '@testing-library/react';
 
 
-const simpleValidation = (value) => {
+
+export const simpleValidation = (value) => {
   if (value == ""){
       return "This field is required"
   }
@@ -35,27 +37,49 @@ const simpleValidation = (value) => {
 
 
 
+
+
+
  function Experience(props){
 
   const works = props.works;
   const dispatch = useDispatch();
-  const [open, setOpen] = React.useState(false);
+  
+  const [validate, setValidate] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+ 
 
 
-  const validateList = () => {
+  const addButton = () => {
 
-   
-
+    dispatch(addExperience())
+    setValidate(false)
+    
   }
 
+  const next = () => {
+
+    setValidate(true)
+
+
+    for(var i=0; i< works.length ; i++){
+
+       if (simpleValidation(works[i].employer)=="valid" && simpleValidation(works[i].position)=="valid" && simpleValidation(works[i].jstartDate)=="valid" && simpleValidation(works[i].jendDate)=="valid"){
+
+              continue
+       }
+
+       else{
+            return false
+
+ 
+            
+       }
+
+    }
+
+   return true 
+  }
 
     return (
       <FadeIn>
@@ -79,9 +103,11 @@ const simpleValidation = (value) => {
       
       works.map( (item, index) => (
         <FadeIn>
-          <Work index ={index} />
+          <Work index ={index} validate = {validate} />
           </FadeIn>
       )) 
+
+     
 
       }
          <div style={{textAlign:"center"}} className="block">
@@ -93,10 +119,10 @@ const simpleValidation = (value) => {
 
      
        
-<div id="bottom"></div>
+    <div id="bottom"></div>
 
 <div style={{textAlign:"center"}}>
-<a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addExperience())}>+</a>{'      '}
+<a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => addButton() }>+</a>{'      '}
       <a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remExperience())}>-</a>
       </div>
       
@@ -105,7 +131,7 @@ const simpleValidation = (value) => {
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
               <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(nextStep())} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => next() ? dispatch(nextStep()): console.log("Nope")} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
         </div>
 
     </div>

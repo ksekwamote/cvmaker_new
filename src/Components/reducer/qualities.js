@@ -1,5 +1,7 @@
 const initialState = {
-    qualities: ``
+
+    qualities: ""
+
 }
 
 export default function qualitiesReducer(state= initialState , action){

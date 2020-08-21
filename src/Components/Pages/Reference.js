@@ -16,6 +16,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { Link } from "react-router-dom";
 import ReactPayPal from "../Fragments/ReactPayPal"
 import Email from "../Fragments/Email"
+import { simpleValidation } from "./Experience"
 
 
 const onSubmit = (reduxState , dispatch) =>
@@ -30,19 +31,40 @@ export default function Reference() {
 
 
  const dispatch = useDispatch();
- const schools = useSelector(state => state.reference.values.refree)
+ const references = useSelector(state => state.reference.values.refree)
  const reduxState = useSelector(state => state)
  
- const [open, setOpen] = React.useState(false);
+
  const [checkout, setCheckout] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+ const [validate, setValidate] = React.useState(false);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+ 
+
+ const next = () => {
+
+   setValidate(true)
+
+
+   for(var i=0; i< references.length ; i++){
+
+      if (simpleValidation(references[i].referent)=="valid" && simpleValidation(references[i].occupation)=="valid" && simpleValidation(references[i].company)=="valid" && simpleValidation(references[i].email)=="valid" && simpleValidation(references[i].phone)=="valid"){
+
+             continue
+      }
+
+      else{
+           return false
+
+
+           
+      }
+
+   }
+
+  return true 
+ }
+
 
 
  return (
@@ -67,9 +89,9 @@ export default function Reference() {
 
       { 
 
-      schools.map( (item, index) => (
+      references.map( (item, index) => (
         <FadeIn>
-          <Referent index ={index} />
+          <Referent index ={index} validate={validate} />
           </FadeIn>
       )) 
 
@@ -92,7 +114,7 @@ export default function Reference() {
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
               <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a id="needHelp" style={{color:'#fff'}} onClick={e => onSubmit(reduxState , dispatch)} className="main-button">&nbsp; &nbsp; MAKE CV &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => next() ? onSubmit(reduxState , dispatch): console.log("Nope") } className="main-button">&nbsp; &nbsp; MAKE CV &nbsp; &nbsp;</a>
         </div>
 
     </div>

@@ -10,15 +10,52 @@ import RichTextEditor from 'react-rte';
 import {nextStep , prevStep} from "../action/index"
 import Richtext from "../GUI/Richtext"
 import {changeEmployer , changeJob , changeJobStartDate , changeJobEndDate ,changeJobDescription } from "../action/index"
-import {validator} from "../Pages/Personal"
+
+
+export const validator = (response , setState) => {
+  if (response == "This field is required" ){
+      setState({error:true , help :response})
+  }
+  else if(response == "Your input is invalid"){
+    setState({error:true , help :response})
+  }
+  else{
+
+    setState({error:false , help :""})
+  }
+
+}
+  
+
+export const simpleValidation = (value) => {
+  if (value == ""){
+      return "This field is required"
+  }
+  else {
+    return ""
+  }
+}
+
+export const isError = (value) =>{
+
+  if (value == ""){
+    return true
+}
+else {
+  return false
+}
+
+}
 
 
 export default function Work (props){
     const formRef = React.createRef();
     const dispatch = useDispatch();
     const i = props.index
+    const valid = props.validate
     const defaultValues = useSelector(state => state.experiences.values.work[i])
     const jobDescription = defaultValues.jdescription
+
 
     const [validEmployer , validateEmployer] = useState({
       error: false,
@@ -36,19 +73,11 @@ export default function Work (props){
      error: false ,
      help: ""
    })
-    
 
-   const simpleValidation = (value) => {
-    if (value == ""){
-        return "This field is required"
-    }
-    else {
-      return "valid"
-    }
-  
-  }
   
 
+  
+  
 
   
    const save = () => {
@@ -63,8 +92,7 @@ export default function Work (props){
      title=""
    }
   
-
-
+   
 
 
 
@@ -87,8 +115,9 @@ export default function Work (props){
         defaultValue={defaultValues.employer}
         onChange ={e => dispatch(changeEmployer(e.target.value, i ))}
         onBlur= {e => validator(simpleValidation(e.target.value) ,validateEmployer)} 
-        error ={validEmployer.error}
-        helperText ={ validEmployer.help}
+        error ={valid ? isError(defaultValues.employer): validEmployer.error }
+        helperText ={ valid ? simpleValidation(defaultValues.employer) : validEmployer.help}
+        required
         
 
       />
@@ -103,8 +132,9 @@ export default function Work (props){
        id="jobTitle"
        onChange ={e => dispatch(changeJob(e.target.value, i))}
        onBlur= {e => validator(simpleValidation(e.target.value) ,validatePosition)} 
-       error ={validPosition.error}
-       helperText ={ validPosition.help}
+       error ={valid ? isError(defaultValues.position): validPosition.error }
+       helperText ={ valid ? simpleValidation(defaultValues.position) : validPosition.help}
+       required
       />
     <br></br>
 
@@ -117,8 +147,9 @@ export default function Work (props){
        id="jstartDate"
        onChange ={e => dispatch(changeJobStartDate(e.target.value, i))}
        onBlur= {e => validator(simpleValidation(e.target.value) ,validateJstartDate)} 
-       error ={validJstartDate.error}
-       helperText ={ validJstartDate.help}
+       error ={valid ? isError(defaultValues.jstartDate): validJstartDate.error }
+       helperText ={ valid ? simpleValidation(defaultValues.jstartDate) : validJstartDate.help}
+       required
       />
    
 
@@ -132,8 +163,9 @@ export default function Work (props){
 
         onChange ={e => dispatch(changeJobEndDate(e.target.value, i))}
         onBlur= {e => validator(simpleValidation(e.target.value) ,validateJendDate)} 
-        error ={validJendDate.error}
-        helperText ={ validJendDate.help}
+        error ={valid ? isError(defaultValues.jendDate): validateJendDate.error }
+       helperText ={ valid ? simpleValidation(defaultValues.jendDate) : validateJendDate.help}
+        required
       />
          <br></br>
 
@@ -145,6 +177,10 @@ export default function Work (props){
   
       <br></br>
       
+ 
+           
+
+ 
 
      
 

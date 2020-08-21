@@ -2,7 +2,9 @@
 
 const initialState ={
 
-    profile : ``
+
+    profile : ""
+
 
 }
 

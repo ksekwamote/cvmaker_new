@@ -56,7 +56,7 @@ export default function MaterialUIPickers() {
         <KeyboardDatePicker
           margin="normal"
           id="date-picker-dialog"
-          label="Date picker dialog"
+          label="Date Of Birth"
           className={classes.margin}
           format="MM/dd/yyyy"
           value={selectedDate}
