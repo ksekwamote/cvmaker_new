@@ -66,6 +66,13 @@ export default function Reference() {
  }
 
 
+ const addButton = () => {
+
+  dispatch(addReference())
+  setValidate(false)
+  
+}
+
 
  return (
 
@@ -105,7 +112,7 @@ export default function Reference() {
       <div id="bottom"></div>
 
 <div style={{textAlign:"center"}}>
-<a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addReference())}>+</a>{'      '}
+<a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => addButton()}>+</a>{'      '}
       <a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remReference())}>-</a>
       </div>
       

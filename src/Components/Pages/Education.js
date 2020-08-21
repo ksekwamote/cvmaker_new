@@ -37,8 +37,16 @@ export default function Education() {
 
    }
 
+
   return true 
  }
+
+ const addButton = () => {
+
+  dispatch(addEducation())
+  setValidate(false)
+  
+}
 
 
     return (
@@ -74,7 +82,7 @@ export default function Education() {
       <div id="bottom"></div>
 
 <div style={{textAlign:"center"}}>
-<a  id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(addEducation())}>+</a>{'      '}
+<a  id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => addButton() }>+</a>{'      '}
       <a id="needHelp"  class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remEducation())}>-</a>
       </div>
       
