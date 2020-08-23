@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "../assets/CSS/Header.css"
+import { HashRouter, Route, Link } from "react-router-dom";
 import $ from 'jquery'
 
 export default class Header extends Component {
@@ -50,13 +51,13 @@ export default class Header extends Component {
                     <nav class="main-nav" >
                         
                         <a  href="#" id="log" class="logo">Resume Factory</a>
-                   
+                       
                         <ul style={{marginRight:75}} class="nav">
-                            <li class="scroll-to-section"><a href="/" class="active"><strong>Home</strong></a></li>
-                            <li class="scroll-to-section"><a href="/"><strong>About</strong></a></li>
-                            <li class="scroll-to-section"><a href="/"><strong>Services</strong></a></li>
-                            <li class="scroll-to-section"><a href="/"><strong>Frequently Questions</strong></a></li>
-                            <li class="scroll-to-section"><a href="/"><strong>Contact Us</strong></a></li>
+                            <li class="scroll-to-section"><a href= "/"><strong>Home</strong></a></li>
+                            <li class="scroll-to-section"><a><Link to="/multi"><strong>ResumeMaker</strong></Link></a></li>
+                            <li class="scroll-to-section"><a><Link to="/About"><strong>About</strong></Link></a></li>
+                            <li class="scroll-to-section"><a href="/"><Link to="/Whyus"><strong>Whyus</strong></Link></a></li>
+                            <li class="scroll-to-section"><a href="/"><Link to="/Contacts"><strong>Contacts</strong></Link></a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span id="span">Menu</span>

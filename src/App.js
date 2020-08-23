@@ -13,6 +13,10 @@ import Multi from "./Components/Pages/Multi"
 import Qualities from './Components/Pages/Qualities'
 import Emailsent from "./Components/Pages/Emailsent"
 import Download from "./Components/Pages/Download"
+import About from "./Components/Pages/Section/About"
+import Whyus from "./Components/Pages/Section/Whyus"
+import Faq from "./Components/Pages/Section/Faq"
+import Contacts from "./Components/Pages/Section/Contacts"
 
 
 function App() {
@@ -32,6 +36,10 @@ function App() {
         <Route component={Qualities} path="/qualities"/>
         <Route component={Emailsent} path="/email_sent"/>
         <Route component={Download} path="/download"/>
+        <Route component={About} path="/About"/>
+        <Route component={Whyus} path="/Whyus"/>
+        <Route component={Faq} path="/Faq"/>
+        <Route component={Contacts} path="/Contacts"/>
 
         </HashRouter>
     

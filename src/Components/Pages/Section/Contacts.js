@@ -9,7 +9,17 @@ export default function Contacts() {
                 
         	        <Header/>
 
+
+                    <br></br> <br></br> <br></br><br></br> <br></br> <br></br>
+
+                    
+           
                     <section align="center" class="section" id="contact-us">
+                    <div class="section-heading">
+                        <h2>Contact US</h2>
+                    </div>
+                    <br></br> 
+                    
         <div align="center" class="container-fluid">
             <div align="center" >
                 <div align="center" class="col-lg-6 col-md-6 col-sm-12">

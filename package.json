@@ -30,6 +30,8 @@
     "react-rich-text-editor": "^2.1.2",
     "react-rte": "^0.16.1",
     "react-scripts": "3.4.1",
+    "react-scroll": "^1.8.1",
+    "react-scroll-to": "^3.0.0-beta.6",
     "react-sharingbuttons": "^1.0.0",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
