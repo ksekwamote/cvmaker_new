@@ -20,7 +20,7 @@ export default function Buttons(props) {
     <div className={classes.root}>
      
       <Button variant="contained" size="large" color="secondary" {...props}>
-        DOWNLOAD NOW! 
+        DOWNLOAD RESUME! 
       </Button>
     
     </div>

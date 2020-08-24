@@ -39,20 +39,11 @@ export default class Emailsent extends Component {
                      
                  
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#welcome" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#about">About</a></li>
-                            <li class="scroll-to-section"><a href="#whyus">Services</a></li>
-                            <li class="scroll-to-section"><a href="#frequently-question">Frequently Questions</a></li>
-                            <li class="submenu">
-                                <a href="javascript:;">Drop Down</a>
-                                <ul>
-                                    <li><a href="">About Us</a></li>
-                                    <li><a href="">Features</a></li>
-                                    <li><a href="">FAQ's</a></li>
-                                    <li><a href="">Blog</a></li>
-                                </ul>
-                            </li>
-                            <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li>
+                        <li class="scroll-to-section"><a href= "/"><strong>Home</strong></a></li>
+                            <li class="scroll-to-section"><a><Link to="/multi"><strong>ResumeMaker</strong></Link></a></li>
+                            <li class="scroll-to-section"><a><Link to="/About"><strong>About</strong></Link></a></li>
+                            <li class="scroll-to-section"><a href="/"><Link to="/Whyus"><strong>Whyus</strong></Link></a></li>
+                            <li class="scroll-to-section"><a href="/"><Link to="/Contacts"><strong>Contacts</strong></Link></a></li>
                         </ul>
                         <a id="mobile-menu" class='menu-trigger'>
                             <span >Menu</span>

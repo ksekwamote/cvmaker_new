@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
 import Email from "../Fragments/Email"
 import { textValidation , validator } from "../Pages/Personal";
 import { getNodeText } from '@testing-library/react';
-import { ScrollTo, ScrollArea } from "react-scroll-to";
+
 
 
 export const simpleValidation = (value) => {

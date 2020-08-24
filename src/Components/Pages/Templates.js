@@ -100,7 +100,7 @@ class Templates extends Component {
                    <li className="pad10">
                    
                    
-                           <input type="radio" id="template1" onChange ={this.handleChange} name="template" value="template1" checked></input>
+                           <input type="radio" id="template1" onChange ={this.handleChange} name="template" value="template1" ></input>
                            
                            <label for="template1" >Simplex</label>
 
@@ -193,7 +193,7 @@ class Templates extends Component {
                    
                    
                            <input type="radio" id="template5" name="template"onChange={this.handleChange} value="template5"></input>
-                           <label for="template4" >Cappuccino</label>
+                           <label for="template5" >Cappuccino</label>
 
                    </li>
                </lu>

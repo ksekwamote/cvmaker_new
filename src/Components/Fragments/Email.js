@@ -8,6 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { Link } from "react-router-dom";
 import emailjs from 'emailjs-com';
+import axios from "axios"
 
 export default function Email() {
 
@@ -36,11 +37,14 @@ export default function Email() {
     const re = /\S+@\S+\.\S+/;
     const phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
 
-    if (re.test(email) || phoneno.test(email)){
+    if (re.test(email)){
         setOpen(false);
         sendEmail(email)
     }
-
+    else{
+      setOpen(false);
+      axios.post("http://localhost:5001/send_whatsapp")
+    }
    
   };
 

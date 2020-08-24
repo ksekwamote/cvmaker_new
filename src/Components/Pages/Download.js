@@ -117,7 +117,7 @@ export default class Download extends Component{
         <div>
 
       <br></br><br></br><br></br><br></br><br></br>
-        <div style={{textAlign:"center"}}>
+        <div style={{textAlign:"center", color:"#253B80"}}>
             <Grid justify="center">
             <h4>DOWNLOAD YOUR RESUME</h4>
 
@@ -125,7 +125,7 @@ export default class Download extends Component{
             <Grid justify="center">
 
             <span style={{textAlign:"center", justifyContent:"center" , marginLeft:500, paddingLeft:500} }>
-            <div style={{borderStyle:"solid",padding:10, borderRadius:10, height:450, width:400 ,marginLeft:500, backgroundColor:'#c4e0e4'}}>
+            <div style={{borderStyle:"solid",padding:10, borderRadius:10, height:400, width:400 ,marginLeft:500, backgroundColor:'#c4e0e4'}}>
              <h3 style={{color:"black"}}>KINDLY SUPPORT US</h3>
               <br></br>
               <p>This is a free application but is very expensive to maintain. We feel it was important to create this platform to
@@ -134,6 +134,14 @@ export default class Download extends Component{
 
               <Facebook url={url} shareText={shareText} />
               <Twitter url={url} shareText={shareText} />
+              <br></br><br></br>
+
+              
+              <a href="https://www.paypal.com/paypalme/ksekwamote" target="_blank" >Donate via Paypal</a>
+              <br></br>
+              <a href="https://www.paypal.com/paypalme/ksekwamote" target="_blank" class="btn"></a>
+
+            
 
           
 
@@ -175,6 +183,7 @@ export default class Download extends Component{
 
                 
        <Buttons id="btn_download" disabled={this.state.disable} /> 
+       
 
        <br></br> <br></br>
         </div>
