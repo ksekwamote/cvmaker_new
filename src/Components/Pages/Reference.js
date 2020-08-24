@@ -66,10 +66,14 @@ export default function Reference() {
  }
 
 
- const addButton = () => {
+ const addButton = (e) => {
 
   dispatch(addReference())
   setValidate(false)
+  var scrollDiv = document.getElementById("scroll")
+
+  window.scrollTo(0, scrollDiv.scrollHeight-30 )
+  
   
 }
 
@@ -92,7 +96,7 @@ export default function Reference() {
         </div>
         </div>
         
-      <div>
+      <div id = "scroll">
 
       { 
 

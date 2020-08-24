@@ -45,6 +45,9 @@ export default function Education() {
 
   dispatch(addEducation())
   setValidate(false)
+  var scrollDiv = document.getElementById("scroll")
+
+  window.scrollTo(0, scrollDiv.scrollHeight-30 )
   
 }
 
@@ -67,7 +70,7 @@ export default function Education() {
 
         </div>
         
-      <div>
+      <div id="scroll">
       { 
 
       schools.map( (item, index) => (

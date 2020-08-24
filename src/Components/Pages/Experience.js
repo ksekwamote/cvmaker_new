@@ -1,6 +1,5 @@
 
 import React from 'react'
-
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
 import RichTextEditor from 'react-rte';
@@ -22,7 +21,7 @@ import { Link } from "react-router-dom";
 import Email from "../Fragments/Email"
 import { textValidation , validator } from "../Pages/Personal";
 import { getNodeText } from '@testing-library/react';
-
+import { ScrollTo, ScrollArea } from "react-scroll-to";
 
 
 export const simpleValidation = (value) => {
@@ -54,6 +53,9 @@ export const simpleValidation = (value) => {
 
     dispatch(addExperience())
     setValidate(false)
+    var scrollDiv = document.getElementById("scroll")
+
+    window.scrollTo(0, scrollDiv.scrollHeight-30 )
     
   }
 
@@ -97,7 +99,10 @@ export const simpleValidation = (value) => {
       </div>
         </div>
         
-      <div>
+     
+
+          <div>
+      <div id="scroll">
       { 
       
       
@@ -122,16 +127,21 @@ export const simpleValidation = (value) => {
     <div id="bottom"></div>
 
 <div style={{textAlign:"center"}}>
-<a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => addButton() }>+</a>{'      '}
+<a id="needHelp" class="main-button-slider" style={{color:'#fff' }} onClick={e => addButton() }>+</a>{'      '}
       <a id="needHelp" class="main-button-slider" style={{color:'#fff'}} onClick={e => dispatch(remExperience())}>-</a>
+     
       </div>
       
+      </div>
+
+     
+     
         
        
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
               <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a id="needHelp" style={{color:'#fff'}} onClick={e => next() ? dispatch(nextStep()): console.log("Nope")} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff', animation: "shake 0.1s"}} onClick={e => next() ? dispatch(nextStep()): console.log("Nope")} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
         </div>
 
     </div>
