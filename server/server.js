@@ -6,11 +6,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const ejs = require('ejs');
 
-//WHATSAPP TWILIO
 
-const accountSid = 'ACb2048abb6993308a562518661211f4e2'; 
-const authToken = ''; 
-const client = require('twilio')(accountSid, authToken);
+
+
 
 //CONFIGURE SERVER
 
@@ -32,24 +30,6 @@ app.get('/resume',(req, res) => {
 });
 
 //WHATSAPP SENDING API
-
-app.post('/send_whatsapp' , (req, res)=>{
-
-		 console.log(req.body)
-
-
-	client.messages 
-      .create({ 
-         body: "Hi, thank you so much for contacting us, we've just recieved your request to create a resume for you. We'll get back to you soon. ",
-         from: 'whatsapp:+14155238886',       
-         to: 'whatsapp:+26777105790' 
-       }) 
-	  .then(message => console.log(message.sid)) 
-	  .catch(error => console.log(error +"  "+ "Eish sorry mfwethu" ) )
-      .done();
-
-
-})
 
 var html;
 app.post('/cv', (req,res) =>{
