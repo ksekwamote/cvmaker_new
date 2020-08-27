@@ -14,6 +14,8 @@ export default function Email() {
 
     const [open, setOpen] = React.useState(false);
     const [email , setEmail]= React.useState("me@yahoo.com");
+    const [link , setLink] = React.useState("/multi")
+
 
     const styles ={
         color:'red',
@@ -29,22 +31,69 @@ export default function Email() {
 
   const handleClose = () => {
     setOpen(false);
+    
  
   };
 
-  const handleClose2 = () => {
-    
+  const handleChange =(value) =>{
+
+    setEmail(value)
     const re = /\S+@\S+\.\S+/;
-    const phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+    const regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+
+    if(value==""){
+      return 
+    }
 
     if (re.test(email)){
-        setOpen(false);
-        sendEmail(email)
+      setLink("/email_sent")
+   
+        
+       
     }
-    else{
-      setOpen(false);
-      axios.post("http://localhost:5001/send_whatsapp")
+
+    else  if (regex.test(email)){
+      setLink("/phone_sent")
+
+       
+        console.log("Phone set" + link)
+       
+       
+      }
+      else{
+  
+          setLink("/multi")
+      }
+
+
+  }
+
+  const handleClose2 = (value) => {
+    
+    const re = /\S+@\S+\.\S+/;
+    const regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+
+    if (re.test(email)){
+      sendEmail(email)
+   
+        
+       
     }
+
+    else  if (regex.test(email)){
+      sendPhone(email)
+
+       
+        console.log("Phone set" + link)
+       
+       
+      }
+      else{
+  
+          setLink("/multi")
+      }
+    //sendEmail(email)
+    setOpen(false);
    
   };
 
@@ -69,6 +118,24 @@ export default function Email() {
 
  }
 
+ const sendPhone = (value) => {
+  var template_params = {
+    "from_name": value
+ }
+ 
+ var service_id = "default_service";
+ var template_id = "template_DhRX5H1o";
+ var user_id ="user_4aFD7YULlH83qEgcPfsEG";
+
+ emailjs.send(service_id, template_id, template_params , user_id)
+ .then((response) => {
+  console.log('SUCCESS! Number', response.status, response.text);
+}, (err) => {
+  console.log('FAILED... Number', err);
+});
+ 
+ }
+
 
 
 
@@ -85,15 +152,16 @@ export default function Email() {
         <DialogContent>
           <DialogContentText>
             Creating a Resume or CV can be quite difficult or cumbersome exercise and we understand. 
-         Send us your Email below so we can contact you and do the whole thing for you. &#128525; &#128525;
+         Send us your Email &#128231; or Whatsapp Phone Number &#128241; so we can contact you and do the whole thing for you. &#128525; &#128525;
           </DialogContentText>
           <TextField
             autoFocus
             margin="dense"
             id="name"
-            label="Email Address"
+            label="Email or Whatsapp Number"
             type="email"
-            onChange ={ e => setEmail(e.target.value) }
+            onChange ={ e => handleChange(e.target.value)}
+            onBlur={ e => handleChange(e.target.value)}
             fullWidth
           />
         </DialogContent>
@@ -102,7 +170,7 @@ export default function Email() {
             No Thanks! 
           </Button>
           <Button onClick={handleClose2} color="primary">
-            <Link to="/email_sent"> Send</Link>
+            <Link to={link}> Send</Link>
           </Button>
         </DialogActions>
       </Dialog>
