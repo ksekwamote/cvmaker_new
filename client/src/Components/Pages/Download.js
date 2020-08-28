@@ -40,7 +40,7 @@ export default class Download extends Component{
            this.fetchData()
 
             $("#btn_download").click(function(){
-              window.open('http://localhost:5001/My_Resume');
+              window.open('/My_Resume');
              
           })
 
@@ -68,7 +68,7 @@ export default class Download extends Component{
 
    
                
-      axios.get('http://localhost:5001/download')
+      axios.get('/download')
                     .then((res) => {
 
                      console.log("we good to go")

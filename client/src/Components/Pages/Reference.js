@@ -22,7 +22,7 @@ import { simpleValidation } from "./Experience"
 const onSubmit = (reduxState , dispatch) =>
  {
 
- axios.post("http://localhost:5001/create-resume",reduxState)
+ axios.post("/create-resume",reduxState)
 
  dispatch(nextStep())
 } 
