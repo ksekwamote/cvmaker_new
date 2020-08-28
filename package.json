@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "client": "cd client && npm start",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -15,10 +20,12 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "html-pdf": "^2.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7"
   }
 }
