@@ -184,7 +184,7 @@ export default function(props) {
       }
       else {
     
-        console.log("error somewhere")
+       
        
       }
     

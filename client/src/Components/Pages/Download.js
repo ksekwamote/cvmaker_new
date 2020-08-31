@@ -7,12 +7,9 @@ import { Grid } from '@material-ui/core';
 import axios from 'axios';
 import Facebook from 'react-sharingbuttons/dist/buttons/Facebook'
 import Twitter from 'react-sharingbuttons/dist/buttons/Twitter'
-
 import $ from "jquery"
-
 import 'react-sharingbuttons/dist/main.css'
-import { PayPalButton } from "react-paypal-button-v2";
-//import ReactPayPal from "../Fragments/ReactPayPal"
+import { PayPalButton } from "react-paypal-button-v2"
 import emailjs from 'emailjs-com';
 
 
@@ -22,7 +19,7 @@ export default class Download extends Component{
   
       constructor(props){
         super(props)  
-        //this.createAndDownloadPdf = this.createAndDownloadPdf.bind(this)
+  
           this.checkFile = this.checkFile.bind(this)
          
         this.state = {
@@ -64,50 +61,27 @@ export default class Download extends Component{
    
 
 
-  checkFile = () => {
-
-   
-               
+  checkFile = () => {            
       axios.get('/download')
                     .then((res) => {
-
-                     console.log("we good to go")
                      this.setState({loading:false})
                      this.setState({disable:false})
             })
 
             .catch(error => {
-              console.log("Erroor sorrry")
+              console.log("Just a moment... ")
               
             })
     
 
  }
 
- /**
-  * 
-  *  <PayPalButton
-                    amount="8.00"
-                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
-                    onSuccess={(details, data) => {
-                      alert("Transaction completed by " + details.payer.name.given_name);
-            
-                      // OPTIONAL: Call your server to save the transaction
-                      
-                    }}
-                    options={{
-                      clientId: "AZFoQTy8SIilPxdMmHc6F3zIlST067a5xUFijD4AXSKB5eF3B-qRRSGgN5a-Myz2ZL4B21zv8lAl9VZ0"
-                   }}
-           />
-  */
-
- 
 
 
 
   render(){
     const url = 'https://github.com/caspg/react-sharingbuttons'
-    const shareText = 'Guys i just found the perferct site to create a resume, very proffesional!'
+    const shareText = 'Guys i just found the perfect site to create a resume, very proffesional!'
 
     return (
       <FadeIn>

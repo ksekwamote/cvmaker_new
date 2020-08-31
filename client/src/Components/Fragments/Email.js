@@ -56,7 +56,7 @@ export default function Email() {
       setLink("/phone_sent")
 
        
-        console.log("Phone set" + link)
+        //console.log("Phone set" + link)
        
        
       }
@@ -84,7 +84,7 @@ export default function Email() {
       sendPhone(email)
 
        
-        console.log("Phone set" + link)
+        //console.log("Phone set" + link)
        
        
       }
@@ -111,9 +111,9 @@ export default function Email() {
   
  emailjs.send(service_id, template_id, template_params, user_id)
         .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          //console.log('SUCCESS!', response.status, response.text);
         }, (err) => {
-          console.log('FAILED...', err);
+         // console.log('FAILED...', err);
         });
 
  }
@@ -129,9 +129,9 @@ export default function Email() {
 
  emailjs.send(service_id, template_id, template_params , user_id)
  .then((response) => {
-  console.log('SUCCESS! Number', response.status, response.text);
+ // console.log('SUCCESS! Number', response.status, response.text);
 }, (err) => {
-  console.log('FAILED... Number', err);
+ // console.log('FAILED... Number', err);
 });
  
  }

@@ -1,11 +1,11 @@
 const initialState ={
 
-    firstname:"Kutlo",
-    surname:"Sekwamote",
-    email:"ksekwamote@yahoo.com",
-    phoneNumber:"+267 77105790",
+    firstname:"",
+    surname:"",
+    email:"",
+    phoneNumber:"",
     dob:"",
-    address:"P O BOX 45",
+    address:"",
 
     occupation: "",
     

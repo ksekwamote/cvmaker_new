@@ -49,7 +49,7 @@ export default function Qualities() {
     }
     else {
   
-      console.log("error")
+      console.log("")
      
     }
   

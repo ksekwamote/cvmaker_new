@@ -16,7 +16,7 @@ import Download from "./Download";
  function SwitchSteps(){
      const steps = useSelector(state => state.steper)
     
-     console.log(steps)
+     //console.log(steps)
     
         switch(steps){
             case 1:

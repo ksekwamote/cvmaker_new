@@ -141,7 +141,7 @@ export const simpleValidation = (value) => {
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
               <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a id="needHelp" style={{color:'#fff', animation: "shake 0.1s"}} onClick={e => next() ? dispatch(nextStep()): console.log("Nope")} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff', animation: "shake 0.1s"}} onClick={e => next() ? dispatch(nextStep()): console.log("")} className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
         </div>
 
     </div>

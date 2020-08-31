@@ -50,7 +50,7 @@ export default function Profile (){
     }
     else {
   
-      console.log("error")
+      console.log("")
      
     }
   

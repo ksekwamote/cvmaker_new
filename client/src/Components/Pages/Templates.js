@@ -66,7 +66,6 @@ class Templates extends Component {
     
     handleChange = e => {
         this.setState({template:e.target.value})
-        console.log(e.target.value)
     }
 
     render() {
