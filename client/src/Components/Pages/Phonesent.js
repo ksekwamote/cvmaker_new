@@ -40,7 +40,7 @@ export default class Phonesent extends Component {
                  
                         <ul class="nav">
                         <li class="scroll-to-section"><a href= "/"><strong>Home</strong></a></li>
-                            <li class="scroll-to-section"><a><Link to="/multi"><strong>ResumeMaker</strong></Link></a></li>
+                            <li class="scroll-to-section"><a><Link to="/resume_maker"><strong>ResumeMaker</strong></Link></a></li>
                             <li class="scroll-to-section"><a><Link to="/About"><strong>About</strong></Link></a></li>
                             <li class="scroll-to-section"><a href="/"><Link to="/Whyus"><strong>Whyus</strong></Link></a></li>
                             <li class="scroll-to-section"><a href="/"><Link to="/Contacts"><strong>Contacts</strong></Link></a></li>

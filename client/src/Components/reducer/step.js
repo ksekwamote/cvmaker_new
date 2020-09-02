@@ -1,5 +1,5 @@
 
-export function stepReducer(state = 1 ,action){
+export function stepReducer(state = 9 ,action){
     switch(action.type){
         case "NEXT_STEP":
             return state+1

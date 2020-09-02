@@ -9,11 +9,11 @@ export default function About() {
                 
         	        <Header/>
 
-                    <section class="section" id="about">
+                    <section class="section" id="whyus" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <img src={require("../../assets/images/left-image.png")} class="rounded img-fluid d-block mx-auto" alt="App"></img>
+                    <img id="aboutImage" src={require("../../assets/images/left-image.png")} class="rounded img-fluid d-block mx-auto" alt="App"></img>
                 </div>
                 <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
                     <div class="left-heading">

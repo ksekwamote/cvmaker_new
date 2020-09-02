@@ -18,7 +18,7 @@ import About from "./Components/Pages/Section/About"
 import Whyus from "./Components/Pages/Section/Whyus"
 import Faq from "./Components/Pages/Section/Faq"
 import Contacts from "./Components/Pages/Section/Contacts"
-
+import Error from "./Components/Pages/Error"
 
 function App() {
  
@@ -33,7 +33,7 @@ function App() {
         <Route exact path="/" component={Home}  />
         <Route component={Templates} path="/templates"/>
         <Route component={Personal} path="/personal_information"/>
-        <Route component={Multi} path="/multi"/>
+        <Route component={Multi} path="/resume_maker"/>
         <Route component={Qualities} path="/qualities"/>
         <Route component={Emailsent} path="/email_sent"/>
         <Route component={Phonesent} path="/phone_sent"/>
@@ -42,6 +42,7 @@ function App() {
         <Route component={Whyus} path="/Whyus"/>
         <Route component={Faq} path="/Faq"/>
         <Route component={Contacts} path="/Contacts"/>
+        <Route component={Error} path="/Error"/>
 
         </HashRouter>
     

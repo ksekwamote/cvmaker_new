@@ -1,17 +1,17 @@
-
 import React, { Component } from 'react'
 import Buttons from "../GUI/Button"
 import Zoom from "@material-ui/core/Zoom"
 import FadeIn from 'react-fade-in';
 import { Grid } from '@material-ui/core';
 import axios from 'axios';
+import $ from "jquery"
+import emailjs from 'emailjs-com';
+import Support from "../Fragments/Support"
 import Facebook from 'react-sharingbuttons/dist/buttons/Facebook'
 import Twitter from 'react-sharingbuttons/dist/buttons/Twitter'
-import $ from "jquery"
 import 'react-sharingbuttons/dist/main.css'
-import { PayPalButton } from "react-paypal-button-v2"
-import emailjs from 'emailjs-com';
-
+import { Redirect } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 
 
@@ -22,15 +22,17 @@ export default class Download extends Component{
   
           this.checkFile = this.checkFile.bind(this)
          
+          
         this.state = {
 
             loading: true,
-            disable:true
+            disable:true,
+            count :0
 
           }
 
       }
-
+   
 
       componentDidMount =()=> {
 
@@ -50,11 +52,21 @@ export default class Download extends Component{
 
 
       fetchData = () =>{
+
+      
+        
         const interval = setInterval(() => {
-          if (this.state.loading){
+          if (this.state.loading && this.state.count<11 ){
           this.checkFile();}
-          else {clearInterval(interval)}
+          else {
+            clearInterval(interval)
+            //console.log("an error occured")
+             window.location.href="http://localhost:3000/#/error"
+           
+          
+          }
         }, 3000);
+        
       }
 
 
@@ -69,7 +81,8 @@ export default class Download extends Component{
             })
 
             .catch(error => {
-              console.log("Just a moment... ")
+              this.setState({count:this.state.count+1})
+             // console.log("Just a moment... " + this.state.count)
               
             })
     
@@ -80,60 +93,54 @@ export default class Download extends Component{
 
 
   render(){
+   
     const url = 'https://github.com/caspg/react-sharingbuttons'
     const shareText = 'Guys i just found the perfect site to create a resume, very proffesional!'
-
     return (
       <FadeIn>
       <React.Fragment>
-        
-
+      
         <div>
 
       <br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center", color:"#253B80"}}>
-            <Grid justify="center">
+
             <h4>DOWNLOAD YOUR RESUME</h4>
 
+            <br></br>
+                          <div id="cover">
 
-            <Grid justify="center">
+              <h3 style={{color:"black"}}><strong>SHOW YOUR SUPPORT</strong></h3>
+                  <br></br>
 
-            <span style={{textAlign:"center", justifyContent:"center" , marginLeft:500, paddingLeft:500} }>
-            <div style={{borderStyle:"solid",padding:10, borderRadius:10, height:400, width:400 ,marginLeft:500, backgroundColor:'#c4e0e4'}}>
-             <h3 style={{color:"black"}}>KINDLY SUPPORT US</h3>
-              <br></br>
-              <p>This is a free application but is very expensive to maintain. We feel it was important to create this platform to
-              help and assist those who are unable to do Resumes for themselves. To support this endavour by AFRICAN DEVELOPERS. You 
-              can DONATE via PAYPAL or SHARE our webiste on your social media.</p>
+              <p id="para">
+              This is a free application but is very expensive to maintain.
+                        We feel it was important to create this platform to help and   
+                  assist those who are unable to do Resumes for themselves.
+                  To support this endavour by AFRICAN DEVELOPERS. You 
+                  can DONATE via PAYPAL or SHARE our webiste on 
+                  your social media.</p>
 
-              <Facebook url={url} shareText={shareText} />
-              <Twitter url={url} shareText={shareText} />
-              <br></br><br></br>
 
-              
-              <a href="https://www.paypal.com/paypalme/ksekwamote" target="_blank" >Donate via Paypal</a>
-              <br></br>
-              <a href="https://www.paypal.com/paypalme/ksekwamote" target="_blank" class="btn"></a>
+                  <br></br>
+                  <Facebook url={url} shareText={shareText} />
+                  <Twitter url={url} shareText={shareText} />
+                  <br></br><br></br>
 
-            
+                  
+                  <a href="https://www.paypal.com/paypalme/ksekwamote" target="_blank" >Donate via Paypal</a>
+                  <br></br>
+                  <a href="https://www.paypal.com/paypalme/ksekwamote" target="_blank" class="btn"></a>
+                  <br></br><br></br>
+                  </div>
 
           
-
-</div>
-
-
-</span>
-
-
-</Grid>
-
-
-            </Grid>
+        
 
             <span style={{fontSize:90}}>&#8595;</span>
         
         
-        <br></br><br></br>
+            <br></br><br></br>
 
 
  
@@ -142,17 +149,22 @@ export default class Download extends Component{
 
         {this.state.loading && <div >
 
-          <div style={{width:30, height:30}} className="spinner-grow text-muted"></div>
-<div style={{width:30, height:30}}  className="spinner-grow text-primary"></div>
-<div style={{width:30, height:30}}  className="spinner-grow text-success"></div>
-<div style={{width:30, height:30}}  className="spinner-grow text-info"></div>
-<div style={{width:30, height:30}}  className="spinner-grow text-warning"></div>
-<div style={{width:30, height:30}}  className="spinner-grow text-danger"></div>
-<div style={{width:30, height:30}}  className="spinner-grow text-secondary"></div>
-<div style={{width:30, height:30}}  className="spinner-grow text-dark"></div>
-<div style={{width:30, height:30}}  className="spinner-grow text-light"></div>
-          
+                          <div style={{width:30, height:30}} className="spinner-grow text-muted"></div>
+                <div style={{width:30, height:30}}  className="spinner-grow text-primary"></div>
+                <div style={{width:30, height:30}}  className="spinner-grow text-success"></div>
+                <div style={{width:30, height:30}}  className="spinner-grow text-info"></div>
+                <div style={{width:30, height:30}}  className="spinner-grow text-warning"></div>
+                <div style={{width:30, height:30}}  className="spinner-grow text-danger"></div>
+                <div style={{width:30, height:30}}  className="spinner-grow text-secondary"></div>
+                <div style={{width:30, height:30}}  className="spinner-grow text-dark"></div>
+                <div style={{width:30, height:30}}  className="spinner-grow text-light"></div>
+                          
           </div>} 
+
+
+          
+
+
 
 
                 

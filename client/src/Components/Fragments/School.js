@@ -17,7 +17,7 @@ export default function(props){
 
     const [validfos, validatefos] = useState({
       error: false,
-      help: ""
+      help: "E.g Civil Engineering"
     })
     const [validSchoolName, validateSchoolName] = useState({
      error: false ,
@@ -25,11 +25,11 @@ export default function(props){
    })
     const [validstartDate , validatestartDate] = useState({
      error: false ,
-     help: ""
+     help: "E.g June 2016"
    })
     const [validgradDate , validategradDate] = useState({
      error: false ,
-     help: ""
+     help: "E.g June 2021"
    })
 
 

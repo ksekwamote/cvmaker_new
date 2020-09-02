@@ -13,6 +13,7 @@ import {useSelector , useDispatch} from "react-redux"
 import {changeTemplate} from "../action/index"
 import {connect} from "react-redux"
 import { bindActionCreators } from 'redux'
+import FadeIn from 'react-fade-in';
 
 
 const mapStateToProps = (state , dispatch) => {
@@ -77,8 +78,9 @@ class Templates extends Component {
             <div>
                 <Header/>
                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+                <FadeIn>
             <div className="wrapper" style={{textAlign:"center"}}>
-                {console.log(works)}
       
            <h4 style={{ marginTop:"-40px"}}>Resume Templates</h4>
            
@@ -277,7 +279,7 @@ class Templates extends Component {
 
        <div className="block">
 
-       <a className="main-button" onClick={this.props.pick_template(this.state.template)} ><Link style={{color:"#fff"}} to="/multi">&nbsp; &nbsp; Continue &nbsp; &nbsp;</Link></a>
+       <a className="main-button" onClick={this.props.pick_template(this.state.template)} ><Link style={{color:"#fff"}} to="/resume_maker">&nbsp; &nbsp; Continue &nbsp; &nbsp;</Link></a>
       
    </div>
 
@@ -286,8 +288,11 @@ class Templates extends Component {
 
 
    </div>
+   </FadeIn>
    <Footer/>
    </div>
+
+ 
         )
     }
 }

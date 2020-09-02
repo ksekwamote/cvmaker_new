@@ -148,17 +148,16 @@ export default function Email() {
             <div>
       
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="form-dialog-title">Need some Help?</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Creating a Resume or CV can be quite difficult or cumbersome exercise and we understand. 
-         Send us your Email &#128231; or Whatsapp Phone Number &#128241; so we can contact you and do the whole thing for you. &#128525; &#128525;
+         Send us your Email &#128231; or Whatsapp Phone Number &#128241; (with country code e.g '+1') so we can contact you and do the whole thing for you. &#128525; &#128525;
           </DialogContentText>
           <TextField
-            autoFocus
             margin="dense"
             id="name"
-            label="Email or Whatsapp Number"
+            label=" Enter your Email or Whatsapp"
             type="email"
             onChange ={ e => handleChange(e.target.value)}
             onBlur={ e => handleChange(e.target.value)}

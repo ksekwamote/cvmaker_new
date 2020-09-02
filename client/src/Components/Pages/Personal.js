@@ -136,7 +136,7 @@ export default function(props) {
   })
    const [validPhone , validatePhone] = useState({
     error: false ,
-    help: ""
+    help: "E.g +27 62 508 0050"
   })
 
    const [validate , setValidate] = useState({

@@ -67,11 +67,11 @@ export default function Work (props){
    })
     const [validJstartDate , validateJstartDate] = useState({
      error: false ,
-     help: ""
+     help: "E.g June 2015"
    })
     const [validJendDate , validateJendDate] = useState({
      error: false ,
-     help: ""
+     help: "E.g December 2017, Present"
    })
 
   

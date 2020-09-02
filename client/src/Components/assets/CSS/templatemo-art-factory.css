@@ -665,6 +665,29 @@ div.content {
   height: 1000px;
 }
 
+
+
+#cover{
+  width: 400px;
+  margin: 0 auto;
+  background-color: #c4e0e4;
+  padding: 10px;
+  border-radius: 10px;
+  padding-bottom: 5px;
+
+}
+
+#para{
+
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+
+
+
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
@@ -673,6 +696,28 @@ div.content {
   }
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
+
+  #cover{
+    width: 310px;
+    margin: 0 auto;
+    background-color: #c4e0e4;
+    padding: 3px;
+    border-radius: 10px;
+    padding-bottom: 5px;
+  
+  }
+  
+  #para{
+  
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+  
+  }
+
+ 
+  
+
   
  
 }
@@ -693,6 +738,7 @@ div.content {
   #intro{
     font-size: 13px;
   }
+
 }
   
   
@@ -804,6 +850,9 @@ div.content {
   .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
   }
+
+ 
+
 }
 
 #emoji{
@@ -833,6 +882,16 @@ div.content {
   color: #0088e8;
 
 }
+#text{
+  text-align: center;
+  text-anchor: middle;
+  justify-content: center;
+  justify-items: center;
+  
+}
+
+
+
 
 /* 
 ---------------------------------------------

@@ -16,10 +16,10 @@ export default class Footer extends Component {
                 </div>
                 <div className="col-lg-5 col-md-12 col-sm-12">
                     <ul className="social">
-                        <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i className="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i className="fa fa-facebook"></i></a></li> {'    '}
+                        <li><a href="#"><i className="fa fa-twitter"></i></a></li>{'    '}
+                        <li><a href="#"><i className="fa fa-linkedin"></i></a></li>{'    '}
+                        <li><a href="#"><i className="fa fa-rss"></i></a></li>{'    '}
            
                     </ul>
                 </div>
