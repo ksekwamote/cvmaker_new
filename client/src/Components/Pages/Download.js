@@ -56,7 +56,7 @@ export default class Download extends Component{
       
         
         const interval = setInterval(() => {
-          if (this.state.loading && this.state.count<11 ){
+          if (this.state.loading && this.state.count<15 ){
           this.checkFile();}
           else {
             clearInterval(interval)
