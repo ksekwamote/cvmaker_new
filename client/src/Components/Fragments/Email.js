@@ -125,7 +125,7 @@ export default function Email() {
  
  var service_id = "default_service";
  var template_id = "template_DhRX5H1o";
- var user_id ="user_4aFD7YULlH83qEgcPfsEG";
+ var user_id =process.env.user_id;
 
  emailjs.send(service_id, template_id, template_params , user_id)
  .then((response) => {

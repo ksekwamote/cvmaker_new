@@ -12,6 +12,8 @@ import Twitter from 'react-sharingbuttons/dist/buttons/Twitter'
 import 'react-sharingbuttons/dist/main.css'
 import { Redirect } from "react-router-dom"
 import { Link } from "react-router-dom";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+
 
 
 
@@ -172,6 +174,12 @@ export default class Download extends Component{
        
 
        <br></br> <br></br>
+
+
+
+
+       Subscribe to our newsletter for update on Jobs 
+          <MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL} />
         </div>
         </div>
             
