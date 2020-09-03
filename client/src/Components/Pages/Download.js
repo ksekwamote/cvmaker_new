@@ -60,12 +60,12 @@ export default class Download extends Component{
         const interval = setInterval(() => {
           if (this.state.loading && this.state.count<30 ){
           this.checkFile();}
+          else if(this.state.count>15) {
+            clearInterval(interval)
+            window.location.href="//www.resumefactory.co/#/error"
+          }
           else {
             clearInterval(interval)
-            //console.log("an error occured")
-             window.location.href="//www.resumefactory.co/#/error"
-           
-          
           }
         }, 3000);
         
