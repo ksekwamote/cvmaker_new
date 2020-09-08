@@ -34,7 +34,7 @@ li,p,b,i{
 }
 
 td{
-  font-size: 9px;
+  font-size: 11px;
 }
 
 	</style>
@@ -49,8 +49,8 @@ td{
   <div class="column" style="background-color:#333f4f;">
   	<div align="center" style="justify-content: center; margin-top:20px;  ">
 
-  		<h3><%= personer.firstname %></h3>
-    <h3><%= personer.surname %></h3>
+  		<h1><%= personer.firstname %></h1>
+    <h1><%= personer.surname %></h1>
   		
 
   	</div>
@@ -85,7 +85,7 @@ td{
 
 <div style="margin-left:20px; margin-right:20px;  color:#333f4f;">
 	<br>
-	<h6 style="color:#333f4f; font-weight:900; ">Summary</h6>
+	<h3 style="color:#333f4f; font-weight:900; ">Summary</h3>
 	<hr>
 
 	<p style="color:#333f4f; padding-top:10px; ">
@@ -95,13 +95,13 @@ td{
 	</p>
 
 	<br>
-	<h6 style="color:#333f4f; font-weight:900; ">Skills</h6>
+	<h3 style="color:#333f4f; font-weight:900; ">Skills</h3>
 	<hr>
 
 	<p><%= quality.qualities %></p>
 
 	<br>
-	<h6 style="color:#333f4f; font-weight:900; ">Experience</h6>
+	<h3 style="color:#333f4f; font-weight:900; ">Experience</h3>
 	<hr>
 	<br>
 
@@ -120,7 +120,7 @@ td{
 		<% }); %>
 
 	<br>
-	<h6 style="color:#333f4f; font-weight:900; ">Education</h6>
+	<h3 style="color:#333f4f; font-weight:900; ">Education</h3>
 	<hr>
 	<br>
 			<% education.values.education.forEach(function(item) { %>
@@ -137,7 +137,7 @@ td{
   
 
 
-	<h6 style="color:#333f4f; font-weight:900; ">Reference</h6>
+	<h3 style="color:#333f4f; font-weight:900; ">Reference</h3>
 	<hr>
 	<br>
 			<% reference.values.refree.forEach(function(item) { %>

@@ -1,6 +1,9 @@
 <html>
 <head>
 	<title>   </title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+
 	<style type="text/css">
 		* {
   box-sizing: border-box;
@@ -12,8 +15,13 @@
   src: url('http://fonts.googleapis.com/css?family=Droid+Serif');
 }
 
+@font-face {
+  font-family: Lato;
+  src: url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+}
+
     body{
-      font-family: Arial;
+      font-family: Lato;
     }
 		.column {
   float: left;
@@ -32,7 +40,7 @@
 p, li , td{
 
       font-size: 9px;
-      font-family: Arial;
+      font-family: Lato;
     }
 
 
@@ -68,8 +76,8 @@ p, li , td{
     				</tr>
 
     				<tr>
-    					<td style="padding: 10px; word-wrap: break-word;"><b>Email </b></td>
-    					<td>  <%= personer.email %></td>
+    					<td><b>Email </b></td>
+    					<td style="padding: 10px; word-wrap: break-word;"> <%= personer.email %></td>
 
     				</tr>
 
