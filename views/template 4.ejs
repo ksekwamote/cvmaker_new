@@ -30,11 +30,15 @@
 li,p,b,i{
 
 	color:#333f4f;
+  font-size: :9px;
 }
 
-
+td{
+  font-size: 9px;
+}
 
 	</style>
+}
 
 
 </head>
@@ -45,8 +49,8 @@ li,p,b,i{
   <div class="column" style="background-color:#333f4f;">
   	<div align="center" style="justify-content: center; margin-top:20px;  ">
 
-  		<h1><%= personer.firstname %></h1>
-    <h1><%= personer.surname %></h1>
+  		<h3><%= personer.firstname %></h3>
+    <h3><%= personer.surname %></h3>
   		
 
   	</div>
@@ -81,7 +85,7 @@ li,p,b,i{
 
 <div style="margin-left:20px; margin-right:20px;  color:#333f4f;">
 	<br>
-	<h3 style="color:#333f4f; font-weight:900; ">Summary</h3>
+	<h6 style="color:#333f4f; font-weight:900; ">Summary</h6>
 	<hr>
 
 	<p style="color:#333f4f; padding-top:10px; ">
@@ -91,18 +95,18 @@ li,p,b,i{
 	</p>
 
 	<br>
-	<h3 style="color:#333f4f; font-weight:900; ">Skills</h3>
+	<h6 style="color:#333f4f; font-weight:900; ">Skills</h6>
 	<hr>
 
 	<p><%= quality.qualities %></p>
 
 	<br>
-	<h3 style="color:#333f4f; font-weight:900; ">Experience</h3>
+	<h6 style="color:#333f4f; font-weight:900; ">Experience</h6>
 	<hr>
 	<br>
 
 		 <% experiences.values.work.forEach(function(item) { %>
-		<div>
+		<div style="padding-bottom: 15px;" >
 
   			<p> <b><%= item.position %> , <%= item.employer %></b></p>
 			<p style="margin-top: 0px;"> <%= item.jstartDate %> --------- <%= item.jendDate %></p>
@@ -111,12 +115,12 @@ li,p,b,i{
                </div>
 
 		</div>
-      <br>
+
 
 		<% }); %>
 
 	<br>
-	<h3 style="color:#333f4f; font-weight:900; ">Education</h3>
+	<h6 style="color:#333f4f; font-weight:900; ">Education</h6>
 	<hr>
 	<br>
 			<% education.values.education.forEach(function(item) { %>
@@ -133,7 +137,7 @@ li,p,b,i{
   
 
 
-	<h3 style="color:#333f4f; font-weight:900; ">Reference</h3>
+	<h6 style="color:#333f4f; font-weight:900; ">Reference</h6>
 	<hr>
 	<br>
 			<% reference.values.refree.forEach(function(item) { %>

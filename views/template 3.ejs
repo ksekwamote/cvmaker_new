@@ -9,6 +9,13 @@
   font-family: Arial;
  
 }
+@font-face {
+  font-family: serif;
+  src: url('http://fonts.googleapis.com/css?family=Droid+Serif');
+}
+body{
+      font-family: serif;
+    }
 
 /* Create two unequal columns that floats next to each other */
 .column {
@@ -46,9 +53,11 @@ img.left{
   border-radius: 50%;
 }
 
-.p{
-  font-size: 13px
-}
+p, li {
+
+      font-size: 9px;
+      font-family: serif;
+    }
 
 
 
@@ -67,7 +76,7 @@ img.left{
 
   		
 
-  			<h3>CONTACT</h2>
+  			<h3>CONTACT</h3>
   			<p><b>Phone</b></p>
   			<p style="word-wrap: break-word;" ><%= personer.phoneNumber %></p>
   			<p><b>Email</b></p>
@@ -96,7 +105,7 @@ img.left{
   <div class="column right" style="background-color:#333f4f;">
   	<div align="center" style=" color: white;">
 
-  		  <h2><%= personer.firstname + "  "+ personer.surname  %></h2>
+  		  <h6><%= personer.firstname + "  "+ personer.surname  %></h6>
    		 <p><%= personer.occupation.toUpperCase() %></p>
   		
 
@@ -116,7 +125,7 @@ img.left{
 
     					<td>
     						
-    							<h2>ABOUT ME </h2>
+    							<h6>ABOUT ME </h6>
     							<p><%= profiler.profile %></p>
 
     					</td>
@@ -140,10 +149,10 @@ img.left{
 
     					<td>
     						
-    							<h2>EXPERIENCE </h2>
+    							<h6>EXPERIENCE </h6>
 
               <% experiences.values.work.forEach(function(item) { %>
-    							<div>
+    							<div style="padding-bottom: 15px;">
 
               			<p> <b><%= item.position.toUpperCase() %></b></p>
               			<p style="margin-top: 0px; float: right;"><b> <%= item.jstartDate %> --------- <%= item.jendDate %></b></p>
@@ -179,7 +188,7 @@ img.left{
 
 
     					<td>
-    						<h2>EDUCATION</h2>
+    						<h6>EDUCATION</h6>
 
                 <% education.values.education.forEach(function(item) { %>
 
@@ -221,7 +230,7 @@ img.left{
 
 
               <td>
-                <h2>REFERENCE</h2>
+                <h6>REFERENCE</h6>
 
                <% reference.values.refree.forEach(function(item) { %>
       <div>
