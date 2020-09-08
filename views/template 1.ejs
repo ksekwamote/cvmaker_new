@@ -70,7 +70,7 @@
 	<hr style="height:1px; background-color: black;">
 	<h6>PROFESSIONAL EXPERIENCE</h6>
 	<hr style="height:1px; background-color: black;">
-	<div class="row" style=" margin-top:15px;">
+	<div class="row" style=" margin-top:15px; padding-bottom: 10px;">
 		
 	   <% experiences.values.work.forEach(function(item) { %>
 
@@ -101,7 +101,7 @@
 
 		<% education.values.education.forEach(function(item) { %>
 		
-		<div class="column" style="padding-bottom: 12px;" >
+		<div class="column" style="padding-bottom: 10px;" >
 			<p  style="margin-top: -10px;"><b><%= item.schoolName %></b></p>
 			<p  style="margin-top: -8px;"><i><%= item.fieldOfStudy %> </i></p>
 			<p  style="margin-top: -6px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
@@ -125,7 +125,7 @@
 			
 
 	<% reference.values.refree.forEach(function(item) { %>
-		<div class="column" style="padding-bottom: 8px;">
+		<div class="column" style="padding-bottom: 10px;">
 			<p style="margin-top: -10px;"><b><%= item.referent %>, <%= item.company %></b></p>
 			<p style="margin-top: -8px;"><i><%= item.occupation %></i></p>
 			<p style="margin-top: -6px;"><b>Tel: <%= item.phone %></b></p>
