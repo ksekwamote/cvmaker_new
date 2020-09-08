@@ -43,6 +43,11 @@ p, li , td{
       font-family: Lato;
     }
 
+h6 ,b {
+    font-family: Lato;
+
+}
+
 
 
 
@@ -115,7 +120,7 @@ p, li , td{
         <% experiences.values.work.forEach(function(item) { %>
   			<div style="padding-bottom: 10px;">
 
-  			<p> <b><%= item.position %> , <%= item.employer %></b></p>
+  			<p> <%= item.position %> , <%= item.employer %></p>
 			     <p style="margin-top: -8px;"> <%= item.jstartDate %> -   <%= item.jendDate %></p>
 			     <div style="margin-top: -6px;">
                 <%- item.jdescription  %>
@@ -132,9 +137,9 @@ p, li , td{
         <% education.values.education.forEach(function(item) { %>
   			<div>
 
-  				<p><b><%= item.schoolName %></b></p>
+  				<p><%= item.schoolName %></p>
 			<p style="margin-top: -8px;"><i><%= item.fieldOfStudy %> </i></p>
-			<p style="margin-top: -6px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
+			<p style="margin-top: -6px;"><%= item.startDate %> -- <%= item.gradDate %></p>
   			</div>
 
         <% }); %>
@@ -146,9 +151,9 @@ p, li , td{
         <% reference.values.refree.forEach(function(item) { %>
 
   			<div>
-  				<p><b><%= item.referent %>, <%= item.company %></b></p>
+  				<p><%= item.referent %>, <%= item.company %></p>
 			<p style="margin-top: -8px;"><i><%= item.occupation %></i></p>
-			<p style="margin-top: -6px;"><b>Tel: <%= item.phone %></b></p>
+			<p style="margin-top: -6px;">Tel: <%= item.phone %></p>
   			</div>
 
         <% }); %>
