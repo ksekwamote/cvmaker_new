@@ -118,11 +118,11 @@ h6 ,b {
   			<hr style="margin-top: -15px;">
 
         <% experiences.values.work.forEach(function(item) { %>
-  			<div style="padding-bottom: 10px;">
+  			<div style="padding-bottom: 5px;">
 
   			<p> <%= item.position %> , <%= item.employer %></p>
-			     <p style="margin-top: -8px;"> <%= item.jstartDate %> -   <%= item.jendDate %></p>
-			     <div style="margin-top: -6px;">
+			     <p style="margin-top: -7px;"> <%= item.jstartDate %> -   <%= item.jendDate %></p>
+			     <div style="margin-top: -4px;">
                 <%- item.jdescription  %>
             </div>
 	     	</div>
@@ -130,7 +130,7 @@ h6 ,b {
      <% }); %>
 
 			
-
+      <div style="margin-top: -5px;">
 			<h6>EDUCATION</h6>
   			<hr style="margin-top: -15px;">
 
@@ -138,11 +138,12 @@ h6 ,b {
   			<div>
 
   				<p><%= item.schoolName %></p>
-			<p style="margin-top: -8px;"><i><%= item.fieldOfStudy %> </i></p>
-			<p style="margin-top: -6px;"><%= item.startDate %> -- <%= item.gradDate %></p>
+			<p style="margin-top: -7px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p style="margin-top: -4px;"><%= item.startDate %> -- <%= item.gradDate %></p>
   			</div>
 
         <% }); %>
+      </div>
 
 
   			<h6>REFERENCE</h6>
@@ -152,8 +153,8 @@ h6 ,b {
 
   			<div>
   				<p><%= item.referent %>, <%= item.company %></p>
-			<p style="margin-top: -8px;"><i><%= item.occupation %></i></p>
-			<p style="margin-top: -6px;">Tel: <%= item.phone %></p>
+			<p style="margin-top: -7px;"><i><%= item.occupation %></i></p>
+			<p style="margin-top: -4px;">Tel: <%= item.phone %></p>
   			</div>
 
         <% }); %>
