@@ -6,6 +6,11 @@
   box-sizing: border-box;
   		font-family: Arial;
 }
+
+@font-face {
+  font-family: serif;
+  src: url('http://fonts.googleapis.com/css?family=Droid+Serif');
+}
 		.column {
   float: left;
   padding: 10px;
@@ -19,6 +24,12 @@
 .right {	
   width: 65%;
 }
+
+p, li , td{
+
+      font-size: 9px;
+      font-family: serif;
+    }
 
 
 
@@ -37,7 +48,7 @@
 
 	<div class="row">
   		<div class="column left" style="background-color:#f4f4f4;">
-  			<h4 style="margin-top:80px">INFO</h4>
+  			<h6 style="margin-top:80px">INFO</h6>
   			<hr>
     			<table>
     				<tr style="height: 50px;" >
@@ -69,7 +80,7 @@
 
     	
 
-    		<h4 style="margin-top:40px">SKILLS</h4>
+    		<h6 style="margin-top:40px">SKILLS</h6>
   			<hr>
 
 
@@ -80,11 +91,11 @@
   		<div class="column right" style="padding-left: 10px;" >
   			<div align="center">
 
-  				<h2><%= personer.firstname + "  "+ personer.surname  %></h2>
+  				<h3><%= personer.firstname + "  "+ personer.surname  %></h3>
     			<p><%= personer.occupation.toUpperCase() %></p>
   			</div>
 
-  			<h4 style="margin-top:-23px">PROFILE</h4>
+  			<h6 style="margin-top:-23px">PROFILE</h6>
   			<hr style="margin-top: -3px;">
   			<p>
   				<%= profiler.profile %>
@@ -92,7 +103,7 @@
 
 
 
-  			<h4>EMPLOYMENT HISTORY</h4>
+  			<h6>EMPLOYMENT HISTORY</h6>
   			<hr style="margin-top: -15px;">
 
         <% experiences.values.work.forEach(function(item) { %>
@@ -109,7 +120,7 @@
 
 			
 
-			<h4>EDUCATION</h4>
+			<h6>EDUCATION</h6>
   			<hr style="margin-top: -15px;">
 
         <% education.values.education.forEach(function(item) { %>
@@ -123,7 +134,7 @@
         <% }); %>
 
 
-  			<h4>REFERENCE</h4>
+  			<h6>REFERENCE</h6>
   			<hr style="margin-top: -15px;">
 
         <% reference.values.refree.forEach(function(item) { %>

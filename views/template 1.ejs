@@ -70,11 +70,11 @@
 	<hr style="height:1px; background-color: black;">
 	<h6>PROFESSIONAL EXPERIENCE</h6>
 	<hr style="height:1px; background-color: black;">
-	<div class="row" style=" margin-top:15px; padding-bottom: 10px;">
+	<div class="row" style=" margin-top:15px;">
 		
 	   <% experiences.values.work.forEach(function(item) { %>
 
-		<div class="column" style="padding-bottom: 10px;">
+		<div class="column" style="padding-bottom: 15px;">
 			<p style="margin-top: -10px;"> <b><%= item.position %></b> , <i><%= item.employer %></i></p>
 		
 			<p style="margin-top: -8px;"> <b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
@@ -84,7 +84,6 @@
              </div>
 			
 		</div>
-		 <br>
 		 <% }); %>
 
 
