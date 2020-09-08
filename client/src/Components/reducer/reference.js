@@ -3,11 +3,11 @@ const initialState ={
 
         refree:[
             {
-            referent:"",
-            occupation:"",
-            company: "",
-            email:"",
-            phone:""
+            referent:"V Kapuisire",
+            occupation:"Priciple Programmer",
+            company: "CTO",
+            email:"vkapuisire@gov.bw",
+            phone:"+27 3474893342"
             }
         ]
     }

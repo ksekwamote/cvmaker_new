@@ -3,10 +3,17 @@ const initialState = {
         education:
         [
              {
-                fieldOfStudy:"",
-                schoolName:"",
-                startDate:"",
-                gradDate:""
+                fieldOfStudy:"Bachelor Of Science",
+                schoolName:"University Of Botswana",
+                startDate:"June 2016",
+                gradDate:"June 2018"
+
+             },
+             {
+                fieldOfStudy:"Bachelor Of Law",
+                schoolName:"University Of Kwazulu-Natal",
+                startDate:"June 2019",
+                gradDate:"June 2020"
 
              }
 
