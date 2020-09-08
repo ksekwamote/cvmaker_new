@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<style type="text/css">
-		
-		* {
+
+
+  <title></title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  <style type="text/css">
+    
+    * {
   box-sizing: border-box;
   font-family: Arial;
  
 }
 @font-face {
-  font-family: serif;
-  src: url('http://fonts.googleapis.com/css?family=Droid+Serif');
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 }
 body{
       font-family: serif;
@@ -40,10 +44,10 @@ body{
 }
 img.left{
 
-	float: left;
-	
-	margin-top: -60px;
-	margin-left: 30px;
+  float: left;
+  
+  margin-top: -60px;
+  margin-left: 30px;
 }
 
 .avatar {
@@ -53,167 +57,168 @@ img.left{
   border-radius: 50%;
 }
 
-p, li {
+p, li ,b{
 
       font-size: 9px;
-      font-family: serif;
+      font-family: Roboto;
     }
 
+h4, h6, div, td , li{
+
+  font-family: Roboto;
+}
 
 
-	</style>
+
+
+  </style>
 </head>
 <body>
-  		
+      
 
-  		<div class="row">
+      <div class="row">
   <div class="column left" style="background-color:#333f4f; color:#333f4f; ">
-  	
-  	<div  style="background-color: #ededed; height: 1100px;">
-  		<br>
+    
+    <div  style="background-color: #ededed;  height:1000px; max-height: 800px;">
+      <br>
 
-  		<div align="center">
+      <div align="center">
 
-  		
+      <br> <br><br> <br> <br>
 
-  			<h3>CONTACT</h3>
-  			<p><b>Phone</b></p>
-  			<p style="word-wrap: break-word;" ><%= personer.phoneNumber %></p>
-  			<p><b>Email</b></p>
-  			<p style="word-wrap: break-word;"><%= personer.email %></p>
-  			<p><b>Address</b></p>
-  			<p style="word-wrap: break-word;"><%= personer.address %></p>
-  			<br>
-  		<h3>SKILL</h3>
-  			
+        <h4>CONTACT</h4>
+        <p><b>Phone</b></p>
+        <p style="word-wrap: break-word;" ><%= personer.phoneNumber %></p>
+        <p><b>Email</b></p>
+        <p style="word-wrap: break-word;"><%= personer.email %></p>
+        <p><b>Address</b></p>
+        <p style="word-wrap: break-word;"><%= personer.address %></p>
+        <br>
+      <h4>SKILL</h4>
+        
 
-  		</div>
-  		
-  		<br>
-  		<p style="padding-left: 5px;"><%= quality.qualities %></p>
+      </div>
+      
+      <br>
+      <p style="padding: 5px;"><%= quality.qualities %></p>
 
-	<br>
-	
-	
-
-
+  <br>
+  
+  
 
 
-  	</div>
+
+
+    </div>
     
   </div>
   <div class="column right" style="background-color:#333f4f;">
-  	<div align="center" style=" color: white;">
+    <div align="center" style=" color: white;">
 
-  		  <h6><%= personer.firstname + "  "+ personer.surname  %></h6>
-   		 <p><%= personer.occupation.toUpperCase() %></p>
-  		
+        <h6><%= personer.firstname + "  "+ personer.surname  %></h6>
+       <p><%= personer.occupation.toUpperCase() %></p>
+      
 
-  	</div>
+    </div>
 
-  	<br>
+    <br>
 
-  	<div>
+    <div>
 
-  			<table>
-    				<tr style="height: 20px;" >
-    					
-    					<td valign="top" style="padding:20px;">
-    						<img src="users.png">
-    					</td>
+        <table>
+            <tr style="height: 20px;" >
+              
+            
 
+              <td>
+                
+                  <h6>ABOUT ME </h6>
+                  <p><%= profiler.profile %></p>
 
-    					<td>
-    						
-    							<h6>ABOUT ME </h6>
-    							<p><%= profiler.profile %></p>
+              </td>
+              
 
-    					</td>
-    					
+            </tr>
 
-    				</tr>
+          </table>
+    </div>
 
-    			</table>
-  	</div>
+    <div>
+      
 
-  	<div>
-  		
+      <table>
+            <tr style="height: 20px;" >
+              
+              
 
-  		<table>
-    				<tr style="height: 20px;" >
-    					
-    					<td valign="top" style="padding:20px;">
-    						<img src="gears.png">
-    					</td>
-
-
-    					<td>
-    						
-    							<h6>EXPERIENCE </h6>
+              <td>
+                
+                  <h6>EXPERIENCE </h6>
 
               <% experiences.values.work.forEach(function(item) { %>
-    							<div style="padding-bottom: 10px;">
+                  <div style="padding-bottom: 10px;">
 
-              			<p> <b><%= item.position.toUpperCase() %></b></p>
-              			<p style="margin-top: 0px; float: right;"><b> <%= item.jstartDate %> --------- <%= item.jendDate %></b></p>
-              			<p> <b><%= item.employer %></b></p>
+                    <p> <%= item.position.toUpperCase() %></p>
 
-            			          <div>
+                    <div style="display: inline;">
+                    <p style="margin-top: 0px; float: right;"> <%= item.jstartDate %> --------- <%= item.jendDate %></p>
+                    <p style="float: left;"> <%= item.employer %></p>
+
+                    </div>
+
+                            <div>
                                   <%- item.jdescription  %>
                            </div>
-			
-		          </div>
+      
+              </div>
 
     <% }); %>
 
-    					</td>
-    					
+              </td>
+              
 
-    				</tr>
+            </tr>
 
-    			</table>
-
-
-  	</div>
-
-  	<div>
+          </table>
 
 
-  		<table>
-    				<tr style="height: 20px;" >
-    					
-    					<td valign="top" style="padding:20px;">
-    						<img src="registers.png">
-    					</td>
+    </div>
+
+    <div>
 
 
-    					<td>
-    						<h6>EDUCATION</h6>
+      <table>
+            <tr style="height: 20px;" >
+              
+            
+
+              <td>
+                <h6>EDUCATION</h6>
 
                 <% education.values.education.forEach(function(item) { %>
 
-    						<div>
+                <div>
 
-    		      	<p style="margin-top: 0px; float: right; "><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
-  				      <p><b><%= item.schoolName %></b></p>
-  				
+                <p style="margin-top: 0px; float: right; "><%= item.startDate %> -- <%= item.gradDate %></p>
+                <p><%= item.schoolName %></p>
+          
 
-			         <p style="margin-top: 0px;"><i><%= item.fieldOfStudy %></i></p>
-  			</div>
+               <p style="margin-top: 0px;"><i><%= item.fieldOfStudy %></i></p>
+        </div>
 
            <% }); %>
 
-					
-  					</td>
-    					
+          
+            </td>
+              
 
-    				</tr>
+            </tr>
 
-    			</table>
-  		
+          </table>
+      
 
 
-  	 </div>
+     </div>
 
 
 
@@ -224,10 +229,7 @@ p, li {
       <table>
             <tr style="height: 20px;" >
               
-              <td valign="top" style="padding:20px;">
-                <img src="registers.png">
-              </td>
-
+            
 
               <td>
                 <h6>REFERENCE</h6>
