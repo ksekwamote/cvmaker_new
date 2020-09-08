@@ -76,11 +76,11 @@
 	   <% experiences.values.work.forEach(function(item) { %>
 	   	<br>
 		<div class="column">
-			<p style="margin-top: -20px;"> <b><%= item.position %></b> , <i><%= item.employer %></i></p>
+			<p style="margin-top: -15px;"> <b><%= item.position %></b> , <i><%= item.employer %></i></p>
 		
-			<p style="margin-top: -20px;"> <b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+			<p style="margin-top: -15px;"> <b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
 	
-			<div style="margin-top: -20px;">
+			<div style="margin-top: -15px;">
                 <%- item.jdescription  %>
              </div>
 			
@@ -102,9 +102,9 @@
 		<% education.values.education.forEach(function(item) { %>
 			  	<br>
 		<div class="column" >
-			<p  style="margin-top: -20px;"><b><%= item.schoolName %></b></p>
-			<p  style="margin-top: -20px;"><i><%= item.fieldOfStudy %> </i></p>
-			<p  style="margin-top: -20px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
+			<p  style="margin-top: -15px;"><b><%= item.schoolName %></b></p>
+			<p  style="margin-top: -15px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p  style="margin-top: -15px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
 			
 		</div>
 
@@ -125,9 +125,9 @@
 	<% reference.values.refree.forEach(function(item) { %>
 					  	<br>
 		<div class="column">
-			<p style="margin-top: -20px;"><b><%= item.referent %>, <%= item.company %></b></p>
-			<p style="margin-top: -20px;"><i><%= item.occupation %></i></p>
-			<p style="margin-top: -20px;"><b>Tel: <%= item.phone %></b></p>
+			<p style="margin-top: -15px;"><b><%= item.referent %>, <%= item.company %></b></p>
+			<p style="margin-top: -15px;"><i><%= item.occupation %></i></p>
+			<p style="margin-top: -15px;"><b>Tel: <%= item.phone %></b></p>
 			
 		</div>
 
