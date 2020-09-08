@@ -71,16 +71,15 @@
 	<h6>PROFESSIONAL EXPERIENCE</h6>
 	<hr style="height:1px; background-color: black;">
 	<div class="row" style=" margin-top:15px;">
-
-
+		
 	   <% experiences.values.work.forEach(function(item) { %>
 	   	<br>
-		<div class="column">
-			<p style="margin-top: -10px;"> <b><%= item.position %></b> , <i><%= item.employer %></i></p>
+		<div class="column" style="padding-bottom: 5px;">
+			<p style="margin-top: -12px;"> <b><%= item.position %></b> , <i><%= item.employer %></i></p>
 		
-			<p style="margin-top: -8px;"> <b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+			<p style="margin-top: -10px;"> <b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
 	
-			<div style="margin-top: -6px;">
+			<div style="margin-top: -8px;" >
                 <%- item.jdescription  %>
              </div>
 			
@@ -100,11 +99,11 @@
 
 
 		<% education.values.education.forEach(function(item) { %>
-			  	<br>
-		<div class="column" >
-			<p  style="margin-top: -10px;"><b><%= item.schoolName %></b></p>
-			<p  style="margin-top: -8px;"><i><%= item.fieldOfStudy %> </i></p>
-			<p  style="margin-top: -6px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
+		
+		<div class="column" style="padding-bottom: 5px;" >
+			<p  style="margin-top: -12px;"><b><%= item.schoolName %></b></p>
+			<p  style="margin-top: -10px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p  style="margin-top: -8px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
 			
 		</div>
 
@@ -123,11 +122,10 @@
 			
 
 	<% reference.values.refree.forEach(function(item) { %>
-					  	<br>
-		<div class="column">
-			<p style="margin-top: -10px;"><b><%= item.referent %>, <%= item.company %></b></p>
-			<p style="margin-top: -8px;"><i><%= item.occupation %></i></p>
-			<p style="margin-top: -6px;"><b>Tel: <%= item.phone %></b></p>
+		<div class="column" style="padding-bottom: 5px;">
+			<p style="margin-top: -12px;"><b><%= item.referent %>, <%= item.company %></b></p>
+			<p style="margin-top: -10px;"><i><%= item.occupation %></i></p>
+			<p style="margin-top: -8px;"><b>Tel: <%= item.phone %></b></p>
 			
 		</div>
 
