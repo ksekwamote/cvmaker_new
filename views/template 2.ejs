@@ -11,6 +11,10 @@
   font-family: serif;
   src: url('http://fonts.googleapis.com/css?family=Droid+Serif');
 }
+
+    body{
+      font-family: serif;
+    }
 		.column {
   float: left;
   padding: 10px;
@@ -71,20 +75,13 @@ p, li , td{
 
     			</table>
     		
-    		<div>
-    		<p><b>DATE/PLACE OF BIRTH</b></p>
-    		<p><%= personer.dob %></p>
-    		<p>Gantsi</p>
-    		</div>
     		<br>
 
     	
 
     		<h6 style="margin-top:40px">SKILLS</h6>
   			<hr>
-
-
-          cc
+          <p style="font-size: 9px;"><%= quality.qualities %></p>
 
   		</div>
 
@@ -95,6 +92,7 @@ p, li , td{
     			<p><%= personer.occupation.toUpperCase() %></p>
   			</div>
 
+          <br><br>
   			<h6 style="margin-top:-23px">PROFILE</h6>
   			<hr style="margin-top: -3px;">
   			<p>
@@ -107,7 +105,7 @@ p, li , td{
   			<hr style="margin-top: -15px;">
 
         <% experiences.values.work.forEach(function(item) { %>
-  			<div>
+  			<div style="padding-bottom: 20px;">
 
   			<p> <b><%= item.position %> , <%= item.employer %></b></p>
 			     <p style="margin-top: -10px;"> <%= item.jstartDate %> -   <%= item.jendDate %></p>
