@@ -96,7 +96,7 @@ export default class Download extends Component{
 
   render(){
    
-    const url = 'https://github.com/caspg/react-sharingbuttons'
+    const url = 'https://www.resumefactory.co'
     const shareText = 'Guys i just found the perfect site to create a resume, very proffesional!'
     return (
       <FadeIn>
