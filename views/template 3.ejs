@@ -1,40 +1,55 @@
-<!DOCTYPE html>
 <html>
 <head>
+  <title>   </title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
 
-  <title></title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   <style type="text/css">
-    
     * {
   box-sizing: border-box;
-  font-family: Arial;
- 
+      font-family: Arial;
 }
-@font-face {
-  font-family: Roboto;
-  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-}
-body{
-      font-family: serif;
-    }
 
-/* Create two unequal columns that floats next to each other */
-.column {
+@font-face {
+  font-family: serif;
+  src: url('http://fonts.googleapis.com/css?family=Droid+Serif');
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+}
+
+    body{
+      font-family: Lato;
+    }
+    .column {
   float: left;
   padding: 10px;
-  height: 120px; /* Should be removed. Only for demonstration */
+  height: 1100px; /* Should be removed. Only for demonstration */
 }
 
 .left {
-  width: 30%;
+  width: 35%;
 }
 
-.right {
-  width: 70%;
+.right {  
+  width: 65%;
 }
+
+p, li , td{
+
+      font-size: 9px;
+      font-family: Lato;
+    }
+
+h6 ,b {
+    font-family: Lato;
+
+}
+
+
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -42,233 +57,115 @@ body{
   display: table;
   clear: both;
 }
-img.left{
-
-  float: left;
-  
-  margin-top: -60px;
-  margin-left: 30px;
-}
-
-.avatar {
-  vertical-align: middle;
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
-}
-
-p, li ,b{
-
-      font-size: 9px;
-      font-family: Roboto;
-    }
-
-h4, h6, div, td , li{
-
-  font-family: Roboto;
-}
-
-
-
 
   </style>
 </head>
 <body>
+  
+
+  <div class="row">
+      <div class="column left" style="background-color:#f4f4f4; color:#333f4f;">
+        <h6 style="margin-top:80px"><b>INFO</b></h6>
+        <hr>
+          <table>
+            <tr style="color:#333f4f;" >
+              <td><b>Address </b></td>
+              <td style="padding: 10px; word-wrap: break-word;"><%= personer.address %></td>
+
+            </tr>
+
+            <tr style="color:#333f4f;">
+              <td><b>Phone </b></td>
+              <td style="padding: 10px; word-wrap: break-word;"> <%= personer.phoneNumber %> </td>
+
+            </tr>
+
+            <tr style="color:#333f4f;">
+              <td><b>Email </b></td>
+              <td style="padding: 10px; word-wrap: break-word;"> <%= personer.email %></td>
+
+            </tr>
+
+          </table>
+        
+        <br>
+
       
 
-      <div class="row">
-  <div class="column left" style="background-color:#333f4f; color:#333f4f; ">
-    
-    <div  style="background-color: #ededed;  height:1000px; max-height: 800px;">
-      <br>
-
-      <div align="center">
-
-      <br> <br><br> <br> <br>
-
-        <h4>CONTACT</h4>
-        <p><b>Phone</b></p>
-        <p style="word-wrap: break-word;" ><%= personer.phoneNumber %></p>
-        <p><b>Email</b></p>
-        <p style="word-wrap: break-word;"><%= personer.email %></p>
-        <p><b>Address</b></p>
-        <p style="word-wrap: break-word;"><%= personer.address %></p>
-        <br>
-      <h4>SKILL</h4>
-        
+        <h6 style="margin-top:40px"><b>SKILLS</b></h6>
+        <hr>
+          <p style="font-size: 9px;"><%= quality.qualities %></p>
 
       </div>
-      
-      <br>
-      <p style="padding: 5px;"><%= quality.qualities %></p>
 
-  <br>
-  
-  
-
-
-
-
-    </div>
-    
-  </div>
-  <div class="column right" style="background-color:#333f4f;">
-    <div align="center" style=" color: white;">
-
-        <h6><%= personer.firstname + "  "+ personer.surname  %></h6>
-       <p><%= personer.occupation.toUpperCase() %></p>
-      
-
-    </div>
-
-    <br>
-
-    <div>
-
-        <table>
-            <tr style="height: 20px;" >
-              
-            
-
-              <td>
-                
-                  <h6>ABOUT ME </h6>
-                  <p><%= profiler.profile %></p>
-
-              </td>
-              
-
-            </tr>
-
-          </table>
-    </div>
-
-    <div>
-      
-
-      <table>
-            <tr style="height: 20px;" >
-              
-              
-
-              <td>
-                
-                  <h6>EXPERIENCE </h6>
-
-              <% experiences.values.work.forEach(function(item) { %>
-                  <div style="padding-bottom: 10px;">
-
-                    <p> <%= item.position.toUpperCase() %></p>
-
-                    <div style="display: inline;">
-                    <p style="margin-top: 0px; float: right;"> <%= item.jstartDate %> --------- <%= item.jendDate %></p>
-                    <p style="float: left;"> <%= item.employer %></p>
-
-                    </div>
-
-                            <div>
-                                  <%- item.jdescription  %>
-                           </div>
-      
-              </div>
-
-    <% }); %>
-
-              </td>
-              
-
-            </tr>
-
-          </table>
-
-
-    </div>
-
-    <div>
-
-
-      <table>
-            <tr style="height: 20px;" >
-              
-            
-
-              <td>
-                <h6>EDUCATION</h6>
-
-                <% education.values.education.forEach(function(item) { %>
-
-                <div>
-
-                <p style="margin-top: 0px; float: right; "><%= item.startDate %> -- <%= item.gradDate %></p>
-                <p><%= item.schoolName %></p>
-          
-
-               <p style="margin-top: 0px;"><i><%= item.fieldOfStudy %></i></p>
+      <div class="column right" style="padding-left: 10px;" >
+        <div align="center" style="background-color:#333f4f; color: #fff; margin-top: -30px; height: 100px; ">
+            <br>
+          <h3><%= personer.firstname + "  "+ personer.surname  %></h3>
+          <p><%= personer.occupation.toUpperCase() %></p>
         </div>
 
-           <% }); %>
-
-          
-            </td>
-              
-
-            </tr>
-
-          </table>
-      
-
-
-     </div>
+          <br><br>
+        <h6 style="margin-top:-23px"><b>PROFILE</b></h6>
+        <hr style="margin-top: -3px;">
+        <p>
+          <%= profiler.profile %>
+        </p>
 
 
 
+        <h6><b>EMPLOYMENT HISTORY</b></h6>
+        <hr style="margin-top: -15px;">
 
-      <div>
+        <% experiences.values.work.forEach(function(item) { %>
+        <div style="padding-bottom: 5px;">
 
-
-      <table>
-            <tr style="height: 20px;" >
-              
-            
-
-              <td>
-                <h6>REFERENCE</h6>
-
-               <% reference.values.refree.forEach(function(item) { %>
-      <div>
-          <p><b><%= item.referent %>, <%= item.company %></b></p>
-      <p style="margin-top: 0px;"><i> <%= item.occupation %></i></p>
-      <p style="margin-top: 0px;">Email: <%= item.email %></p>
-      <p style="margin-top: 0px;">Phone Number: <%= item.phone %></p>
+        <p> <%= item.position %> , <%= item.employer %></p>
+           <p style="margin-top: -7px;"> <%= item.jstartDate %> -   <%= item.jendDate %></p>
+           <div style="margin-top: -5px;">
+                <%- item.jdescription  %>
+            </div>
         </div>
 
-        <br>
+     <% }); %>
+
+      
+      <div style="margin-top: -5px;">
+      <h6><b>EDUCATION</b></h6>
+        <hr style="margin-top: -15px;">
+
+        <% education.values.education.forEach(function(item) { %>
+        <div>
+
+          <p><%= item.schoolName %></p>
+      <p style="margin-top: -7px;"><i><%= item.fieldOfStudy %> </i></p>
+      <p style="margin-top: -5px;"><%= item.startDate %> -- <%= item.gradDate %></p>
+        </div>
+
+        <% }); %>
+      </div>
+
+
+        <h6><b>REFERENCE</b></h6>
+        <hr style="margin-top: -15px;">
+
+        <% reference.values.refree.forEach(function(item) { %>
+
+        <div>
+          <p><%= item.referent %>, <%= item.company %></p>
+      <p style="margin-top: -7px;"><i><%= item.occupation %></i></p>
+      <p style="margin-top: -5px;">Tel: <%= item.phone %></p>
+        </div>
 
         <% }); %>
 
-               
-            </td>
-              
-
-            </tr>
-
-          </table>
-      
+        
 
 
-     </div>
+          
+      </div>
 
-
-
-
-
-
-
-  
   </div>
-</div>
-
-
 
 </body>
 </html>
