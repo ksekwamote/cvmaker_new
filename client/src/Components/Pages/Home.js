@@ -129,8 +129,10 @@ export default class Home extends Component {
             <div class="container">
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <h1 id="intro">Create a Proffesional CV  <strong>Online FREE</strong></h1>
-                        <p>Climb the ladder to corporate success through an award  winning professional Resume or CV maker. All our CV's are  <strong>Recommended by HR Experts</strong></p>
+                        //<h1 id="intro">Create a Proffesional CV  <strong>Online FREE</strong></h1>
+                        //<p>Climb the ladder to corporate success through an award  winning professional Resume or CV maker. All our CV's are  <strong>Recommended by HR Experts</strong></p>
+                        <h1>SITE UNDER CONSTRUCTION &#128295;</h1>
+                        <span style='font-size:200px;'>&#128679;</span>
                         <a class="main-button-slider"><Link style={{color:"#fff"}} to="/templates">Create My CV &#8594;</Link></a>
                     </div>
                     
