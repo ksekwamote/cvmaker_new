@@ -164,38 +164,36 @@ p,b,i,div{
     <div>
       
 
-      <table>
-            <tr style="height: 20px;" >
-              
-              
-
-
+     <table>
+            
+          <tr style="height: 20px;" >
+            <br>
               <td>
                 
-          <h3>EXPERIENCE </h3>
-          <% experiences.values.work.forEach(function(item) { %>
+                  <h3 style=" width: 300px;">EXPERIENCE </h3>
+                    <br>
+                    <% experiences.values.work.forEach(function(item) { %>
               <div>
 
-        <p> <b><%= item.position.toUpperCase() %></b></p>
-        <p style="margin-top: 0px; float: right;"><%= item.jstartDate %> -   <%= item.jendDate %></p>
-        <p> <%= item.employer %></p>
+              <p id="font"> <b><%= item.position.toUpperCase() %></b></p>
+              <p id="font" style="margin-top: 0px; float: right;"><b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+              <p id="font"> <b><%= item.employer %></b></p>
 
-        <div>
-                <%- item.jdescription  %>
-            </div>
-      
-      
-    </div>
+              <div id="font">
+                      <%- item.jdescription  %>
+                  </div>
+            
+            
+          </div>
+          <br>
          <% }); %>
-    
 
-              </td>
+                </td>
               
 
             </tr>
 
           </table>
-
 
     </div>
 

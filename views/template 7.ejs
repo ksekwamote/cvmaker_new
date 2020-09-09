@@ -143,36 +143,35 @@ li,p,b,i{
   		
 
   		<table>
-    				
+            
+          <tr style="height: 20px;" >
+            <br>
+              <td style="border-left: 1px solid black; padding-left: 15px;">
+                
+                  <h3 style=" width: 300px; color:#333f4f;">EXPERIENCE </h3>
+                    <br>
+                    <% experiences.values.work.forEach(function(item) { %>
+              <div>
 
-  					<br>
-    					<td style="border-left: 1px solid black; padding-left: 15px;">
-    						
-    			<h3 style="color:#333f4f">EXPERIENCE </h3>
-    						<br>
-    			<% experiences.values.work.forEach(function(item) { %>
-    					<div>
+              <p id="font"> <b><%= item.position.toUpperCase() %></b></p>
+              <p id="font" style="margin-top: 0px; float: right;"><b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+              <p id="font"> <b><%= item.employer %></b></p>
 
-			  			<p id="font"> <b><%= item.position.toUpperCase() %></b></p>
-			  			<p id="font" style="margin-top: 0px; float: right;"><b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
-			  			<p id="font"> <b><%= item.employer %></b></p>
+              <div id="font">
+                      <%- item.jdescription  %>
+                  </div>
+            
+            
+          </div>
+          <br>
+         <% }); %>
 
-			  			<div id="font">
-			                <%- item.jdescription  %>
-			            </div>
-						
-						
-					</div>
-					<br>
-				 <% }); %>
-		
+                </td>
+              
 
-    					</td>
-    					
+            </tr>
 
-    				</tr>
-
-    			</table>
+          </table>
 
 
   	</div>
