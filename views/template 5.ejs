@@ -52,7 +52,10 @@ img.left{
 
 	color: #259ceb
 }
+p,b,i,div{
 
+  font-size: 9px;
+}
 
 
 	</style>
@@ -70,23 +73,23 @@ img.left{
 
   			<img src="kutlo.jpg" alt="Avatar" class="avatar">
 
-  			<h3 style="padding: 10px; background-color:#241601; color:#fff; ">CONTACT</h2>
+  			<h5 style="padding: 10px; background-color:#241601; color:#fff; ">CONTACT</h5>
   			<p><b>Phone</b></p>
   			<p style="word-wrap: break-word;"><%= personer.phoneNumber %></p>
-  			<p style="word-wrap: break-word;"><b>Email</b></p>
-  			<p><%= personer.email %></p>
+  			<p ><b>Email</b></p>
+  			<p style="word-wrap: break-word;"><%= personer.email %></p>
   			<p><b>Address</b></p>
   			<p style="word-wrap: break-word;"><%= personer.address %></p>
   			<br>
 
   			<div align="center">
 
-		<h3 style="padding: 10px; background-color:#241601; color:#fff; " >EDUCATION</h3>
+		<h5 style="padding: 10px; background-color:#241601; color:#fff; " >EDUCATION</h5>
 		<% education.values.education.forEach(function(item) { %>
 				<div style="padding-bottom: 1px;">
   				<p><b><%= item.schoolName %></b></p>
 			<p style="margin-top: 0px;"><i><%= item.fieldOfStudy %> </i></p>
-			<p><b><%= item.startDate %> - <%= item.gradDate %></b></p>
+			<p><%= item.startDate %> - <%= item.gradDate %></p>
 			
   			</div>
   					
@@ -95,7 +98,7 @@ img.left{
   			
 	</div>
 	
-  		<h3 style="padding: 10px; background-color:#241601; color:#fff; " >SKILL</h3>
+  		<h5 style="padding: 10px; background-color:#241601; color:#fff; " >SKILL</h5>
   			
 
   		</div>
@@ -122,7 +125,7 @@ img.left{
   <div class="column right" style="background-color:#241601;">
   	<div align="center" style=" color: white;">
 
-  		  <h2><%= personer.firstname + "  "+ personer.surname  %></h2>
+  		  <h3><%= personer.firstname + "  "+ personer.surname  %></h3>
    		 <p><%= personer.occupation.toUpperCase() %></p>
   		
 
@@ -140,7 +143,7 @@ img.left{
 
     					<td>
     						
-    							<h2>ABOUT ME </h2>
+    							<h6>ABOUT ME </h6>
     							<p>
   				<%= profiler.profile %>
   			</p>
@@ -164,13 +167,13 @@ img.left{
 
     					<td>
     						
-    			<h2>EXPERIENCE </h2>
+    			<h6>EXPERIENCE </h6>
     			<% experiences.values.work.forEach(function(item) { %>
     					<div>
 
   			<p> <b><%= item.position.toUpperCase() %></b></p>
-  			<p style="margin-top: 0px; float: right;"><b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
-  			<p> <b><%= item.employer %></b></p>
+  			<p style="margin-top: 0px; float: right;"><%= item.jstartDate %> -   <%= item.jendDate %></p>
+  			<p> <%= item.employer %></p>
 
   			<div>
                 <%- item.jdescription  %>
@@ -201,7 +204,7 @@ img.left{
 
 
     					<td>
-    						<h2>REFERENCE</h2>
+    						<h6>REFERENCE</h6>
 
     						<% reference.values.refree.forEach(function(item) { %>
 			<div>
