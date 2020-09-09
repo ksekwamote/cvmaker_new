@@ -4,6 +4,15 @@
 	<title>Template 1</title>
 
 	<style type="text/css">
+
+		@font-face {
+  font-family: Lato;
+  src: url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+}			
+		*{
+  				font-family: Lato;
+			}
+
 		.row{
 
 			display: flex;
@@ -17,13 +26,31 @@
 		}
 
 		body{
-			font-family: Arial;
+			font-family: Lato;
 		}
 
 		h3 {
-
-				color: #259ceb
+				color: #259ceb;
+				font-family: Lato;
 			}
+
+			li,p,b,i{
+				font-family: Lato;
+  				font-size: :9px;
+
+			}
+
+			td{
+  font-size: 12px;
+  font-family: Lato;
+}
+h3{
+  font-family: Lato;  
+}
+
+#font{
+  font-size: 9px;
+}
 
 	</style>
 </head>
@@ -42,26 +69,26 @@
 	<hr style="height:3px; background-color: black;">
 
 	<div>
-	<h3>Objectives</h3>
-	<p><%= profiler.profile %></p>
-	<h3>Skills</h3>
+	<h4>Objectives</h4>
+	<p id="font"><%= profiler.profile %></p>
+	<h4>Skills</h4>
 	
-			<p><%= quality.qualities %></p>
+			<p id="font"><%= quality.qualities %></p>
 	</div>
 
 	<hr style="height:3px; background-color: black;">
-	<h3>Proffesional Experience</h3>
+	<h4>Proffesional Experience</h4>
 	
 	<div class="row" style=" margin-top:25px;">
 		
 	   <% experiences.values.work.forEach(function(item) { %>
 
 		<div class="column">
-			<p style="margin-top: -10px;"> <b><%= item.position %></b> , <i><%= item.employer %></i></p>
+			<p id="font" style="margin-top: -10px;"> <b><%= item.position %></b> , <i><%= item.employer %></i></p>
 		
-			<p style="margin-top: -10px;"> <b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+			<p id="font" style="margin-top: -10px;"> <%= item.jstartDate %> -   <%= item.jendDate %></p>
 	
-			<div style="margin-top: -10px;">
+			<div id="font" style="margin-top: -10px;">
                 <%- item.jdescription  %>
              </div>
 			
@@ -73,16 +100,16 @@
 
 
 	<hr style="height:3px; background-color: black;">
-	<h3>Certification</h3>
+	<h4>Certification</h4>
 	
 	<div class="row" style=" margin-top:25px;">
 
 		<% education.values.education.forEach(function(item) { %>
 
 		<div class="column" >
-			<p  style="margin-top: -10px;"><b><%= item.schoolName %></b></p>
-			<p  style="margin-top: -10px;"><i><%= item.fieldOfStudy %> </i></p>
-			<p  style="margin-top: -10px;"><b><%= item.startDate %> -- <%= item.gradDate %></b></p>
+			<p id="font" style="margin-top: -10px;"><b><%= item.schoolName %></b></p>
+			<p id="font" style="margin-top: -10px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p id="font" style="margin-top: -10px;"><%= item.startDate %> -- <%= item.gradDate %></p>
 			
 		</div>
 
@@ -92,15 +119,15 @@
 	</div>
 
 	<hr style="height:3px; background-color: black;">
-	<h3>References</h3>
+	<h4>References</h4>
 	
 	<div class="row" style="margin-top: 25px;">
 
 		<% reference.values.refree.forEach(function(item) { %>
 		<div class="column">
-			<p style="margin-top: -10px;"><b><%= item.referent %>, <%= item.company %></b></p>
-			<p style="margin-top: -10px;"><i><%= item.occupation %></i></p>
-			<p style="margin-top: -10px;"><b>Tel: <%= item.phone %></b></p>
+			<p id="font" style="margin-top: -10px;"><b><%= item.referent %>, <%= item.company %></b></p>
+			<p id="font" style="margin-top: -10px;"><i><%= item.occupation %></i></p>
+		<p id="font" style="margin-top: -10px;">Tel: <%= item.phone %></p>
 			
 		</div>
 

@@ -39,6 +39,12 @@
 li,p,b,i{
 
 	color:#333f4f;
+    font-size: 9px;
+}
+
+#font{
+
+  font-size: 9px;
 }
 
 
@@ -48,7 +54,7 @@ li,p,b,i{
 
 </head>
 <body>
-		<div align="center" style="background-color:#333f4f; border-style: solid; border-color:#D4AF37;   height:150px; padding-top: 25px; " class="row">
+		<div align="center" style="background-color:#333f4f; border-style: solid; border-color:#D4AF37; height:140px; padding-top: 25px; " class="row">
 
 				<h1 ><%= personer.firstname + "  "+ personer.surname  %></h1>
 				<br>
@@ -65,23 +71,23 @@ li,p,b,i{
   		<div >
 
 
-  			<h3 style="padding: 10px;  color:#333f4f; word-wrap: break-word;">CONTACT</h2>
-  			<p>&#128241; &nbsp; <%= personer.phoneNumber %></p>
+  			<h4 style="padding: 10px;  color:#333f4f; word-wrap: break-word;">CONTACT</h4>
+  			<p id="font" >&#128241; &nbsp; <%= personer.phoneNumber %></p>
   			<br>
-  			<p style="word-wrap: break-word;"> &#9993; &nbsp; <%= personer.email %></p>
+  			<p id="font" style="word-wrap: break-word;"> &#9993; &nbsp; <%= personer.email %></p>
   			<br>
-  			<p style="word-wrap: break-word;">&#128234; &nbsp; <%= personer.address %></p>
+  			<p id="font" style="word-wrap: break-word;">&#128234; &nbsp; <%= personer.address %></p>
   			<br>
 
   			<div>
 
-		<h3 style="padding: 10px;  color:#333f4f; " >EDUCATION</h3>
+		<h4 style="padding: 10px;  color:#333f4f; " >EDUCATION</h4>
 
 				<% education.values.education.forEach(function(item) { %>
 				<div style="padding-bottom: 1px;">
-  				<p><b><%= item.schoolName %></b></p>
-			<p style="margin-top: 0px;"><i><%= item.fieldOfStudy %> </i></p>
-			<p><b><%= item.startDate %> - <%= item.gradDate %></b></p>
+  				<p id="font" ><b><%= item.schoolName %></b></p>
+			<p id="font" style="margin-top: 0px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p id="font"><b><%= item.startDate %> - <%= item.gradDate %></b></p>
 			
   			</div>
   					<br>
@@ -89,13 +95,13 @@ li,p,b,i{
 	</div>
 	
 	<br>
-  		<h3 style="padding: 10px;color:#333f4f; " >SKILL</h3>
+  		<h4 style="padding: 10px;color:#333f4f; " >SKILL</h4>
   			
 
   		</div>
   		
   		<br>
-  		<p><%= quality.qualities %></p>
+  		<p id="font"><%= quality.qualities %></p>
 
 	<br>
 	
@@ -121,9 +127,9 @@ li,p,b,i{
 
     					<td style="border-left: 1px solid black; padding-left: 15px;">
     						
-    							<h2 style="color:#333f4f">ABOUT ME </h2>
+    							<h3 style="color:#333f4f">ABOUT ME </h3>
     								<br>
-    							<p><%= profiler.profile %></p>
+    							<p id="font"><%= profiler.profile %></p>
 
     					</td>
     					
@@ -142,16 +148,16 @@ li,p,b,i{
   					<br>
     					<td style="border-left: 1px solid black; padding-left: 15px;">
     						
-    			<h2 style="color:#333f4f">EXPERIENCE </h2>
+    			<h3 style="color:#333f4f">EXPERIENCE </h3>
     						<br>
     			<% experiences.values.work.forEach(function(item) { %>
     					<div>
 
-			  			<p> <b><%= item.position.toUpperCase() %></b></p>
-			  			<p style="margin-top: 0px; float: right;"><b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
-			  			<p> <b><%= item.employer %></b></p>
+			  			<p id="font"> <b><%= item.position.toUpperCase() %></b></p>
+			  			<p id="font" style="margin-top: 0px; float: right;"><b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+			  			<p id="font"> <b><%= item.employer %></b></p>
 
-			  			<div>
+			  			<div id="font">
 			                <%- item.jdescription  %>
 			            </div>
 						
@@ -181,13 +187,13 @@ li,p,b,i{
 
     					<br>
     					<td style="border-left: 1px solid black; padding-left: 15px;">
-    						<h2 style="color:#333f4f">REFERENCE</h2>
+    						<h3 style="color:#333f4f">REFERENCE</h3>
     								<br>
     				<% reference.values.refree.forEach(function(item) { %>
 							<div>
-				  				<p><b><%= item.referent %>, <%= item.company %></b></p>
-							<p style="margin-top: 0px;"><i><%= item.occupation %></i></p>
-							<p style="margin-top: 0px;">Email: <%= item.email %></p>
+				  				<p id="font"><b><%= item.referent %>, <%= item.company %></b></p>
+							<p id="font" style="margin-top: 0px;"><i><%= item.occupation %></i></p>
+							<p id="font" style="margin-top: 0px;">Email: <%= item.email %></p>
 				  			</div>
 
 				  					<br>

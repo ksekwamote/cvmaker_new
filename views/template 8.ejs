@@ -39,6 +39,12 @@
 li,p,b,i{
 
 	color:#333f4f;
+  font-size: 9px;
+}
+
+#font{
+
+  font-size: 9px;
 }
 
 
@@ -65,23 +71,23 @@ li,p,b,i{
   		<div >
 
 
-  			<h3 style="padding: 10px; color:#278bb9; background-color: #bfe2f1; word-wrap: break-word;">CONTACT</h2>
-  			<p>&#128241; &nbsp; <%= personer.phoneNumber %></p>
+  			<h4 style="padding: 10px; color:#278bb9; background-color: #bfe2f1; word-wrap: break-word;">CONTACT</h4>
+  			<p id="font" >&#128241; &nbsp; <%= personer.phoneNumber %></p>
   			<br>
-  			<p style="word-wrap: break-word;"> &#9993; &nbsp; <%= personer.email %></p>
+  			<p id="font" style="word-wrap: break-word;"> &#9993; &nbsp; <%= personer.email %></p>
   			<br>
-  			<p style="word-wrap: break-word;">&#128234; &nbsp; <%= personer.address %></p>
+  			<p id="font" style="word-wrap: break-word;">&#128234; &nbsp; <%= personer.address %></p>
   			<br>
 
   			<div>
 
-		<h3 style="padding: 10px; color:#278bb9; background-color: #bfe2f1 " >EDUCATION</h3>
+		<h4 style="padding: 10px; color:#278bb9; background-color: #bfe2f1 " >EDUCATION</h4>
 
 				<% education.values.education.forEach(function(item) { %>
 				<div style="padding-bottom: 1px;">
-  				<p><b><%= item.schoolName %></b></p>
-			<p style="margin-top: 0px;"><i><%= item.fieldOfStudy %> </i></p>
-			<p><b><%= item.startDate %> - <%= item.gradDate %></b></p>
+  				<p id="font"><b><%= item.schoolName %></b></p>
+			<p id="font" style="margin-top: 0px;"><i><%= item.fieldOfStudy %> </i></p>
+			<p id="font"><b><%= item.startDate %> - <%= item.gradDate %></b></p>
 			
   			</div>
   					<br>
@@ -89,13 +95,13 @@ li,p,b,i{
 	</div>
 	
 	<br>
-  		<h3 style="padding: 10px; color:#278bb9; background-color: #bfe2f1 " >SKILL</h3>
+  		<h4 style="padding: 10px; color:#278bb9; background-color: #bfe2f1 " >SKILL</h4>
   			
 
   		</div>
   		
   		<br>
-  		<p><%= quality.qualities %></p>
+  		<p id="font"><%= quality.qualities %></p>
 	<br>
 	
 	
@@ -120,10 +126,10 @@ li,p,b,i{
 
     					<td style="border-left: 1px solid black; padding-left: 15px;">
     						
-    							<h2 style=" padding: 10px; width: 300px; color:#278bb9; background-color: #bfe2f1">ABOUT ME </h2>
+    							<h3 style=" padding: 10px; width: 300px; color:#278bb9; background-color: #bfe2f1">ABOUT ME </h3>
     								<br>
     					
-  				<p><%= profiler.profile %></p>
+  				<p id="font"><%= profiler.profile %></p>
   	
 
     					</td>
@@ -143,16 +149,16 @@ li,p,b,i{
   					<br>
     					<td style="border-left: 1px solid black; padding-left: 15px;">
     						
-    							<h2 style="padding: 10px; width: 300px; color:#278bb9; background-color: #bfe2f1">EXPERIENCE </h2>
+    							<h3 style="padding: 10px; width: 300px; color:#278bb9; background-color: #bfe2f1">EXPERIENCE </h3>
     								<br>
     								<% experiences.values.work.forEach(function(item) { %>
     					<div>
 
-			  			<p> <b><%= item.position.toUpperCase() %></b></p>
-			  			<p style="margin-top: 0px; float: right;"><b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
-			  			<p> <b><%= item.employer %></b></p>
+			  			<p id="font"> <b><%= item.position.toUpperCase() %></b></p>
+			  			<p id="font" style="margin-top: 0px; float: right;"><b><%= item.jstartDate %> -   <%= item.jendDate %></b></p>
+			  			<p id="font"> <b><%= item.employer %></b></p>
 
-			  			<div>
+			  			<div id="font">
 			                <%- item.jdescription  %>
 			            </div>
 						
@@ -182,13 +188,13 @@ li,p,b,i{
   					<br>
     					<td style="border-left: 1px solid black; padding-left: 15px;">
     						
-    							<h2 style="padding: 10px; width: 300px; color:#278bb9; background-color: #bfe2f1">REFERENCE </h2>
+    							<h3 style="padding: 10px; width: 300px; color:#278bb9; background-color: #bfe2f1">REFERENCE </h3>
     								<br>
     											<% reference.values.refree.forEach(function(item) { %>
 							<div>
-				  				<p><b><%= item.referent %>, <%= item.company %></b></p>
-							<p style="margin-top: 0px;"><i><%= item.occupation %></i></p>
-							<p style="margin-top: 0px;">Email: <%= item.email %></p>
+				  				<p id="font"><b><%= item.referent %>, <%= item.company %></b></p>
+							<p id="font" style="margin-top: 0px;"><i><%= item.occupation %></i></p>
+							<p id="font" style="margin-top: 0px;">Email: <%= item.email %></p>
 				  			</div>
 
 				  					<br>
@@ -209,159 +215,6 @@ li,p,b,i{
   </div>
 </div>
 
-
-
-
-
-
-
-			<!---
-  <div class="column" style="background-color:#333f4f;">
-  	<div align="center" style="justify-content: center; margin-top:20px; #D4AF37 ">
-  		<h1>KUTLO</h1>
-    <h1>SEKWAMOTE</h1>
-  	</div>
-  </div>
-  <div class="column" style="background-color:#333f4f;">
-    <table>
-    				<tr style="height: 50px;" >
-    					<td><b>Address </b></td>
-    					<td style="padding: 10px; word-wrap: break-word;"> P O BOX 771, GANTSI, BOTSWANA</td>
-
-    				</tr>
-
-    				<tr>
-    					<td><b>Phone </b></td>
-    					<td> +267 77105790 </td>
-
-    				</tr>
-
-    				<tr>
-    					<td><b>Email </b></td>
-    					<td> ksekwamote @gmail.com</td>
-
-    				</tr>
-
-    			</table>
-
-
-  </div>
-
-</div>
-
-
-<div style="margin-left:20px; margin-right:20px;  color:#333f4f;">
-	<br>
-	<h3 style="color:#333f4f; font-weight:900; ">Summary</h3>
-	<hr>
-
-	<p style="color:#333f4f; padding-top:10px; ">
-		Results driven individual with four years experience desiring to bring engineering and telecommunication experience to a software engineering position at ABC Company. Searching for the oppotunirt to bring 8+ years experience , and server maintenance to a software engineer position with ABC Company incorporating critical thinking, problem solving and leadership.
-
-
-	</p>
-
-	<br>
-	<h3 style="color:#333f4f; font-weight:900; ">Skills</h3>
-	<hr>
-
-	<br><br>
-
-	<ul  style="display: inline-block; margin-top: -15px; color:#333f4f;">
-		<li>JAVA</li>
-		<li>PYTHON</li>
-		<li>C++</li>
-		<li>C#</li>
-		<li>RUBY</li>
-
-	</ul>
-
-	<ul  style="display: inline-block; margin-left: 150px; margin-top: -15px; color:#333f4f;">
-		<li>UNITY</li>
-		<li>Android Studio</li>
-		<li>Visual Basic</li>
-		<li>HASKELL</li>
-		<li>C</li>
-
-	</ul>
-
-	<ul  style="display: inline-block; margin-left: 150px; margin-top: -15px; color:#333f4f;">
-		<li>Javascript</li>
-		<li>HTML</li>
-		<li>CSS</li>
-		<li>Angular JS</li>
-		<li>Node.js</li>
-
-	</ul>
-
-	<br><br>
-	<h3 style="color:#333f4f; font-weight:900; ">Experience</h3>
-	<hr>
-	<br>
-
-		<div>
-
-  			<p> <b>Back-End Developer , Shakinah Sports</b></p>
-			<p style="margin-top: 0px;"> January 2017 - August 2017</p>
-			<p>A company that rents out stadiums for sports or entertainment purposes. </p>
-
-
-
-			<ul style="margin-top: 5px;">
-				<li>Facilitate back-end aspect of things</li>
-				<li>Make sure everything was insynch with everything</li>
-				<li>Communicate well with the front end stuff</li>
-				<li>Make sure data storage and app is in synch</li>
-			</ul>
-		</div>
-			<br>
-		<div>
-
-			<p> <b>IT Internship ,Central Transport Organisation</b></p>
-			<p style="margin-top: 0px;">July 2019 - Present</p>
-			<p>A government parastatal that procures, maintains and services state owned vehicles</p>
-
-			<ul style="margin-top: 5px;">
-				<li>Mantain server </li>
-				<li>Provide and facilitate end user assistance</li>
-				<li> Maintain computer parifinalia</li>
-				<li>Make sure data storage and app is in synch</li>
-			</ul>
-		</div>
-
-	<br><br>
-	<h3 style="color:#333f4f; font-weight:900; ">Education</h3>
-	<hr>
-	<br>
-
-	<div>
-
-  				<p><b>University of Kwazulu-Natal</b></p>
-			<p style="margin-top: 0px;"><i>Bachelor of Computer Science and Information Technlogies </i></p>
-			<p style="margin-top: 0px;"><b>July 2015 - November 2017</b></p>
-  			</div>
-
-  			<br>
-
-			<div>
-  				<p><b>University of Kwazulu-Natal</b></p>
-			<p style="margin-top: 0px;"><i>Bachelor of Computer Science Honours</i></p>
-			<p style="margin-top: 0px;"><b>November 2018</b></p>
-		
-  			</div>
-
-  	<br>
-	<h3 style="color:#333f4f; font-weight:900; ">Reference</h3>
-	<hr>
-	<br>
-
-	<div>
-  				<p><b>Miss V Kapuisire, CTO</b></p>
-			<p style="margin-top: 0px;"><i>Principle Programmer</i></p>
-			<p style="margin-top: 0px;"><b>Tel: 71 686 888</b></p>
-  			</div>
-
--->
 
 
 
