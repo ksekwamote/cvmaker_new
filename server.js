@@ -23,11 +23,16 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
 const htmls = fs.readFileSync('./templates/template1.html', 'utf8')
+
 app.get('/resume',(req, res) => {
 
 	
 	res.render('template2' , req.body)
 
+});
+
+app.get('/test', function(req, res){ 
+    res.download('Hello.txt'); 
 });
 
 //WHATSAPP SENDING API
