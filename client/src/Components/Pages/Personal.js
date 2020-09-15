@@ -10,6 +10,8 @@ import {changeFirstname,changeCurrentOccupation, changeSurname , changeAddress ,
 import TextField from '@material-ui/core/TextField';
 import FadeIn from 'react-fade-in';
 import { set } from 'date-fns';
+import {Button1} from "../GUI/Button"
+import axios from 'axios';
 
 
 
@@ -144,6 +146,28 @@ export default function(props) {
     help: ""
   })
 
+
+
+  const handleDownloadFile = () => {
+    return axios({
+      url: 'http://localhost:5001/download/', // download url
+      method: 'get',
+      headers: {
+        Accept: 'application/pdf',
+        'Content-Type': 'application/pdf',
+        mode: 'no-cors'
+      }
+    })
+    .then((response) => {
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'resume.pdf');
+      document.body.appendChild(link);
+      link.click();
+    });
+
+}
 
 
 
@@ -308,6 +332,11 @@ export default function(props) {
   
         {'       '} <MaterialUIPickers/>
 
+        <br></br>
+
+        <Button1 id="btn_download" onClick={e => handleDownloadFile()}/> 
+       
+        <br></br>
      
 
         <div style={{textAlign:"center"}} className="block">

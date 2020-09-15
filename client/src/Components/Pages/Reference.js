@@ -1,4 +1,3 @@
-
 import React from 'react'
 import {useSelector , useDispatch} from "react-redux"
 import {prevStep, nextStep, addReference, remReference ,changeReferentName,changeOccupation,changeCompany,changeRPhoneNumber} from "../action/index"

@@ -23,16 +23,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
 const htmls = fs.readFileSync('./templates/template1.html', 'utf8')
-
 app.get('/resume',(req, res) => {
 
 	
 	res.render('template2' , req.body)
 
-});
-
-app.get('/test', function(req, res){ 
-    res.download('Hello.txt'); 
 });
 
 //WHATSAPP SENDING API
@@ -57,10 +52,11 @@ app.post('/cv', (req,res) =>{
 
 app.get('/download', (req,res) => {
 	res.sendFile(__dirname + '/public/'+newpdf, 'resume.pdf')
+
 	
 })
-app.get('/My_Resume', (req,res) => {
-	res.sendFile(__dirname + '/public/'+newpdf, 'resume.pdf')
+app.get('/download_resume', (req,res) => {
+	res.download(__dirname + '/public/'+newpdf, 'resume.pdf')
 	
 })
 
@@ -150,5 +146,3 @@ app.post('/create-pdf' , (req, res)=>{
 
 
 app.listen(port , () => console.log(`Listen to port ${port}`))
-
-

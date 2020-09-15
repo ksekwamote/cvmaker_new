@@ -26,3 +26,18 @@ export default function Buttons(props) {
     </div>
   );
 }
+
+export function Button1(props) {
+
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+     
+      <Button variant="contained" size="large" color="secondary" {...props}>
+        DOWNLOAD EXISTING RESUME
+      </Button>
+    
+    </div>
+  );
+}

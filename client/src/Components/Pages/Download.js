@@ -40,10 +40,13 @@ export default class Download extends Component{
 
            this.fetchData()
 
+           /** 
             $("#btn_download").click(function(){
               window.open('/My_Resume');
              
           })
+
+          */
 
 
           
@@ -68,6 +71,8 @@ export default class Download extends Component{
             clearInterval(interval)
           }
         }, 3000);
+
+         
         
       }
 
@@ -84,12 +89,31 @@ export default class Download extends Component{
 
             .catch(error => {
               this.setState({count:this.state.count+1})
-             // console.log("Just a moment... " + this.state.count)
+             
               
             })
-    
-
  }
+
+ handleDownloadFile = () => {
+  return axios({
+    url: '/download_resume', // download url
+    method: 'get',
+    headers: {
+      Accept: 'application/pdf',
+      'Content-Type': 'application/pdf',
+      mode: 'no-cors'
+    }
+  })
+  .then((response) => {
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+  });
+
+}
 
 
 
@@ -170,7 +194,7 @@ export default class Download extends Component{
 
 
                 
-       <Buttons id="btn_download" disabled={this.state.disable} /> 
+       <Buttons id="btn_download" onClick={e => this.handleDownloadFile()}  /> 
        
 
        <br></br> <br></br>
@@ -193,5 +217,3 @@ export default class Download extends Component{
     )
   }
 }
-
-
