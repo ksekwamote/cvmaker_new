@@ -150,7 +150,7 @@ export default function(props) {
 
   const handleDownloadFile = () => {
     return axios({
-      url: '/download', // download url
+      url: '/api/download', // download url
       method: 'get',
       responseType: 'arraybuffer',
       headers: {

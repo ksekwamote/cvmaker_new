@@ -75,7 +75,7 @@ export default class Download extends Component{
 
 
   checkFile = () => {            
-      axios.get('/download')
+      axios.get('/api/download')
                     .then((res) => {
                      this.setState({loading:false})
                      this.setState({disable:false})
@@ -90,7 +90,7 @@ export default class Download extends Component{
 
   handleDownloadFile = () => {
     return axios({
-      url: '/download_resume', // download url
+      url: '/api/download_resume', // download url
       method: 'get',
       responseType: 'arraybuffer',
       headers: {

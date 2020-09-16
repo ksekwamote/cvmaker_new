@@ -6,7 +6,7 @@ import Header from "./Components/Fragments/Header"
 import Footer from './Components/Fragments/Footer';
 import Templates from './Components/Pages/Templates';
 import Home from "./Components/Pages/Home";
-import {BrowserRouter as Router , Route} from "react-router-dom"
+import { Route ,Switch} from "react-router-dom"
 import Personal from "./Components/Pages/Personal"
 import Profile from "./Components/Pages/Profile"
 import Multi from "./Components/Pages/Multi"
@@ -20,33 +20,42 @@ import Faq from "./Components/Pages/Section/Faq"
 import Contacts from "./Components/Pages/Section/Contacts"
 import Error from "./Components/Pages/Error"
 
+const Application = () => (
+
+  <div>
+        
+        
+  <Switch >
+
+     <Route component={Profile} path="/profile"/>
+      <Route exact path="/" component={Home}  />
+      <Route  component={Templates} path="/templates"/>
+      <Route  component={Personal} path="/personal_information"/>
+      <Route component={Multi} path="/resumake"/>
+      <Route component={Qualities} path="/qualities"/>
+      <Route  component={Emailsent} path="/email_sent"/>
+      <Route  component={Phonesent} path="/phone_sent"/>
+      <Route  component={Download} path="/download"/>
+      <Route  component={About} path="/About"/>
+      <Route  component={Whyus} path="/Whyus"/>
+      <Route  component={Faq} path="/Faq"/>
+      <Route  component={Contacts} path="/Contacts"/>
+      <Route  component={Error} path="/Error"/>
+
+      </Switch>
+  
+  </div>
+
+)
+
 function App() {
  
 
   return (
-    <div>
-        
-        
-    <Router>
-
-       <Route component={Profile} path="/profile"/>
-        <Route exact path="/" component={Home}  />
-        <Route exact component={Templates} path="/templates"/>
-        <Route exact  component={Personal} path="/personal_information"/>
-        <Route exact component={Multi} path="/resumake"/>
-        <Route exact component={Qualities} path="/qualities"/>
-        <Route exact component={Emailsent} path="/email_sent"/>
-        <Route exact component={Phonesent} path="/phone_sent"/>
-        <Route exact component={Download} path="/download"/>
-        <Route exact component={About} path="/About"/>
-        <Route exact component={Whyus} path="/Whyus"/>
-        <Route exact component={Faq} path="/Faq"/>
-        <Route exact component={Contacts} path="/Contacts"/>
-        <Route exact component={Error} path="/Error"/>
-
-        </Router>
+    <Switch>
+      <Application/>
+    </Switch>
     
-    </div>
   );
 }
 

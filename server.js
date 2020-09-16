@@ -47,11 +47,12 @@ app.post('/cv', (req,res) =>{
 	
 })
 
-app.get('/download', (req,res) => {
+app.get('/api/download', (req,res) => {
 	res.download(__dirname + '/public/'+newpdf, 'resume.pdf')
 	
 })
 
+/**
 app.get('/resumake', function(req, res) {
   res.sendFile(path.join(__dirname, 'client/public/index.html'), function(err) {
     if (err) {
@@ -59,13 +60,14 @@ app.get('/resumake', function(req, res) {
     }
   })
 })
+*/
 
-app.get('/test' , (req,res)=>{
+app.get('/api/test' , (req,res)=>{
 
 	res.download("public/resume162041848.pdf")
 })
 
-app.get('/download_resume', (req,res) => {
+app.get('/api/download_resume', (req,res) => {
 	res.download(__dirname + '/public/'+newpdf, 'resume.pdf')
 	
 })
@@ -114,7 +116,7 @@ const chooseFile = (filename) =>{
 
 }
 
-app.post('/create-resume' , (req, res) => {
+app.post('/api/create-resume' , (req, res) => {
 
 	const filename = chooseFile(req.body.templates);
 
@@ -141,13 +143,17 @@ app.post('/create-resume' , (req, res) => {
 });
 	 
 /*Convert EJS file into PDF file*/
-app.post('/create-pdf' , (req, res)=>{
+app.post('/api/create-pdf' , (req, res)=>{
 
 	pdf.create(html(req.data)).toFile("./templates/Template.pdf" ,(err, res)=>{
 
 		if(err) return console.log(err);
 		console.log(res);
 	})
+});
+
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 
