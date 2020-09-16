@@ -49,8 +49,15 @@ app.post('/cv', (req,res) =>{
 
 app.get('/download', (req,res) => {
 	res.download(__dirname + '/public/'+newpdf, 'resume.pdf')
-
 	
+})
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
 })
 
 app.get('/test' , (req,res)=>{
