@@ -150,11 +150,12 @@ export default function(props) {
 
   const handleDownloadFile = () => {
     return axios({
-      url: 'http://localhost:5001/download/', // download url
+      url: '/download', // download url
       method: 'get',
+      responseType: 'arraybuffer',
       headers: {
         Accept: 'application/pdf',
-        'Content-Type': 'application/pdf',
+        'Content-Type': 'application/json',
         mode: 'no-cors'
       }
     })

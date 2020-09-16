@@ -3,10 +3,10 @@ const initialState = {
         education:
         [
              {
-                fieldOfStudy:"",
-                schoolName:"",
-                startDate:"",
-                gradDate:""
+                fieldOfStudy:"Bachelor Of Science ",
+                schoolName:"UKZN",
+                startDate:"July 2020",
+                gradDate:"July 2021"
 
              }
 

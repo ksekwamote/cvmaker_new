@@ -40,13 +40,7 @@ export default class Download extends Component{
 
            this.fetchData()
 
-           /** 
-            $("#btn_download").click(function(){
-              window.open('/My_Resume');
-             
-          })
-
-          */
+        
 
 
           
@@ -63,16 +57,16 @@ export default class Download extends Component{
         const interval = setInterval(() => {
           if (this.state.loading && this.state.count<30 ){
           this.checkFile();}
-          else if(this.state.count>15) {
+          else if(this.state.count>20) {
             clearInterval(interval)
-            window.location.href="//www.resumefactory.co/#/error"
+            window.location.href="//www.resumefactory.co/error"
           }
           else {
             clearInterval(interval)
           }
-        }, 3000);
+        }, 5000);
 
-         
+      
         
       }
 
@@ -94,24 +88,25 @@ export default class Download extends Component{
             })
  }
 
- handleDownloadFile = () => {
-  return axios({
-    url: '/download_resume', // download url
-    method: 'get',
-    headers: {
-      Accept: 'application/pdf',
-      'Content-Type': 'application/pdf',
-      mode: 'no-cors'
-    }
-  })
-  .then((response) => {
-    const url = window.URL.createObjectURL(new Blob([response.data]));
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'resume.pdf');
-    document.body.appendChild(link);
-    link.click();
-  });
+  handleDownloadFile = () => {
+    return axios({
+      url: '/download_resume', // download url
+      method: 'get',
+      responseType: 'arraybuffer',
+      headers: {
+        Accept: 'application/pdf',
+        'Content-Type': 'application/json',
+        mode: 'no-cors'
+      }
+    })
+    .then((response) => {
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'resume.pdf');
+      document.body.appendChild(link);
+      link.click();
+    });
 
 }
 
@@ -194,7 +189,7 @@ export default class Download extends Component{
 
 
                 
-       <Buttons id="btn_download" onClick={e => this.handleDownloadFile()}  /> 
+       <Buttons onClick={e => this.handleDownloadFile()} disabled={this.state.disable} /> 
        
 
        <br></br> <br></br>

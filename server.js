@@ -8,9 +8,6 @@ const ejs = require('ejs');
 const path = require("path")
 
 
-
-
-
 //CONFIGURE SERVER
 
 
@@ -51,10 +48,16 @@ app.post('/cv', (req,res) =>{
 })
 
 app.get('/download', (req,res) => {
-	res.sendFile(__dirname + '/public/'+newpdf, 'resume.pdf')
+	res.download(__dirname + '/public/'+newpdf, 'resume.pdf')
 
 	
 })
+
+app.get('/test' , (req,res)=>{
+
+	res.download("public/resume162041848.pdf")
+})
+
 app.get('/download_resume', (req,res) => {
 	res.download(__dirname + '/public/'+newpdf, 'resume.pdf')
 	
@@ -122,7 +125,7 @@ app.post('/create-resume' , (req, res) => {
 	const randomNumber =(Math.floor(Math.random() * 10000000000) + 100000000)
 	const newFile = 'resume'+ randomNumber.toString()+'.pdf'
 	newpdf =newFile
-	pdf.create(html).toFile('./public/'+newFile,function(err, res){
+	pdf.create(html,{orientation:'potrait',type:'pdf',timeout:'1000000'}).toFile('./public/'+newFile,function(err, res){
 
 		if(err) return console.log(err);
 			console.log(res);
