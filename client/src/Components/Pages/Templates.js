@@ -279,7 +279,7 @@ class Templates extends Component {
 
        <div className="block">
 
-       <a className="main-button" onClick={this.props.pick_template(this.state.template)} ><Link to="/resume_maker"><strong style={{color:'#fff'}}>Continue</strong></Link></a>
+       <a className="main-button" onClick={this.props.pick_template(this.state.template)} ><Link to="/resumake"><strong style={{color:'#fff'}}>Continue</strong></Link></a>
       
       
    </div>

@@ -33,7 +33,7 @@ function App() {
         <Route exact path="/" component={Home}  />
         <Route exact component={Templates} path="/templates"/>
         <Route exact  component={Personal} path="/personal_information"/>
-        <Route exact component={Multi} path="/resume_maker"/>
+        <Route exact component={Multi} path="/resumake"/>
         <Route exact component={Qualities} path="/qualities"/>
         <Route exact component={Emailsent} path="/email_sent"/>
         <Route exact component={Phonesent} path="/phone_sent"/>
