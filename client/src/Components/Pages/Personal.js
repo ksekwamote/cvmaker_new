@@ -343,7 +343,7 @@ export default function(props) {
         <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
               <a id="needHelp" type="submit" style={{color:'#fff'}} onClick={e => next(personal.firstname ,personal.surname ,personal.address,personal.email,personal.phoneNumber) }
-               className="main-button">&nbsp; &nbsp; Continue &nbsp; &nbsp;</a>
+               className="main-button"><strong>&nbsp; &nbsp; Continue &nbsp; &nbsp;</strong></a>
     
         </div>
 

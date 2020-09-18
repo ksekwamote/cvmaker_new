@@ -123,8 +123,8 @@ export default function Reference() {
        
     <div style={{textAlign:"center"}} className="block">
               <br></br><br></br>
-              <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button">&nbsp; &nbsp; Back &nbsp; &nbsp;</a> {'     '} <div>&nbsp;</div>
-              <a id="needHelp" style={{color:'#fff'}} onClick={e => next() ? onSubmit(reduxState , dispatch): console.log("") } className="main-button">&nbsp; &nbsp; MAKE CV &nbsp; &nbsp;</a>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => dispatch(prevStep())} className="main-button"><strong>&nbsp; &nbsp; Back &nbsp; &nbsp;</strong></a> {'     '} <div>&nbsp;</div>
+              <a id="needHelp" style={{color:'#fff'}} onClick={e => next() ? onSubmit(reduxState , dispatch): console.log("") } className="main-button"><strong>&nbsp; &nbsp; MAKE CV &nbsp; &nbsp;</strong></a>
         </div>
 
     </div>

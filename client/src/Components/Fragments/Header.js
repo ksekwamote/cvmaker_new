@@ -50,11 +50,11 @@ export default class Header extends Component {
                 <div class="col-12" style={{backgroundColor:'#fff'}}>
                     <nav class="main-nav" >
                         
-                        <a  href="#" id="log" class="logo">Resume Factory</a>
+                        <a  href="/" id="log" class="logo">Resume Factory</a>
                        
                         <ul style={{marginRight:75}} class="nav">
                             <li class="scroll-to-section"><a><Link to="/"><strong>Home</strong></Link></a></li>
-                            <li class="scroll-to-section"><a><Link to="/resume_maker"><strong>ResumeMaker</strong></Link></a></li>
+                            <li class="scroll-to-section"><a><Link to="/resumake"><strong>ResumeMaker</strong></Link></a></li>
                             <li class="scroll-to-section"><a><Link to="/About"><strong>About</strong></Link></a></li>
                             <li class="scroll-to-section"><a><Link to="/Whyus"><strong>Whyus</strong></Link></a></li>
                             <li class="scroll-to-section"><a><Link to="/Contacts"><strong>Contacts</strong></Link></a></li>
