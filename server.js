@@ -157,7 +157,7 @@ app.get('*', (req,res) =>{
 });
 
 
-	app.use(express.static("client/build/static"))
+	app.use(express.static(__dirname+"/client/build"))
 	
 
 
