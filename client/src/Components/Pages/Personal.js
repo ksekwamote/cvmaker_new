@@ -199,7 +199,8 @@ export default function(props) {
 
 
 
-
+    
+    //<Button1 id="btn_download" onClick={e => handleDownloadFile()}/> 
 
     
       if ( textValidation(firstname)=="valid" && textValidation(surname)=="valid" && addressValidation(address)=="valid" && emailValidation(email)=="valid" && numberValidation(phone)=="valid"  ){
@@ -335,7 +336,6 @@ export default function(props) {
 
         <br></br>
 
-        <Button1 id="btn_download" onClick={e => handleDownloadFile()}/> 
        
         <br></br>
      
