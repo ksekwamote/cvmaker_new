@@ -157,7 +157,7 @@ app.get('*', (req,res) =>{
 });
 
 
-	app.use(express.static("client/build"))
+	app.use(express.static("client/build/static"))
 	
 
 
