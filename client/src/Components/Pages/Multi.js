@@ -12,6 +12,9 @@ import {useSelector} from "react-redux"
 import { CSSTransition } from "react-transition-group"
 import FadeIn from 'react-fade-in';
 import Download from "./Download";
+import {Helmet} from 'react-helmet'
+
+
 
  function SwitchSteps(){
      const steps = useSelector(state => state.steper)
@@ -43,6 +46,11 @@ import Download from "./Download";
 export default function Multi(){
     return (
         <div>
+
+            <Helmet>
+                    <title>You'll look better with us  </title>
+                    <meta name="description" content="Our user friendly platform gives you the ability to build or create a professional cv in a matter of 5 minutes. " />
+                </Helmet>
 
             <Header/>
 

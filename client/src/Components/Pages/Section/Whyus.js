@@ -1,12 +1,16 @@
 import React from 'react'
 import Header from '../../Fragments/Header'
 import Footer from '../../Fragments/Footer'
+import {Helmet} from 'react-helmet'
 
 
 export default function Whyus() {
     return (
         <div>
-                
+                <Helmet>
+                    <title>You'll look better with us  </title>
+                    <meta name="description" content="Our user friendly platform gives you the ability to build or create a professional cv in a matter of 5 minutes. " />
+                </Helmet>
         	        <Header/>
 
                     <section class="section" id="whyus" >

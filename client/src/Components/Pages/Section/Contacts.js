@@ -1,11 +1,17 @@
 import React from 'react'
 import Header from '../../Fragments/Header'
 import Footer from '../../Fragments/Footer'
+import {Helmet} from 'react-helmet'
 
 
 export default function Contacts() {
     return (
         <div>
+
+                <Helmet>
+                    <title>Contact us for more information about our superb cv maker </title>
+                    <meta name="description" content="Should you have any further questions, feel free to contact us and we'll be more than happy to offer a helping hand" />
+                </Helmet>
                 
         	        <Header/>
 

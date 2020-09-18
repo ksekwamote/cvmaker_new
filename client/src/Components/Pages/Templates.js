@@ -14,6 +14,7 @@ import {changeTemplate} from "../action/index"
 import {connect} from "react-redux"
 import { bindActionCreators } from 'redux'
 import FadeIn from 'react-fade-in';
+import {Helmet} from 'react-helmet'
 
 
 const mapStateToProps = (state , dispatch) => {
@@ -76,6 +77,10 @@ class Templates extends Component {
 
         return (
             <div>
+                <Helmet>
+                    <title>Free Professional Resume Templates </title>
+                    <meta name="description" content="Our collection of stunning and eye catching resume templates designed by career expert will help you stand out and leave a lasting impression on potential employers." />
+                </Helmet>
                 <Header/>
                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 

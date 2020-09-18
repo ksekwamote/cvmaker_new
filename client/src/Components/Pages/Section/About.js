@@ -1,11 +1,16 @@
 import React from 'react'
 import Header from '../../Fragments/Header'
 import Footer from '../../Fragments/Footer'
+import {Helmet} from 'react-helmet'
 
 
 export default function About() {
     return (
         <div>
+            <Helmet>
+                    <title>Professional CV Making platform created by developers and career experts </title>
+                    <meta name="description" content="We are a team of talented developers, graphic designers , career experts and writers. Possesing a superabundace of qualification to deliver a stunningly superb resume that will have employers thiking twice about your Profile before passing on to others." />
+                </Helmet>
                 
         	        <Header/>
 

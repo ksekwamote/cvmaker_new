@@ -1,11 +1,17 @@
 import React from 'react'
 import Header from '../../Fragments/Header'
 import Footer from '../../Fragments/Footer'
+import {Helmet} from 'react-helmet'
 
 
 export default function Faq() {
     return (
         <div>
+             <Helmet>
+                    <title>Got some questions?</title>
+                    <meta name="description" content="If you’ve got a different question or need a little help with something, do not hesitate to contact us directly and we’ll be happy to give you a helping hand." />
+                </Helmet>
+                
                 
         	        <Header/>
                     <section class="section" id="frequently-question">
