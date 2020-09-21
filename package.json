@@ -26,6 +26,7 @@
     "express": "^4.17.1",
     "html-pdf": "^2.2.0",
     "nodemon": "^2.0.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-app-polyfill": "^1.0.6"
   }
 }
