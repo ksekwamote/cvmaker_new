@@ -53,11 +53,11 @@ export default class Header extends Component {
                         <a  href="/" id="log" class="logo">Resume Factory</a>
                        
                         <ul style={{marginRight:75}} class="nav">
-                            <li class="scroll-to-section"><a><Link to="/"><strong>Home</strong></Link></a></li>
-                            <li class="scroll-to-section"><a><Link to="/resumake"><strong>ResumeMaker</strong></Link></a></li>
-                            <li class="scroll-to-section"><a><Link to="/About"><strong>About</strong></Link></a></li>
-                            <li class="scroll-to-section"><a><Link to="/Whyus"><strong>Whyus</strong></Link></a></li>
-                            <li class="scroll-to-section"><a><Link to="/Contacts"><strong>Contacts</strong></Link></a></li>
+                            <li class="scroll-to-section"><a href="/"><strong>Home</strong></a></li>
+                            <li class="scroll-to-section"><a href="/resumake"><strong>ResumeMaker</strong></a></li>
+                            <li class="scroll-to-section"><a href="/About"><strong>About</strong></a></li>
+                            <li class="scroll-to-section"><a href="/Whyus"><strong>Whyus</strong></a></li>
+                            <li class="scroll-to-section"><a href="/Contacts"><strong>Contacts</strong></a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span id="span">Menu</span>

@@ -13,7 +13,6 @@ export default class Home extends Component {
 
     constructor(props){
 
-        //const isTabletOrMobile =
         super(props)
         this.state ={
                 name: "",
@@ -142,7 +141,7 @@ export default class Home extends Component {
                       
                         <p>Climb the ladder to corporate success through an award  winning professional Resume or CV maker. All our CV's are  <strong>Recommended by HR Experts</strong></p>
                        
-                        <a class="main-button-slider"><Link style={{color:"#fff"}} to="/templates">Create My CV &#8594;</Link></a>
+                        <a href="/templates" class="main-button-slider" style={{color:"#fff"}}>Create My CV &#8594;</a>
                     </div>
                     
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">

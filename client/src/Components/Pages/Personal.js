@@ -224,6 +224,8 @@ export default function(props) {
       <React.Fragment>
       <div>
 
+        {window.scrollTo(0,0)}
+
 
 <div>
 

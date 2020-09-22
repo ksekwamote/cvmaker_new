@@ -122,6 +122,7 @@ export default class Download extends Component{
       <React.Fragment>
       
         <div>
+        {window.scrollTo(0,0)}
 
       <br></br><br></br><br></br><br></br><br></br>
         <div style={{textAlign:"center", color:"#253B80"}}>

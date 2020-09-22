@@ -88,7 +88,7 @@ export const simpleValidation = (value) => {
         <Grid container justify="center" alignItems="center">
         <React.Fragment>
                 <div>
-
+                {window.scrollTo(0,0)}
       <div>
 
       <br></br><br></br><br></br><br></br><br></br>

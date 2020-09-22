@@ -120,6 +120,8 @@ app.post('/api/create-resume' , (req, res) => {
 
 	const filename = chooseFile(req.body.templates);
 
+	console.log(filename)
+
 	ejs.renderFile(filename,req.body , function(err, result){
 
 		if (result){

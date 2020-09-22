@@ -62,6 +62,8 @@ export default function Qualities() {
         <React.Fragment>
       <div>
 
+      {window.scrollTo(0,0)}
+
 
         <div>
 

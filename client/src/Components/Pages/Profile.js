@@ -64,6 +64,8 @@ export default function Profile (){
       <React.Fragment>
       <div>
 
+        {window.scrollTo(0,0)}
+
 
         <div>
 
