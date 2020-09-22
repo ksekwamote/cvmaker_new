@@ -6,17 +6,21 @@ import { Fade } from '@material-ui/core'
 import $ from 'jquery'
 import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
 import { HashRouter, Route, Link } from "react-router-dom";
-
+import { isIE , isOpera } from 'react-device-detect'
+import { useMediaQuery } from 'react-responsive'
 
 export default class Home extends Component {
 
     constructor(props){
 
+        //const isTabletOrMobile =
         super(props)
         this.state ={
                 name: "",
                 email:"",
-                message:""
+                message:"",
+            
+
         }
     }
 
@@ -67,12 +71,15 @@ export default class Home extends Component {
             }, 2000);
         });
 
+      // console.log( )
+
     }
 
    
 
     render() {
 
+        
         
         return (
             <div className="body">
@@ -92,7 +99,7 @@ export default class Home extends Component {
 
     
            
-    <header class="header-area header-sticky">
+    <header style={{paddingBottom:50}} class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -129,7 +136,10 @@ export default class Home extends Component {
             <div class="container">
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <h1 id="intro">SITE IS UNDER CONSTRUCTION <strong>&#128679; &#128679; &#128679; &#128679; &#128679; &#128679;</strong></h1>
+                       
+                            <h1 id="intro" >SITE IS UNDER CONSTRUCTION <strong>&#128679; &#128679; &#128679; &#128679; &#128679; &#128679;</strong></h1>
+
+                      
                         <p>Climb the ladder to corporate success through an award  winning professional Resume or CV maker. All our CV's are  <strong>Recommended by HR Experts</strong></p>
                        
                         <a class="main-button-slider"><Link style={{color:"#fff"}} to="/templates">Create My CV &#8594;</Link></a>

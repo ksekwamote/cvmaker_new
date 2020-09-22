@@ -29,6 +29,7 @@
     "react": "^16.13.1",
     "react-async-script-loader": "^0.3.0",
     "react-bootstrap": "^1.3.0",
+    "react-device-detect": "^1.13.1",
     "react-dom": "^16.13.1",
     "react-fade-in": "^1.1.0",
     "react-helmet": "^6.1.0",
