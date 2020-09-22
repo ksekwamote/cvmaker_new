@@ -13,6 +13,7 @@ import 'react-sharingbuttons/dist/main.css'
 import { Redirect } from "react-router-dom"
 import { Link } from "react-router-dom";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
+import { isIE , isOpera } from 'react-device-detect'
 
 
 
@@ -100,14 +101,24 @@ export default class Download extends Component{
       }
     })
     .then((response) => {
-     // const url = window.URL.createObjectURL(new Blob([response.data]));
-      let blob = new Blob([response.data], { type: 'application/pdf' });
-      window.navigator.msSaveOrOpenBlob(blob, "My Resume.pdf");
-      //const link = document.createElement('a');
-     // link.href = url;
-      //link.setAttribute('download', 'resume.pdf');
-     // document.body.appendChild(link);
-      //link.click();
+    
+      if(isIE){
+
+        let blob = new Blob([response.data], { type: 'application/pdf' });
+        window.navigator.msSaveOrOpenBlob(blob, "My Resume.pdf");
+      }
+      else{
+
+          const url = window.URL.createObjectURL(new Blob([response.data]));
+     
+          const link = document.createElement('a');
+          link.href = url;
+          link.setAttribute('download', 'resume.pdf');
+          document.body.appendChild(link);
+          link.click();
+
+      }
+
     });
 
 }
