@@ -100,12 +100,14 @@ export default class Download extends Component{
       }
     })
     .then((response) => {
-      const url = window.URL.createObjectURL(new Blob([response.data]));
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'resume.pdf');
-      document.body.appendChild(link);
-      link.click();
+     // const url = window.URL.createObjectURL(new Blob([response.data]));
+      let blob = new Blob([response.data], { type: 'application/pdf' });
+      window.navigator.msSaveOrOpenBlob(blob, "My Resume.pdf");
+      //const link = document.createElement('a');
+     // link.href = url;
+      //link.setAttribute('download', 'resume.pdf');
+     // document.body.appendChild(link);
+      //link.click();
     });
 
 }
