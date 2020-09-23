@@ -113,7 +113,7 @@ class Templates extends Component {
 
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template2" src={require("../assets/images/templates/template 2.webp")} alt="Template 2" ></img>
+                       <img id="myImg" className="template2" onError={e => e.target.src =require("../assets/images/templates/template 2.jpg")} src={require("../assets/images/templates/template 2.webp")} alt="Template 2" ></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>
                              
@@ -134,7 +134,7 @@ class Templates extends Component {
 
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template3" src={require("../assets/images/templates/template 3.webp")} alt="Template 3" ></img>
+                       <img id="myImg" className="template3" onError={e => e.target.src =require("../assets/images/templates/template 3.png")} src={require("../assets/images/templates/template 3.webp")} alt="Template 3" ></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>
                            
@@ -156,7 +156,7 @@ class Templates extends Component {
 
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template4" src={require("../assets/images/templates/template 4.webp")} alt="Template 4"></img>
+                       <img id="myImg" className="template4" onError={e => e.target.src =require("../assets/images/templates/template 4.jpg")} src={require("../assets/images/templates/template 4.webp")} alt="Template 4"></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>         
                            </div>
@@ -175,7 +175,7 @@ class Templates extends Component {
            <div className="pad20">
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template5" src={require("../assets/images/templates/template 5.webp")} alt="Template 5"></img>
+                       <img id="myImg" className="template5" onError={e => e.target.src =require("../assets/images/templates/template 5.png")} src={require("../assets/images/templates/template 5.webp")} alt="Template 5"></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>        
                            </div>
@@ -191,7 +191,7 @@ class Templates extends Component {
            <div className="pad20">
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template6" src={require("../assets/images/templates/template 6.webp")} alt="Template 6"></img>
+                       <img id="myImg" className="template6" onError={e => e.target.src =require("../assets/images/templates/template 6.png")} src={require("../assets/images/templates/template 6.webp")} alt="Template 6"></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>      
                            </div>
@@ -208,7 +208,7 @@ class Templates extends Component {
            <div className="pad20">
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template7" src={require("../assets/images/templates/template 7.webp")} alt="Template 7"></img>
+                       <img id="myImg" className="template7" onError={e => e.target.src =require("../assets/images/templates/template 7.png")} src={require("../assets/images/templates/template 7.webp")} alt="Template 7"></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>         
                            </div>
@@ -226,7 +226,7 @@ class Templates extends Component {
 
                <lu>
                    <li className="pad10">
-                       <img id="myImg" className="template8" src={require("../assets/images/templates/template 8.webp")} alt="template8"></img>
+                       <img id="myImg" className="template8" onError={e => e.target.src =require("../assets/images/templates/template 8.png")} src={require("../assets/images/templates/template 8.webp")} alt="template8"></img>
                            <div id="myModal" className="modal">
                                <span className="close">&times;</span>      
                            </div>
