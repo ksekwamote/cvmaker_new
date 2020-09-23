@@ -171,7 +171,7 @@ export default class Home extends Component {
                 </div>
                 <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
                     <div class="left-heading">
-                        <h5>About Us</h5>
+                        <a href="/About"><h5 >About Us</h5></a>
                     </div>
                     <div class="left-text">
                         <p>Knowing how to make a resume is a crucial skill if you plan on making it career wise  <br></br><br></br>
@@ -198,7 +198,7 @@ export default class Home extends Component {
             <div class="row">
                 <div class="left-text col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix">
                     <div class="left-heading">
-                        <h5>Why Us?</h5>
+                        <a href="/Whyus"><h5>Why Us?</h5></a>
                     </div>
                     <p>Why Us? Well... for the simple fact that we are gauranteed that you'll look better with us.</p>
                     <ul>
@@ -254,7 +254,7 @@ export default class Home extends Component {
 
             <div class="row">
                 <div class="left-text col-lg-6 col-md-6 col-sm-12">
-                    <h5>CONTACTS</h5>
+                    <a href="/Contacts"><h5>CONTACTS</h5></a>
                     <div class="accordion-text">
                         <p>If you’ve got a different question or need a little help with something, do not hesitate to contact us directly and we’ll be happy to give you a helping hand. </p>
                         <span>Email: <a href="#">ksekwamote@yahoo.com</a><br></br></span>

@@ -68,6 +68,7 @@ class Templates extends Component {
     
     handleChange = e => {
         this.setState({template:e.target.value})
+        console.log(this.state.template)
     }
 
     render() {
@@ -103,7 +104,7 @@ class Templates extends Component {
                            </div>
                    </li>
                    <li className="pad10">
-                           <input type="radio" id="template1" onChange ={this.handleChange} name="template" value="template1" ></input> 
+                           <input type="radio" id="template1" onChange ={e => this.props.pick_template("template1")} name="template" value="template1" ></input> 
                            <label for="template1" >Simplex</label>
                    </li>
                </lu>
@@ -123,7 +124,7 @@ class Templates extends Component {
                    <li className="pad10">
                    
                    
-                           <input type="radio" id="template2" onChange={this.handleChange} name="template" value="template2"></input>
+                           <input type="radio" id="template2"  onChange ={e => this.props.pick_template("template2")} name="template" value="template2"></input>
                            <label for="template2"  >Camel Stripe</label>
 
                    </li>
@@ -144,7 +145,7 @@ class Templates extends Component {
                    <li className="pad10">
                    
                    
-                           <input type="radio" id="template3" onChange={this.handleChange} name="template" value="template3"></input>
+                           <input type="radio" id="template3"  onChange ={e => this.props.pick_template("template3")} name="template" value="template3"></input>
                            <label for="template3" >Stripe Navy</label>
 
                    </li>
@@ -162,7 +163,7 @@ class Templates extends Component {
                            </div>
                    </li>
                    <li className="pad10">
-                           <input type="radio" id="template4" name="template"onChange={this.handleChange} value="template4"></input>
+                           <input type="radio" id="template4" name="template"  onChange ={e => this.props.pick_template("template4")} value="template4"></input>
                            <label for="template4" >Navy Seal</label>
                    </li>
                </lu>
@@ -181,7 +182,7 @@ class Templates extends Component {
                            </div>
                    </li>
                    <li className="pad10">
-                           <input type="radio" id="template5" name="template"onChange={this.handleChange} value="template5"></input>
+                           <input type="radio" id="template5" name="template"  onChange ={e => this.props.pick_template("template5")} value="template5"></input>
                            <label for="template5" >Cappuccino</label>
                    </li>
                </lu>
@@ -197,7 +198,7 @@ class Templates extends Component {
                            </div>
                    </li>
                    <li className="pad10">
-                           <input type="radio" id="template6" name="template"onChange={this.handleChange} value="template6"></input>
+                           <input type="radio" id="template6" name="template"  onChange ={e => this.props.pick_template("template6")} value="template6"></input>
                            <label for="template6" >Blueberry</label>
 
                    </li>
@@ -214,7 +215,7 @@ class Templates extends Component {
                            </div>
                    </li>
                    <li className="pad10">
-                           <input type="radio" id="template7" name="template"onChange={this.handleChange} value="template7"></input>
+                           <input type="radio" id="template7" name="template"  onChange ={e => this.props.pick_template("template7")} value="template7"></input>
                            <label for="template7" >Golden Navy</label>
 
                    </li>
@@ -233,7 +234,7 @@ class Templates extends Component {
                    </li>
 
                    <li className="pad10">
-                           <input type="radio" id="template8" name="template" onChange={this.handleChange} value="template8"></input>
+                           <input type="radio" id="template8" name="template"  onChange ={e => this.props.pick_template("template8")} value="template8"></input>
                            <label for="template8" >Golden Sky</label>
 
                    </li>
@@ -249,9 +250,9 @@ class Templates extends Component {
        
        <br></br> <br></br>
 
-       <div className="block">
-       <a href="/resumake" className="main-button" onClick={this.props.pick_template(this.state.template)} ><strong style={{color:'#fff'}}>Continue</strong></a>    
-         </div>
+     
+      <Link className="main-button"  style={{color:"#fff"}} to="/resumake">&nbsp; &nbsp; Continue &nbsp; &nbsp;</Link>
+
 
 
 
