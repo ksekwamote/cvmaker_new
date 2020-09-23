@@ -25,10 +25,10 @@ export default function About() {
                         <h5>About Us</h5>
                     </div>
                     <div class="left-text">
-                        <p>Most job applications involve creating and submitting a Resume- but knowing what to include in a CV , what to leave behind or how to format it can be quite a tedious task.  <br></br><br></br>
-                      Our task team headed by Mr Kutlo Sekwamote has spent a number of years drafting and creating CVs for potential employees and have amassed considerable feedback to create a platform to help and assist job seekers in their journey up the corporate leader.<br></br>
+                        <p>Knowing how to make a resume is a crucial skill if you plan on making it career wise  <br></br><br></br>
+                     This project was developed by Mr Kutlo Sekwamote who has spent a considerable number of years drafting and creating CVs and Cover Letters for potential employees and has amassed considerable feedback to create a free online resume maker to help and assist job seekers in their journey up the corporate leader.<br></br>
 
-                      	We are a team of talented developers, graphic designers , career experts and writers. Possesing a superabundace of qualification to deliver a stunningly superb resume that will have employers thiking twice about your Profile before passing on to others.
+                      	It's worth a mention that this project had some assistance from developers, graphic designers , career experts and writers. Possesing a superabundace of qualification to deliver a stunningly superb resume that will have employers thiking twice about your Profile before passing on to others.
                          </p>
                         <a href="github.com/ksekwamote" class="main-button">Find Out More</a>
                     </div>

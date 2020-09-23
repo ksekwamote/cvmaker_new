@@ -26,21 +26,21 @@ export default function Whyus() {
                             <img src={require("../../assets/images/about-icon-01.png")} alt=""></img>
                             <div class="text">
                                 <h6>Flexible and Easy to use</h6>
-                                <p>Our user friendly platform gives you the ability to build or create a professional cv in a matter of 5 minutes.</p>
+                                <p>Our resume builder is user friendly and will carefully guide you to build a resume in a matter of 5 minutes</p>
                             </div>
                         </li>
                         <li>
                             <img src={require("../../assets/images/about-icon-02.png")} alt=""></img>
                             <div class="text">
                                 <h6>Recommended by HR Experts</h6>
-                                <p>Our Resume templates have a stamp of approval from the Human Resource department. We are impressively sure that every information detailed inside is what they are looking for </p>
+                                <p>Our Free Resume Templates have a stamp of approval from the Human Resource department. We are impressively sure that every information detailed inside is what they are looking for </p>
                             </div>
                         </li>
                         <li>
                             <img src={require("../../assets/images/about-icon-03.png")} alt=""></img>
                             <div class="text">
                                 <h6>Job Winning CV</h6>
-                                <p>Through our experience, we are 70% sure that with our CV's you will not hesitate to land an interview  </p>
+                                <p>Through our experience, we are 70% sure that with our CV's you will not hesitate to land an interview.  </p>
                             </div>
                         </li>
                     </ul>

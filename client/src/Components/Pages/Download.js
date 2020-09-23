@@ -13,7 +13,7 @@ import 'react-sharingbuttons/dist/main.css'
 import { Redirect } from "react-router-dom"
 import { Link } from "react-router-dom";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
-import { isIE , isOpera } from 'react-device-detect'
+import { isIE , isOpera ,isEdge } from 'react-device-detect'
 
 
 
@@ -102,7 +102,7 @@ export default class Download extends Component{
     })
     .then((response) => {
     
-      if(isIE){
+      if(isIE || isEdge){
 
         let blob = new Blob([response.data], { type: 'application/pdf' });
         window.navigator.msSaveOrOpenBlob(blob, "My Resume.pdf");
@@ -149,12 +149,11 @@ export default class Download extends Component{
                   <br></br>
 
               <p id="para">
-              This is a free application but is very expensive to maintain.
-                        We feel it was important to create this platform to help and   
-                  assist those who are unable to do Resumes for themselves.
-                  To support this endavour by AFRICAN DEVELOPERS. You 
+                We appreciate you taking the time to user our online resume maker. We depend on support
+                from generous individuals like you to update and maintain this website. To
+                support this initiative by an African developer, you 
                   can DONATE via PAYPAL or SHARE our webiste on 
-                  your social media.</p>
+                  your social media. </p>
 
 
                   <br></br>

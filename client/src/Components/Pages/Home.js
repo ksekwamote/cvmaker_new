@@ -139,7 +139,8 @@ export default class Home extends Component {
                             <h1 id="intro" >SITE IS UNDER CONSTRUCTION <strong>&#128679; &#128679; &#128679; &#128679; &#128679; &#128679;</strong></h1>
 
                       
-                        <p>Climb the ladder to corporate success through an award  winning professional Resume or CV maker. All our CV's are  <strong>Recommended by HR Experts</strong></p>
+                        <p>Climb the ladder to corporate success through our No. 1  professional online resume builder for free. With an abundance of <strong> free resume templates and resume examples</strong>
+                        you are sure to be noticed by employers</p>
                        
                         <a href="/templates" class="main-button-slider" style={{color:"#fff"}}>Create My CV &#8594;</a>
                     </div>
@@ -173,12 +174,12 @@ export default class Home extends Component {
                         <h5>About Us</h5>
                     </div>
                     <div class="left-text">
-                        <p>Most job applications involve creating and submitting a Resume- but knowing what to include in a CV , what to leave behind or how to format it can be quite a tedious task.  <br></br><br></br>
-                      Our task team headed by Mr Kutlo Sekwamote has spent a number of years drafting and creating CVs for potential employees and have amassed considerable feedback to create a platform to help and assist job seekers in their journey up the corporate leader.<br></br>
+                        <p>Knowing how to make a resume is a crucial skill if you plan on making it career wise  <br></br><br></br>
+                     This project was developed by Mr Kutlo Sekwamote who has spent a considerable number of years drafting and creating CVs and Cover Letters for potential employees and has amassed considerable feedback to create a free online resume maker to help and assist job seekers in their journey up the corporate leader.<br></br>
 
-                      	We are a team of talented developers, graphic designers , career experts and writers. Possesing a superabundace of qualification to deliver a stunningly superb resume that will have employers thiking twice about your Profile before passing on to others.
+                      	It's worth a mention that this project had some assistance from developers, graphic designers , career experts and writers. Possesing a superabundace of qualification to deliver a stunningly superb resume that will have employers thiking twice about your Profile before passing on to others.
                          </p>
-                        <a href="#about2" class="main-button">Find Out More</a>
+                        <a href="github.com/ksekwamote" class="main-button">Find Out More</a>
                     </div>
                 </div>
             </div>
@@ -202,25 +203,28 @@ export default class Home extends Component {
                     <p>Why Us? Well... for the simple fact that we are gauranteed that you'll look better with us.</p>
                     <ul>
                         <li>
-                            <img src={require("../assets/images/about-icon-01.png")} alt=""></img>
+                            <img src={require("../assets/images/about-icon-01.png")} alt="icon 1"></img>
                             <div class="text">
                                 <h6>Flexible and Easy to use</h6>
-                                <p>Our user friendly platform gives you the ability to build or create a professional cv in a matter of 5 minutes.</p>
+                                <p>Our resume builder is user friendly and will carefully guide you to build a resume in a matter of 5 minutes</p>
                             </div>
                         </li>
                         <li>
-                            <img src={require("../assets/images/about-icon-02.png")} alt=""></img>
+                            <img src={require("../assets/images/about-icon-02.png")} alt="icon 2 "></img>
                             <div class="text">
                                 <h6>Recommended by HR Experts</h6>
-                                <p>Our Resume templates have a stamp of approval from the Human Resource department. We are impressively sure that every information detailed inside is what they are looking for </p>
+                                <p>Our Free Resume Templates have a stamp of approval from the Human Resource department. We are impressively sure that every information detailed inside is what they are looking for </p>
                             </div>
                         </li>
                         <li>
-                            <img src={require("../assets/images/about-icon-03.png")} alt=""></img>
+                            <img src={require("../assets/images/about-icon-03.png")} alt="icon 3 "></img>
                             <div class="text">
                                 <h6>Job Winning CV</h6>
-                                <p>Through our experience, we are 70% sure that with our CV's you will not hesitate to land an interview  </p>
+                                <p>Through our experience, we are 70% sure that with our CV's you will not hesitate to land an interview.  </p>
                             </div>
+                        </li>
+                        <li>
+                            <p>Our professional online resume builder will help you build the most professional looking resume.</p>
                         </li>
                     </ul>
                 </div>
