@@ -97,7 +97,7 @@ class Templates extends Component {
 
                <lu>
                    <li className="pad10" >
-                       <img id="myImg" className="template1" src= {require("../assets/images/templates/template 1.webp")} alt="Template 1"></img>
+                       <img id="myImg" className="template1" onError={e => e.target.src =require("../assets/images/templates/template 1.png")}  src= {require("../assets/images/templates/template 1.webp")} alt="Template 1"></img>
                            <div id="myModal" class="modal">
                                <span className="close">&times;</span> 
                            </div>
