@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React , {useEffect} from 'react'
 import {useSelector , useDispatch} from "react-redux"
 import {prevStep, nextStep, addEducation, remEducation} from "../action/index"
 import School from "../Fragments/School"
@@ -14,7 +14,9 @@ export default function Education() {
 
  const [validate, setValidate] = React.useState(false);
 
- 
+ useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
 
  const next = () => {
 

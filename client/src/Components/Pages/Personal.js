@@ -1,5 +1,5 @@
 
-import React, { Component, useState } from 'react'
+import React, { Component, useState ,useEffect} from 'react'
 import Grid from '@material-ui/core/Grid';
 import MaterialUIPickers from "../GUI/Datepicker"
 import Header from "../Fragments/Header"
@@ -110,6 +110,10 @@ export const validator = (response , setState) => {
 
 export default function(props) {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
    const stylesi ={
      info:{
        textAlign: "center",
@@ -148,6 +152,8 @@ export default function(props) {
 
 
 
+
+
   const handleDownloadFile = () => {
     return axios({
       url: '/api/download', // download url
@@ -182,6 +188,7 @@ export default function(props) {
 
     }
     
+
 
 
 
@@ -224,7 +231,7 @@ export default function(props) {
       <React.Fragment>
       <div>
 
-        {window.scrollTo(0,0)}
+
 
 
 <div>

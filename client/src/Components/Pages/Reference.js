@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {useSelector , useDispatch} from "react-redux"
 import {prevStep, nextStep, addReference, remReference ,changeReferentName,changeOccupation,changeCompany,changeRPhoneNumber} from "../action/index"
 import Referent from "../Fragments/Referent"
@@ -33,6 +33,9 @@ export default function Reference() {
  const references = useSelector(state => state.reference.values.refree)
  const reduxState = useSelector(state => state)
  
+ useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
 
  const [checkout, setCheckout] = React.useState(false);
 

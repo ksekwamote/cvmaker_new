@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useState , useEffect} from 'react'
 import Grid from '@material-ui/core/Grid';
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
@@ -29,7 +29,11 @@ const simpleValidation = (value) => {
 
 export default function Qualities() {
     const dispatch = useDispatch();
-  
+
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
+
     const qualities = useSelector(state => state.quality.qualities);
     const [validQuality , validateQuality] = useState({
       error: false,

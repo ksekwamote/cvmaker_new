@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React  , {useEffect} from 'react'
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
 import RichTextEditor from 'react-rte';
@@ -46,7 +46,9 @@ export const simpleValidation = (value) => {
   
   const [validate, setValidate] = React.useState(false);
 
- 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
 
   const addButton = () => {
@@ -88,7 +90,7 @@ export const simpleValidation = (value) => {
         <Grid container justify="center" alignItems="center">
         <React.Fragment>
                 <div>
-                {window.scrollTo(0,0)}
+  
       <div>
 
       <br></br><br></br><br></br><br></br><br></br>

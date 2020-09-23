@@ -1,5 +1,5 @@
 
-import React, { Component ,useState} from 'react'
+import React, { Component ,useState ,useEffect} from 'react'
 import Grid from '@material-ui/core/Grid';
 import {Textfield, Textfield2, Multiline} from "../GUI/Textfield"
 import {useSelector , useDispatch} from "react-redux"
@@ -29,6 +29,11 @@ const simpleValidation = (value) => {
 
 export default function Profile (){
   
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+
     const dispatch = useDispatch();
     const profile = useSelector(state => state.profiler.profile);
     const [validProfile , validateProfile] = useState({
@@ -64,7 +69,6 @@ export default function Profile (){
       <React.Fragment>
       <div>
 
-        {window.scrollTo(0,0)}
 
 
         <div>
