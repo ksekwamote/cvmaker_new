@@ -5,10 +5,10 @@ const initialState = {
         work: 
     [
         {
-            employer:"Google",
-            position:"Tester",
-            jstartDate:"June 2020",
-            jendDate:"July 2020",
+            employer:"",
+            position:"",
+            jstartDate:"",
+            jendDate:"",
             jdescription:""
         }
      

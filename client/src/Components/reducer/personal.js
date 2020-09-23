@@ -1,11 +1,11 @@
 const initialState ={
 
-    firstname:"katloski",
-    surname:"bismilla",
-    email:"bismilla@gov.ca",
-    phoneNumber:"+43434234423",
+    firstname:"",
+    surname:"",
+    email:"",
+    phoneNumber:"",
     dob:"",
-    address:"P O BOX 34",
+    address:"",
 
     occupation: "",
     
