@@ -6,14 +6,28 @@ const bodyParser = require('body-parser');
 const app = express();
 const ejs = require('ejs');
 const path = require("path")
-
+const compression = require('compression');
+const debugMiddleware = require('debug-middleware');
+const http = require('http');
+const https = require('https');
 
 //CONFIGURE SERVER
 
 
 const port = process.env.PORT || 5001;
+
+
+//Reduce Your Middleware
+
+
+//Increase Max Sockets
+http.globalAgent.maxSockets = Infinity;
+https.globalAgent.maxSockets = Infinity;
+
+
 var newpdf='resume.pdf';
 
+app.use(compression());
 app.use(express.json());
 app.set('view engine' , 'ejs');
 app.use(cors());
