@@ -41,7 +41,25 @@ app.get('/resume',(req, res) => {
 
 });
 
-//WHATSAPP SENDING API
+//MINIFY WITH UGLIFY
+module.exports = function(grunt) {
+
+	grunt.initConfig({
+		uglify: {
+			options: {
+				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+			},
+			dist: {
+				files: {
+					'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+				}
+			}
+    	}
+	});
+
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.registerTask('default', ['uglify']);
+};
 
 var html;
 app.post('/cv', (req,res) =>{
@@ -170,7 +188,7 @@ app.post('/api/create-pdf' , (req, res)=>{
 	})
 });
 
-	app.use(express.static(__dirname+"/client/build"))
+	app.use(express.static(__dirname+"/client/build" ,{maxAge: 31557600}));
 
 app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
