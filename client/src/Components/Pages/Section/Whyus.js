@@ -46,7 +46,7 @@ export default function Whyus() {
                     </ul>
                 </div>
                 <div class="right-image col-lg-7 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                    <img src={require("../../assets/images/right-image.png")} class="rounded img-fluid d-block mx-auto" alt="App"></img>
+                    <img src={require("../../assets/images/right-image.webp")} onError={e => e.target.src =require("../../assets/images/right-image.png")} class="rounded img-fluid d-block mx-auto" alt="App"></img>
                 </div>
             </div>
         </div>

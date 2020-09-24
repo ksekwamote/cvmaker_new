@@ -150,7 +150,7 @@ export default class Home extends Component {
                         transitionDuration={1500}
                         delay={100}
                         >
-                        <img src={require("../assets/images/slider-icon.png")} class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic"></img>
+                        <img src={require("../assets/images/slider-icon.webp")} onError={e => e.target.src =require("../assets/images/slider-icon.png")} class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic"></img>
                         </FadeIn>
                     </div>
                   
@@ -167,7 +167,7 @@ export default class Home extends Component {
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <img src={require("../assets/images/left-image.png")} class="rounded img-fluid d-block mx-auto" alt="App"></img>
+                    <img src={require("../assets/images/left-image.webp")} onError={e => e.target.src =require("../assets/images/left-image.png")} class="rounded img-fluid d-block mx-auto" alt="App"></img>
                 </div>
                 <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
                     <div class="left-heading">
@@ -229,7 +229,7 @@ export default class Home extends Component {
                     </ul>
                 </div>
                 <div class="right-image col-lg-7 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                    <img src={require("../assets/images/right-image.png")} class="rounded img-fluid d-block mx-auto" alt="App"></img>
+                    <img src={require("../assets/images/right-image.webp")} onError={e => e.target.src =require("../assets/images/right-image.png")} class="rounded img-fluid d-block mx-auto" alt="App"></img>
                 </div>
             </div>
         </div>
