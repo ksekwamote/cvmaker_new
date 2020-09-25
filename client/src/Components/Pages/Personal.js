@@ -16,7 +16,7 @@ import axios from 'axios';
 
 
 
-export const textValidation = (value) => {
+export  const textValidation = (value) => {
 
   const letters = /^[a-zA-Z\s'-]*$/;
 
