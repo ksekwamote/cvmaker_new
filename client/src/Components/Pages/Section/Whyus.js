@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Header from '../../Fragments/Header'
 import Footer from '../../Fragments/Footer'
 import {Helmet} from 'react-helmet'
 import Lazyload from "react-lazyload";
+import {initGA,  GApageView} from "./../../../index"
+
+
+
 
 
 const Spinner = () => (
@@ -22,6 +26,7 @@ const Spinner = () => (
 )
 
 export default function Whyus() {
+    useEffect(()=> {GApageView("/Whyus")})
     return (
 
         <Lazyload

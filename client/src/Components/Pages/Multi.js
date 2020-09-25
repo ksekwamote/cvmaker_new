@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react';
 import Personal from './Personal';
 import Experience from './Experience';
 import Qualities from './Qualities'
@@ -13,6 +13,10 @@ import { CSSTransition } from "react-transition-group"
 import FadeIn from 'react-fade-in';
 import Download from "./Download";
 import {Helmet} from 'react-helmet'
+import {initGA,  GApageView} from "./../../index"
+
+
+
 
 
 
@@ -44,6 +48,7 @@ import {Helmet} from 'react-helmet'
 }
 
 export default function Multi(){
+    useEffect(()=> {GApageView("/resumake")})
     return (
         <div>
 

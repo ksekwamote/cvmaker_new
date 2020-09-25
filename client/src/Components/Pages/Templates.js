@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react'
+import React, { useEffect , Component} from 'react';
 import "../assets/CSS/template_selection.css"
 import "../assets/CSS/bootstrap.min.css"
 import "../assets/CSS/flex-slider.css"
@@ -16,6 +16,9 @@ import { bindActionCreators } from 'redux'
 import FadeIn from 'react-fade-in';
 import {Helmet} from 'react-helmet'
 import Lazyload from "react-lazyload";
+import {initGA,  GApageView} from "./../../index"
+
+
 
 
 const Spinner = () => (
@@ -65,7 +68,7 @@ class Templates extends Component {
 
     componentDidMount () {
         
-      
+        GApageView("/templates")
         
         $(document).ready(function(){
 

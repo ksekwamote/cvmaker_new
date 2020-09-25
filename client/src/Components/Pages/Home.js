@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component ,useEffect } from 'react'
 import "../assets/CSS/templatemo-art-factory.css"
 import Footer from "../Fragments/Footer"
 import FadeIn from 'react-fade-in';
@@ -9,6 +9,10 @@ import { HashRouter, Route, Link } from "react-router-dom";
 import { isIE , isOpera } from 'react-device-detect'
 import { useMediaQuery } from 'react-responsive'
 import Lazyload from "react-lazyload";
+import {initGA,  GApageView} from "./../../index"
+
+
+
 
 
 const Spinner = () => (
@@ -84,7 +88,7 @@ const Whyus = () => {
                             <img src={require("../assets/images/about-icon-02.png")} alt="icon 2 "></img>
                             <div class="text">
                                 <h6>Recommended by HR Experts</h6>
-                                <p>Our Free Resume Templates have a stamp of approval from the Human Resource department. We are impressively sure that every information detailed inside is what they are looking for </p>
+                                <p>Our Free Resume Templates have a stamp of approval from the Human Resource department. We are impressively sure that every information detailed inside is what employers are looking for. </p>
                             </div>
                         </li>
                         <li>
@@ -95,7 +99,7 @@ const Whyus = () => {
                             </div>
                         </li>
                         <li>
-                            <p>Our professional online resume builder will help you build the most professional looking resume.</p>
+                            <p>Our free online resume builder will help you build the most professional looking resume.</p>
                         </li>
                     </ul>
                 </div>
@@ -283,6 +287,9 @@ const ContactUs = () =>{
 
     )
 }
+
+
+
 export default class Home extends Component {
 
     constructor(props){
@@ -298,6 +305,8 @@ export default class Home extends Component {
     }
 
     componentDidMount () {
+
+        GApageView("/")
 
         $(".submenu").on("click", function() {
             var width = $(window).width();
@@ -410,11 +419,11 @@ export default class Home extends Component {
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                        
-                            <h1 id="intro" >SITE IS UNDER CONSTRUCTION <strong>&#128679; &#128679; &#128679; &#128679; &#128679; &#128679;</strong></h1>
+                            <h1 id="intro" >Have Fun Testing Our Site<strong>&#128679; &#128679; &#128679; &#128679; &#128679; &#128679;</strong></h1>
 
                       
-                        <p>Climb the ladder to corporate success through our No. 1  professional online resume builder for free. With an abundance of <strong> free resume templates and resume examples</strong>
-                        you are sure to be noticed by employers</p>
+                        <p>Climb the ladder to corporate success through our No. 1  professional online resume builder. With an abundance of <strong> free resume templates and resume examples </strong>
+                        you are sure to be noticed by employers.</p>
                        
                         <a href="/templates" class="main-button-slider" style={{color:"#fff"}}>Create My CV &#8594;</a>
                     </div>

@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Header from '../../Fragments/Header'
 import Footer from '../../Fragments/Footer'
 import {Helmet} from 'react-helmet'
 import Lazyload from "react-lazyload";
+import {initGA,  GApageView} from "./../../../index"
+
+
+
+
 
 const Spinner = () => (
     <div className= "post loading">
@@ -21,6 +26,7 @@ const Spinner = () => (
 )
 
 export default function Faq() {
+    useEffect(()=> {GApageView("/Faq")})
     return (
         <Lazyload
         key={101049}

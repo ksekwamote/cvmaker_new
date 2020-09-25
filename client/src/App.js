@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CustomizedInputs from  "./Components/Pages/Personal"
@@ -19,6 +19,11 @@ import Whyus from "./Components/Pages/Section/Whyus"
 import Faq from "./Components/Pages/Section/Faq"
 import Contacts from "./Components/Pages/Section/Contacts"
 import Error from "./Components/Pages/Error"
+import {initGA,  GApageView} from "./index"
+
+
+
+
 
 const Application = () => (
 
@@ -49,6 +54,7 @@ const Application = () => (
 )
 
 function App() {
+  useEffect(() => { initGA(); }, []);
  
 
   return (

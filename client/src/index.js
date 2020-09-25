@@ -9,8 +9,15 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter} from 'react-router-dom';
 import store from "./store"
 import {Provider} from "react-redux"
+import ReactGA from "react-ga"
 
+export const initGA = () => {
+  ReactGA.initialize('UA-179015070-1')
+}
 
+export const GApageView = (page) => {
+  ReactGA.pageview(page);
+}
 
 
 ReactDOM.render(

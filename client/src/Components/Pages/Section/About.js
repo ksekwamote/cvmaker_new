@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Header from '../../Fragments/Header'
 import Footer from '../../Fragments/Footer'
 import {Helmet} from 'react-helmet'
 import Lazyload from "react-lazyload";
+import { GApageView} from "./../../../index"
+
+
+
+
 
 
 const Spinner = () => (
@@ -23,6 +28,8 @@ const Spinner = () => (
 
 
 export default function About() {
+
+    useEffect(()=> {GApageView("/About")})
     return (
         <Lazyload
                 key={101049}
