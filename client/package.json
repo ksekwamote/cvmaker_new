@@ -34,6 +34,7 @@
     "react-dom": "^16.13.1",
     "react-fade-in": "^1.1.0",
     "react-helmet": "^6.1.0",
+    "react-lazyload": "^3.0.0",
     "react-mailchimp-subscribe": "^2.1.0",
     "react-paypal-button-v2": "^2.6.2",
     "react-redux": "^7.2.0",
