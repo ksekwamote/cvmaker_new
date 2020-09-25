@@ -15,6 +15,24 @@ import {connect} from "react-redux"
 import { bindActionCreators } from 'redux'
 import FadeIn from 'react-fade-in';
 import {Helmet} from 'react-helmet'
+import Lazyload from "react-lazyload";
+
+
+const Spinner = () => (
+    <div className= "post loading">
+            <h5></h5>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+    </div>
+)
 
 
 const mapStateToProps = (state , dispatch) => {
@@ -77,6 +95,12 @@ class Templates extends Component {
              
 
         return (
+            <Lazyload
+            key={101049}
+            height={100}
+            offset={[-100, 100]}
+            placeholder = {<Spinner/>}
+            >
             <div>
                 <Helmet>
                     <title>Free Professional Resume Templates </title>
@@ -262,6 +286,7 @@ class Templates extends Component {
    </FadeIn>
    <Footer/>
    </div>
+   </Lazyload>
 
  
         )

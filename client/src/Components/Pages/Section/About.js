@@ -2,10 +2,35 @@ import React from 'react'
 import Header from '../../Fragments/Header'
 import Footer from '../../Fragments/Footer'
 import {Helmet} from 'react-helmet'
+import Lazyload from "react-lazyload";
+
+
+const Spinner = () => (
+    <div className= "post loading">
+            <h5></h5>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+    </div>
+)
 
 
 export default function About() {
     return (
+        <Lazyload
+                key={101049}
+                height={100}
+                offset={[-100, 100]}
+                placeholder = {<Spinner/>}
+                >
+
         <div>
             <Helmet>
                     <title>Professional CV Making platform created by developers and career experts </title>
@@ -46,5 +71,6 @@ export default function About() {
                     <Footer/>
 
         </div>
+        </Lazyload>
     )
 }
