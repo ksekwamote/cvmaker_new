@@ -17,7 +17,34 @@ const https = require('https');
 const port = process.env.PORT || 5001;
 
 
-//Reduce Your Middleware
+//SITEMAP
+app.get('/sitemap.xml', async function(req, res, next){
+  let xml_content = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    '  <url>',
+    '    <loc>https://www.resumefactory.co/</loc>',
+    '    <lastmod>2020-9-29</lastmod>',
+    ' <changefreq>weekly</changefreq>',
+    ' <priority>1.0</priority>',
+    ' <image:image>',
+    ' <image:loc>https://www.resumefactory.co/static/media/left-image.bd74aa5c.webp</image:loc>',
+    ' <image:caption>About the best resume maker that will get you working in no time</image:caption>',
+    ' </image:image>',
+    ' <image:image>',
+    ' <image:loc>https://www.resumefactory.co/static/media/slider-icon.a4ce09fa.webp</image:loc>',
+    ' <image:caption>Your Number 1 resume maker</image:caption>',
+    ' </image:image>',
+    ' <image:image>',
+    ' <image:loc>https://www.resumefactory.co/static/media/right-image.a62d7220.webp</image:loc>',
+    ' <image:caption>The most user friendly resume builder in town</image:caption>',
+    ' </image:image>'
+    '  </url>',
+    '</urlset>'
+  ]
+  res.set('Content-Type', 'text/xml')
+  res.send(xml_content.join('\n'))
+})
 
 
 //Increase Max Sockets
