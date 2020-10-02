@@ -177,11 +177,9 @@ const chooseFile = (filename) =>{
 
 app.post('/api/create-resume' , (req, res) => {
 
-	console.log("Before the method "+req.body.templates)
 
 	const filename = chooseFile(req.body.templates);
 
-	console.log("After the method"+filename)
 
 	ejs.renderFile(filename,req.body , function(err, result){
 
